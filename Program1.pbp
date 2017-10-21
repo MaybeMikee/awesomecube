@@ -17,6 +17,16 @@ loop:   'sets a starting point
 t1=400    'sets t at 400ms
 A=0:C=0
 PAUSE t1
-
-
+C=%000001   'C0 on
+Pause t1
+C=%000010    'C1 on
+pause t1
+c=%000100      'C2 on
+pause t1
+c=%001000     'C3 on
+Pause t1
+c=%010000     'C4 on
+pause t1
+c=%100000      'C5 on
+pause t1
 
