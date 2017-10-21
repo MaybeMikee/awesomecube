@@ -1,6 +1,6 @@
 'Program 1 for the awesome cube
 '****************************************************
-'this program will light the LEDS one at a time, from top right
+'this program will light the LEDS one at a time, from top left
 '***************************************************************
 'make portc and porta outputs
 trisc = 0
