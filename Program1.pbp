@@ -29,4 +29,12 @@ c=%010000     'C4 on
 pause t1
 c=%100000      'C5 on
 pause t1
+A=1
+C=0
+pause t1
+A=2
+pause t1
+A=4   '4 because of bianary numbering
+pause t1
 
+goto loop
