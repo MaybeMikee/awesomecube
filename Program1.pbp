@@ -1,0 +1,22 @@
+'Program 1 for the awesome cube
+'****************************************************
+'this program will light the LEDS one at a time, from top right
+'***************************************************************
+'make portc and porta outputs
+trisc = 0
+trisa = 0
+
+A VAR portA 'address all porta with"A"
+C VAR portC 'address all portc with"C"
+'**************************************************************
+
+t1 VAR WORD
+
+loop:   'sets a starting point
+
+t1=400    'sets t at 400ms
+A=0:C=0
+PAUSE t1
+
+
+
