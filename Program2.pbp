@@ -22,7 +22,7 @@ t2=400
 start:
 C=%000111:A=%000
 pause t2
-a=2:c=%010010
+a=000:c=%111000
 pause t2
 A=1:c=9
 pause t2
