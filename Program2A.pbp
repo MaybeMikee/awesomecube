@@ -18,4 +18,6 @@ t3 var word
 
 t3=400
 
-
+start:
+A=%111:C=%111111
+pause t3
