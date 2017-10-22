@@ -21,3 +21,5 @@ t4=400
 start:
 C=%010000
 pause t4
+A=%101:C=010101
+pause t4
