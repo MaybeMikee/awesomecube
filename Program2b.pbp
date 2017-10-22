@@ -9,7 +9,7 @@
 '*          : create a "X", then a diamond shape                *
 '****************************************************************
 trisc = 0
-trisc = 0
+trisa = 0
 
 A VAR portA
 C var portC
