@@ -1,6 +1,10 @@
 'Program 1 for the awesome cube
 '****************************************************
+<<<<<<< HEAD
 'this program will light the LEDS one at a time, from top left
+=======
+'this program will light the LEDS one at a time, from top right
+>>>>>>> development
 '***************************************************************
 'make portc and porta outputs
 trisc = 0
@@ -12,7 +16,11 @@ C VAR portC 'address all portc with"C"
 
 t1 VAR WORD
 
+<<<<<<< HEAD
 loop:   'sets a starting point
+=======
+start:   'sets a starting point
+>>>>>>> development
 
 t1=400    'sets t at 400ms
 A=0:C=0
@@ -37,4 +45,8 @@ pause t1
 A=1                 'A0 on
 pause t1
 
+<<<<<<< HEAD
 goto loop               'repeat
+=======
+goto start               'repeat
+>>>>>>> development
