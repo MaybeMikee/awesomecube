@@ -1,0 +1,31 @@
+'****************************************************************
+'*  Name    : Program2bSpeedUp.BAS                              *
+'*  Author  : Mike                                              *
+'*  Notice  : Copyright (c) 2017                                *
+'*          : All Rights Reserved                               *
+'*  Date    : 10/21/2017                                        *
+'*  Version : 1.0                                               *
+'*  Notes   :                                                   *
+'*          :                                                   *
+'****************************************************************
+trisc = 0
+trisa = 0
+
+A VAR portA
+C var portC
+'****************************************************************
+t5 var word
+
+start:
+
+    For t5 = 400 to 100 step -50
+
+        C=%010000    'center lED 
+        pause t4
+        A=%101:C=010101  '"X shape
+        pause t4
+        A=%010:C=101010   ' Diamond shape
+        pause t4
+    Next t5
+
+    goto start
