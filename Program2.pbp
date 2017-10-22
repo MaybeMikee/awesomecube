@@ -22,9 +22,9 @@ t2=400
 start:
 C=%000111:A=%000
 pause t2
-a=000:c=%111000
+a=%000:c=%111000
 pause t2
-A=1:c=9
+A=%111:C=%000000
 pause t2
 
 goto start
