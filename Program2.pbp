@@ -1,0 +1,18 @@
+'****************************************************************
+'*  Name    : PROGRAM2.BAS                                      *
+'*  Author  : Mike                                              *
+'*  Notice  : Copyright (c) 2017                                *
+'*          : All Rights Reserved                               *
+'*  Date    : 10/21/2017                                        *
+'*  Version : 1.0                                               *
+'*  Notes   : this program will light the LEDs one column at a  *
+'*          : time left to right                                *
+'*          :                                                   *
+'****************************************************************
+trisc = 0
+trisc = 0
+
+A VAR portA
+C var portC
+'****************************************************************
+t2 var WORD
