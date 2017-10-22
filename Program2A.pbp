@@ -24,3 +24,4 @@ pause t3
 A=%000:c=%000000
 pause t3
 
+goto start
