@@ -12,7 +12,7 @@ C VAR portC 'address all portc with"C"
 
 t1 VAR WORD
 
-loop:   'sets a starting point
+start:   'sets a starting point
 
 t1=400    'sets t at 400ms
 A=0:C=0
@@ -37,4 +37,4 @@ pause t1
 A=1                 'A0 on
 pause t1
 
-goto loop               'repeat
+goto start               'repeat
