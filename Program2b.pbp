@@ -1,0 +1,16 @@
+'****************************************************************
+'*  Name    : Program2b.BAS                                     *
+'*  Author  : Mike                                              *
+'*  Notice  : Copyright (c) 2017                                *
+'*          : All Rights Reserved                               *
+'*  Date    : 10/21/2017                                        *
+'*  Version : 1.0                                               *
+'*  Notes   : this programm will light the center LED, then     *
+'*          : create a "X", then a diamond shape                *
+'****************************************************************
+trisc = 0
+trisc = 0
+
+A VAR portA
+C var portC
+'****************************************************************
