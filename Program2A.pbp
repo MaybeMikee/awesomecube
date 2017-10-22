@@ -1,0 +1,27 @@
+'****************************************************************
+'*  Name    : Program2A.BAS                                     *
+'*  Author  : Mike                                              *
+'*  Notice  : Copyright (c) 2017                                *
+'*          : All Rights Reserved                               *
+'*  Date    : 10/21/2017                                        *
+'*  Version : 1.0                                               *
+'*  Notes   : this program all the LEDS will turn on, then off  *
+'*          :                                                   *
+'****************************************************************
+trisc = 0
+trisc = 0
+
+A VAR portA
+C var portC
+'****************************************************************
+t3 var word
+
+t3=400
+
+start:
+A=%111:C=%111111
+pause t3
+A=%000:c=%000000
+pause t3
+
+goto start
