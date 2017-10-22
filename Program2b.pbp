@@ -16,9 +16,10 @@ C var portC
 '****************************************************************
 t4 var word
 
+start:
+
 t4=400
 
-start:
 C=%010000    'center lED 
 pause t4
 A=%101:C=010101  '"X shape

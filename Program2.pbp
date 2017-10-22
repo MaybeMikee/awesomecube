@@ -17,9 +17,10 @@ C var portC
 '****************************************************************
 t2 var Word
 
+start:
+
 t2=400
 
-start:
 C=%000111:A=%000     'Top Row
 pause t2
 a=%000:c=%111000     'Middle Row
