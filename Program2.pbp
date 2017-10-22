@@ -20,11 +20,11 @@ t2 var Word
 t2=400
 
 start:
-C=%000111:A=%000
+C=%000111:A=%000     'Top Row
 pause t2
-a=%000:c=%111000
+a=%000:c=%111000     'Middle Row
 pause t2
-A=%111:C=%000000
+A=%111:C=%000000     'Bottom Row
 pause t2
 
 goto start

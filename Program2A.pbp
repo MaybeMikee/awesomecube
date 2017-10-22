@@ -19,9 +19,9 @@ t3 var word
 t3=400
 
 start:
-A=%111:C=%111111
+A=%111:C=%111111  'LEDs ON
 pause t3
-A=%000:c=%000000
+A=%000:c=%000000   'LEDs Off
 pause t3
 
 goto start
