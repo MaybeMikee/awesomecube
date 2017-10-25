@@ -20,7 +20,7 @@ do
 
     For t5 = 400 to 100 step -50
 
-        C=%010000    'center lED 
+        C=%010000:A=%000    'center lED 
         pause t5
         A=%101:C=%010101  '"X shape
         pause t5
