@@ -16,7 +16,7 @@ C var portC
 '****************************************************************
 t3 var word
 
-start:
+do
 
 t3=400
 
@@ -25,4 +25,4 @@ pause t3
 A=%000:c=%000000   'LEDs Off
 pause t3
 
-goto start
+loop

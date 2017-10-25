@@ -16,7 +16,7 @@ C var portC
 '****************************************************************
 t5 var word
 
-start:
+do
 
     For t5 = 400 to 100 step -50
 
@@ -28,4 +28,4 @@ start:
         pause t4
     Next t5
 
-    goto start
+loop

@@ -2,7 +2,7 @@
 '****************************************************
 'this program will light the LEDS one at a time, from top left
 '***************************************************************
-'make portc and porta outputs
+ 'make portc and porta outputs
 trisc = 0
 trisa = 0
 
@@ -12,7 +12,7 @@ C VAR portC 'address all portc with"C"
 
 t1 VAR WORD
 
-start:   'sets a starting point
+do   'sets a starting point
 
 t1=400    'sets t at 400ms
 A=0:C=0
@@ -37,5 +37,5 @@ pause t1
 A=1                 'A0 on
 pause t1
 
-goto start               'repeat
+loop               'repeat
 

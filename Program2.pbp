@@ -17,7 +17,7 @@ C var portC
 '****************************************************************
 t2 var Word
 
-start:
+do
 
 t2=400
 
@@ -28,4 +28,4 @@ pause t2
 A=%111:C=%000000     'Bottom Row
 pause t2
 
-goto start
+loop

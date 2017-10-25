@@ -16,15 +16,15 @@ C var portC
 '****************************************************************
 t4 var word
 
-start:
+do
 
 t4=400
 
-C=%010000    'center lED 
+C=%010000:a=%000    'center lED 
 pause t4
 A=%101:C=010101  '"X shape
 pause t4
 A=%010:C=101010   ' Diamond shape
 pause t4
 
-goto start
+loop
