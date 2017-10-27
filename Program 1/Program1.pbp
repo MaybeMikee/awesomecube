@@ -13,29 +13,34 @@ C VAR portC 'address all portc with"C"
 t1 VAR WORD
 
 do   'sets a starting point
-
-t1=400    'sets t at 400ms
-A=0:C=0
-PAUSE t1
-C=%000100   'C1 on
-Pause t1
-C=%000010    'C1 on
-pause t1
-c=%000001      'C0 on
-pause t1
-c=%100000     'C5 on
-Pause t1
-c=%010000     'C4 on
-pause t1
-c=%001000      'C3 on
-pause t1
-A=4        '4 because of bianary numbering (A2 on)
-C=0
-pause t1
-A=2                  'A1 on
-pause t1
-A=1                 'A0 on
-pause t1
-
+    gosub left_to_right
 loop               'repeat
 
+
+'***************************
+'SUNROUTINES
+    left_to_right:
+        t1=100    'sets t at 400ms
+        A=0:C=0
+
+        C=%000100   'C1 on
+        Pause t1
+        C=%000010    'C1 on
+        pause t1
+        c=%000001      'C0 on
+        pause t1
+        c=%100000     'C5 on
+        Pause t1
+        c=%010000     'C4 on
+        pause t1
+        c=%001000      'C3 on
+        pause t1
+        A=4        '4 because of bianary numbering (A2 on)
+        C=0
+        pause t1
+        A=2                  'A1 on
+        pause t1
+        A=1                 'A0 on
+        pause t1
+        
+        Return

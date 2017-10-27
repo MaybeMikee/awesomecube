@@ -18,14 +18,22 @@ C var portC
 t2 var Word
 
 do
-
-t2=400
-
-C=%000111:A=%000     'Top Row
-pause t2
-a=%000:c=%111000     'Middle Row
-pause t2
-A=%111:C=%000000     'Bottom Row
-pause t2
-
+  gosub rows
 loop
+
+
+
+'***************************
+'SUNROUTINES
+    rows:     
+    t2=400
+
+    C=%000111:A=%000     'Top Row
+    pause t2
+    a=%000:c=%111000     'Middle Row
+    pause t2
+    A=%111:C=%000000     'Bottom Row
+    pause t2
+    
+    return
+

@@ -18,11 +18,17 @@ t3 var word
 
 do
 
-t3=400
-
-A=%111:C=%111111  'LEDs ON
-pause t3
-A=%000:c=%000000   'LEDs Off
-pause t3
-
 loop
+
+'***************************
+'SUNROUTINES
+ on_off:
+ 
+    t3=400
+
+    A=%111:C=%111111  'LEDs ON
+    pause t3
+    A=%000:c=%000000   'LEDs Off
+    pause t3
+    return
+
