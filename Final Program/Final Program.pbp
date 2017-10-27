@@ -1,10 +1,10 @@
 '****************************************************************
 '*  Name    : Program3.BAS                                      *
-'*  Author  : Mike                                              *
+'*  Author  : Mike DeMoss                                       *
 '*  Notice  : Copyright (c) 2017                                *
 '*          : All Rights Reserved                               *
 '*  Date    : 10/27/2017                                        *
-'*  Version : 1.0                                               *
+'*  Version : 0.0                                               *
 '*  Notes   :                                                   *
 '*          :                                                   *
 '****************************************************************
@@ -13,5 +13,9 @@ trisa = 0
 
 A VAR portA
 C var portC
+
+w1 var word:w2 var word:w3 var word:w4 var word:w5 var word:w6 var word:w7 var word
+t1 var word:t2 var word:t3 var word:t4 var word:t5 var word:t6 var word
+n1 var word:n2 var word:n3 var word:n4 var word
 '****************************************************************
-t5 var word
+
