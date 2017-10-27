@@ -28,6 +28,21 @@ CMPGT?WCL macro Win, Cin, Label
     endm
 CMPGT_USED = 1
 
+CMPLT?WCL macro Win, Cin, Label
+    if ((Cin) >= 10000h)
+        L?GOTO  Label
+    else
+      if ((Cin) > 0)
+        MOVE?WW Win, R0
+        MOVE?CB (Cin) >> 8, R1 + 1
+        MOVE?CA low (Cin)
+        L?CALL  CMPLT
+        BIT?GOTO 0, STATUS, Z, Label
+      endif
+    endif
+    endm
+CMPLT_USED = 1
+
 CMPNE?WCL macro Win, Cin, Label
     if (((Cin) > -10000h) & ((Cin) < 10000h))
         MOVE?CW	Cin, R0
@@ -195,6 +210,32 @@ NEXT?WCL macro Win, Cin, Label
       endif
     endif
 endlabel
+    endm
+
+NEXTM?WCL macro Win, Cin, Label
+    local hlabel
+    local endlabel
+    if ((Cin) == 1)
+        movlw   1
+        CHK?RP  Win
+        subwf   Win, F
+        btfss   STATUS, C
+        subwf   Win + 1, F
+        BIT?GOTO 1, STATUS, C, Label
+    else
+        movlw   low (Cin)
+        CHK?RP  Win
+        subwf   Win, F
+        movlw   (Cin) >> 8
+        BIT?GOTO 1, STATUS, C, hlabel
+        addlw   1
+        BIT?GOTO 1, STATUS, C, endlabel
+hlabel  subwf   Win + 1, F
+      if ((Cin) <= 65535)
+        BIT?GOTO 1, STATUS, C, Label
+      endif
+endlabel
+    endif
     endm
 
 PAUSE?W macro Win

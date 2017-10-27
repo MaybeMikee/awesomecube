@@ -29,7 +29,17 @@ do
                 case 3    
                     gosub on_off
                 case 4    
-                    gosub center_X_diamond
+                    For t5 = 400 to 150 step -50
+                        gosub center_X_diamond
+                    Next t5
+
+                    For t5 = 150 to 90 step -10
+                        gosub center_X_diamond
+                    Next t5
+    
+                    For n3 = 1 to 7
+                        gosub center_X_diamond
+                    Next n3
                 end select
         next n3
 loop
@@ -79,7 +89,6 @@ loop
             return
     
                 center_X_diamond:
-                    t5=300
                     C=%010000:A=%000    'center lED 
                     pause t5
                     A=%101:C=%010101  '"X shape
