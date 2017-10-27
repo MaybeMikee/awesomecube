@@ -20,30 +20,30 @@ n3 var word
 do
 
     For t5 = 400 to 150 step -50
-        C=%010000:A=%000    'center lED 
-        pause t5
-        A=%101:C=%010101  '"X shape
-        pause t5
-        A=%010:C=%101010   ' Diamond shape
-        pause t5
+        gosub center_X_diamond
     Next t5
 
     For t5 = 150 to 90 step -10
-        C=%010000:A=%000    'center lED 
-        pause t5
-        A=%101:C=%010101  '"X shape
-        pause t5
-        A=%010:C=%101010   ' Diamond shape
-        pause t5
+        gosub center_X_diamond
     Next t5
     
     For n3 = 1 to 7
+        gosub center_X_diamond
+    Next n3
+    
+loop
+
+
+ '**************************************
+ 'SUBROUTINES
+    center_X_diamond:
         C=%010000:A=%000    'center lED 
         pause t5
         A=%101:C=%010101  '"X shape
         pause t5
         A=%010:C=%101010   ' Diamond shape
         pause t5
-    Next n3
-    
-loop
+    return
+ 
+ 
+ 
