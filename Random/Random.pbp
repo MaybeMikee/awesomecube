@@ -1,0 +1,26 @@
+trisc = 0
+trisa = 0
+
+A VAR portA
+C var portC
+w3 var word:w4 var word:w5 var word:w6 var word:w7 var word
+
+do
+    gosub random_number
+loop
+
+
+random_number:
+    Random w3
+    w4=w3/1040
+    w5=10*w4+20
+    w6=w4/9
+    w7=10*w4
+a=w6
+c=w4
+pause w5
+a=%111
+C=%111111
+pause w7
+return
+
