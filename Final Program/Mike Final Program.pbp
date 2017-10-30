@@ -4,7 +4,7 @@
 '*  Notice  : Copyright (c) 2017                                *
 '*          : All Rights Reserved                               *
 '*  Date    : 10/27/2017                                        *
-'*  Version : 1.0                                               *
+'*  Version : 6.0                                               *
 '*  Notes   :                                                   *
 '*          :                                                   *
 '****************************************************************
@@ -16,8 +16,8 @@ C var portC
 
 w1 var word:w2 var word:w3 var word:w4 var word:w5 var word:w6 var word:w7 var word
 t1 var word:t2 var word:t3 var word:t4 var word:t5 var word:t6 var word
-n1 var word:n2 var word:n3 var word:n4 var word:n5 var word:n6 var word
-x1 var word:x2 var word
+n1 var word:n2 var word:n3 var word:n4 var word:n5 var word:n6 var word:n7 var word
+x1 var word:x2 var word:x3 var word:x4 var word:x5 var word:x6 var word:x7 var word:x8 var word:x9 var word:x10 var word
 '****************************************************************
 do
         For n2=0 to 19
@@ -31,7 +31,10 @@ do
                     
                     lookup2 x2, [90,250,100,50,150], t1 
                     
-                    for n1 = 1 to 3
+                    Random x3 
+                    x4=x3//10
+                    x5=x4+1
+                    for n1=0 to x5
                         gosub left_to_right
                     next n1
                 case 2
@@ -46,10 +49,21 @@ do
                         gosub rows
                     next n5
                 case 3
-                    for n6=1 to 4    
+                
+                x4=x4+1
+                    if x4>5 then
+                        x4=0
+                    endif
+                    
+                    lookup2 x4, [90,250,100,50,150], t3
+                    
+                    Random x6 
+                    x7=x6//10
+                    x8=x7+1
+                    for n6=1 to x8    
                         gosub on_off
                     next n6
-                case 4    
+                case 4
                     For t5 = 400 to 150 step -50
                         gosub center_X_diamond
                     Next t5
@@ -100,7 +114,6 @@ loop
         return
     
             on_off:
-                t3=400
                 A=%111:C=%111111  'LEDs ON
                 pause t3
                 A=%000:c=%000000   'LEDs Off
@@ -115,3 +128,17 @@ loop
                     A=%010:C=%101010   ' Diamond shape
                     pause t5
                 return
+                
+                    random_number:
+                        Random w3
+                        w4=w3/1040
+                        w5=10*w4+20
+                        w6=w4/9
+                        w7=10*w4
+                        a=w6
+                        c=w4
+                        pause w5
+                        a=%111
+                        C=%111111
+                        pause w7
+                    return
