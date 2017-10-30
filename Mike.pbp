@@ -1,0 +1,30 @@
+'****************************************************************
+'*  Name    : UNTITLED.BAS                                      *
+'*  Author  : Mike                                              *
+'*  Notice  : Copyright (c) 2017 [select VIEW...EDITOR OPTIONS] *
+'*          : All Rights Reserved                               *
+'*  Date    : 10/30/2017                                        *
+'*  Version : 1.0                                               *
+'*  Notes   :                                                   *
+'*          :                                                   *
+'****************************************************************
+trisc = 0
+trisa = 0
+
+A VAR portA
+C var portC
+
+t1 var word
+'***********************************
+
+
+
+
+
+Mike:
+   t1=250
+   a=0
+   c=0
+   
+   c=%111101:A=%101
+
