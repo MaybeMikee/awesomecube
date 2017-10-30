@@ -18,11 +18,15 @@ w1 var word:w2 var word:w3 var word:w4 var word:w5 var word:w6 var word:w7 var w
 t1 var word:t2 var word:t3 var word:t4 var word:t5 var word:t6 var word
 n1 var word:n2 var word:n3 var word:n4 var word:n5 var word:n6 var word:n7 var word
 x1 var word:x2 var word:x3 var word:x4 var word:x5 var word:x6 var word:x7 var word:x8 var word:x9 var word:x10 var word
+m var word:m1 var word:m2 var word:m3 var word
 '****************************************************************
 do
-        For n2=0 to 19
-                lookup2 n2, [1,2,3,4,2,3,4,1,4,3,2,1,3,1,4,3,2,4,1,3], n4
-                select case n4
+        random m
+        m1=m//6
+        m2=m1+1
+        
+        select case m2
+        
                 case 1
                     x2=x2+1
                     if x2>5 then
@@ -75,8 +79,12 @@ do
                     For n3 = 1 to 7
                         gosub center_X_diamond
                     Next n3
+                    
+                Case 5
+                for n5=1 to 4
+                    gosub random_number
+                next n5
                 end select
-        next n2
 loop
 
 '****************************************************************
