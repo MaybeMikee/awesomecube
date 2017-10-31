@@ -15,14 +15,14 @@ A VAR portA
 C var portC
 
 w1 var word:w2 var word:w3 var word:w4 var word:w5 var word:w6 var word:w7 var word
-t1 var word:t2 var word:t3 var word:t4 var word:t5 var word:t6 var word
+t1 var word:t2 var word:t3 var word:t4 var word:t5 var word:t6 var word:t7 var word
 n1 var word:n2 var word:n3 var word:n4 var word:n5 var word:n6 var word:n7 var word
 x1 var word:x2 var word:x3 var word:x4 var word:x5 var word:x6 var word:x7 var word:x8 var word:x9 var word:x10 var word
 m var word:m1 var word:m2 var word:m3 var word
 '****************************************************************
 do
         random m
-        m1=m//7
+        m1=m//8
         m2=m1+1
         
         select case m2
@@ -96,6 +96,10 @@ do
                     for n6=1 to 5    
                         gosub X
                     next n6
+                case 7
+                   for n7=1 to 4
+                    gosub Around_the_Cube
+                   next n7
                 end select
 loop
 
@@ -170,3 +174,22 @@ loop
                              C=0:A=%101
                              pause t1
                             return
+                                Around_the_Cube:
+                                 pause t7
+                                 C=%000100:A=0
+                                 pause t7
+                                 C=%000010:a=0
+                                 pause t7
+                                 C=%000001:a=0
+                                 pause t7
+                                 C=%001000:a=0
+                                 pause t7
+                                 C=0:a=001
+                                 pause t7
+                                 C=0:a=010
+                                 pause t7
+                                 C=0:a=100
+                                 pause t7
+                                 C=%100000:a=0
+                                 pause t7
+                                 return
