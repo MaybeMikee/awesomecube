@@ -22,7 +22,7 @@ m var word:m1 var word:m2 var word:m3 var word
 '****************************************************************
 do
         random m
-        m1=m//6
+        m1=m//7
         m2=m1+1
         
         select case m2
@@ -84,6 +84,18 @@ do
                 for n5=1 to 4
                     gosub random_number
                 next n5
+                
+                case 6
+                    x9=x9+1
+                    if x9>5 then 
+                    x9=0
+                    endif
+                    
+                    lookup2 x9, [80,120,100,60,70,65], t6
+                        
+                    for n6=1 to 5    
+                        gosub X
+                    next n6
                 end select
 loop
 
@@ -150,3 +162,11 @@ loop
                         C=%111111
                         pause w7
                     return
+                            X:
+                             c=%000101:a=0
+                             pause t1
+                             c=%010000:A=0
+                             pause t1
+                             C=0:A=%101
+                             pause t1
+                            return
