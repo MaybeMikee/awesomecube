@@ -18,22 +18,23 @@ t_inc var word
 t_dec var word
 speed var word
 do
-    speed=5
-    c=0:a=0
-    pause 250
-    for t_inc=0 to 4000 step speed
+    speed=20
+    'c=0:a=0
+    'pause 250
+    for t_inc=0 to 5000 step speed
         t_dec=5000-t_inc
-        c=63:a=7  'what is at the START of the loop
+        c=%010101:a=%101  'what is at the START of the loop
         pauseus t_inc 
-        A=0:c=0   'what is at the END of the loop
+        C=%101010:A=%010   'what is at the END of the loop
         pauseus t_dec
     next t_inc
+   
     
-    for t_inc=0 to 4000 step speed
+    for t_inc=0 to 5000 step speed
         t_dec=5000-t_inc
-        c=0:a=0  'what is at the START of the loop
+        C=%101010:A=%010  'what is at the START of the loop
         pauseus t_inc 
-        C=63:A=7   'what is at the END of the loop
+        c=%010101:a=%101   'what is at the END of the loop
         pauseus t_dec
     next t_inc
     
