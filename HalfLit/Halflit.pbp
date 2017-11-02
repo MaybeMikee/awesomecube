@@ -17,3 +17,21 @@ C var portC
 t_inc var word
 t_dec var word
 speed var word
+do
+    for t_inc=0 to 4000 step speed
+        t_dec=5000-t_inc
+        A=%101:c=%010101  'This minus full lits are the halflits
+        pauseus 400
+        C=%101010:A=2   'This is the full lits
+        pauseus 3600
+    next t_inc
+    
+    for t_inc=0 to 4000 step speed
+        t_dec=5000-t_inc
+        A=7:c=63  'This minus full lits are the halflits
+        pauseus 400
+        C=%000101:A=%101   'This is the full lits
+        pauseus 3600
+    next t_inc
+    
+loop

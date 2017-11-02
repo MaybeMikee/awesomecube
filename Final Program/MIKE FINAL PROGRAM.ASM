@@ -80,78 +80,132 @@ RM2             		EQU	RAM_START + 015h
 RR1             		EQU	RAM_START + 016h
 ; C:\PROGRAM FILES\PBP3\PBPPIC14.RAM	00023	A00037	RR2     VAR     BYTE BANK0 SYSTEM       ' Pin 2 Register
 RR2             		EQU	RAM_START + 017h
-; U:\AWESOMECUBE-MASTER\FINAL PROGRAM\MIKE FINAL PROGRAM.PBP	00021	A00038	m var word:m1 var word:m2 var word:m3 var word
-_m               		EQU	RAM_START + 018h
-; U:\AWESOMECUBE-MASTER\FINAL PROGRAM\MIKE FINAL PROGRAM.PBP	00021	A0003A	m var word:m1 var word:m2 var word:m3 var word
-_m1              		EQU	RAM_START + 01Ah
-; U:\AWESOMECUBE-MASTER\FINAL PROGRAM\MIKE FINAL PROGRAM.PBP	00021	A0003C	m var word:m1 var word:m2 var word:m3 var word
-_m2              		EQU	RAM_START + 01Ch
-; U:\AWESOMECUBE-MASTER\FINAL PROGRAM\MIKE FINAL PROGRAM.PBP	00021	A0003E	m var word:m1 var word:m2 var word:m3 var word
-_m3              		EQU	RAM_START + 01Eh
-; U:\AWESOMECUBE-MASTER\FINAL PROGRAM\MIKE FINAL PROGRAM.PBP	00019	A00040	n1 var word:n2 var word:n3 var word:n4 var word:n5 var word:n6 var word:n7 var word
-_n1              		EQU	RAM_START + 020h
-; U:\AWESOMECUBE-MASTER\FINAL PROGRAM\MIKE FINAL PROGRAM.PBP	00019	A00042	n1 var word:n2 var word:n3 var word:n4 var word:n5 var word:n6 var word:n7 var word
-_n2              		EQU	RAM_START + 022h
-; U:\AWESOMECUBE-MASTER\FINAL PROGRAM\MIKE FINAL PROGRAM.PBP	00019	A00044	n1 var word:n2 var word:n3 var word:n4 var word:n5 var word:n6 var word:n7 var word
-_n3              		EQU	RAM_START + 024h
-; U:\AWESOMECUBE-MASTER\FINAL PROGRAM\MIKE FINAL PROGRAM.PBP	00019	A00046	n1 var word:n2 var word:n3 var word:n4 var word:n5 var word:n6 var word:n7 var word
-_n4              		EQU	RAM_START + 026h
-; U:\AWESOMECUBE-MASTER\FINAL PROGRAM\MIKE FINAL PROGRAM.PBP	00019	A00048	n1 var word:n2 var word:n3 var word:n4 var word:n5 var word:n6 var word:n7 var word
-_n5              		EQU	RAM_START + 028h
-; U:\AWESOMECUBE-MASTER\FINAL PROGRAM\MIKE FINAL PROGRAM.PBP	00019	A0004A	n1 var word:n2 var word:n3 var word:n4 var word:n5 var word:n6 var word:n7 var word
-_n6              		EQU	RAM_START + 02Ah
-; U:\AWESOMECUBE-MASTER\FINAL PROGRAM\MIKE FINAL PROGRAM.PBP	00019	A0004C	n1 var word:n2 var word:n3 var word:n4 var word:n5 var word:n6 var word:n7 var word
-_n7              		EQU	RAM_START + 02Ch
-; U:\AWESOMECUBE-MASTER\FINAL PROGRAM\MIKE FINAL PROGRAM.PBP	00018	A0004E	t1 var word:t2 var word:t3 var word:t4 var word:t5 var word:t6 var word:t7 var word
-_t1              		EQU	RAM_START + 02Eh
-; U:\AWESOMECUBE-MASTER\FINAL PROGRAM\MIKE FINAL PROGRAM.PBP	00001	A00050	'****************************************************************
-T1              		EQU	RAM_START + 030h
-; U:\AWESOMECUBE-MASTER\FINAL PROGRAM\MIKE FINAL PROGRAM.PBP	00018	A00052	t1 var word:t2 var word:t3 var word:t4 var word:t5 var word:t6 var word:t7 var word
-_t2              		EQU	RAM_START + 032h
-; U:\AWESOMECUBE-MASTER\FINAL PROGRAM\MIKE FINAL PROGRAM.PBP	00018	A00054	t1 var word:t2 var word:t3 var word:t4 var word:t5 var word:t6 var word:t7 var word
-_t3              		EQU	RAM_START + 034h
-; U:\AWESOMECUBE-MASTER\FINAL PROGRAM\MIKE FINAL PROGRAM.PBP	00018	A00056	t1 var word:t2 var word:t3 var word:t4 var word:t5 var word:t6 var word:t7 var word
-_t4              		EQU	RAM_START + 036h
-; U:\AWESOMECUBE-MASTER\FINAL PROGRAM\MIKE FINAL PROGRAM.PBP	00018	A00058	t1 var word:t2 var word:t3 var word:t4 var word:t5 var word:t6 var word:t7 var word
-_t5              		EQU	RAM_START + 038h
-; U:\AWESOMECUBE-MASTER\FINAL PROGRAM\MIKE FINAL PROGRAM.PBP	00018	A0005A	t1 var word:t2 var word:t3 var word:t4 var word:t5 var word:t6 var word:t7 var word
-_t6              		EQU	RAM_START + 03Ah
-; U:\AWESOMECUBE-MASTER\FINAL PROGRAM\MIKE FINAL PROGRAM.PBP	00018	A0005C	t1 var word:t2 var word:t3 var word:t4 var word:t5 var word:t6 var word:t7 var word
-_t7              		EQU	RAM_START + 03Ch
-; U:\AWESOMECUBE-MASTER\FINAL PROGRAM\MIKE FINAL PROGRAM.PBP	00017	A0005E	w1 var word:w2 var word:w3 var word:w4 var word:w5 var word:w6 var word:w7 var word
-_w1              		EQU	RAM_START + 03Eh
-; U:\AWESOMECUBE-MASTER\FINAL PROGRAM\MIKE FINAL PROGRAM.PBP	00017	A00060	w1 var word:w2 var word:w3 var word:w4 var word:w5 var word:w6 var word:w7 var word
-_w2              		EQU	RAM_START + 040h
-; U:\AWESOMECUBE-MASTER\FINAL PROGRAM\MIKE FINAL PROGRAM.PBP	00017	A00062	w1 var word:w2 var word:w3 var word:w4 var word:w5 var word:w6 var word:w7 var word
-_w3              		EQU	RAM_START + 042h
-; U:\AWESOMECUBE-MASTER\FINAL PROGRAM\MIKE FINAL PROGRAM.PBP	00017	A00064	w1 var word:w2 var word:w3 var word:w4 var word:w5 var word:w6 var word:w7 var word
-_w4              		EQU	RAM_START + 044h
-; U:\AWESOMECUBE-MASTER\FINAL PROGRAM\MIKE FINAL PROGRAM.PBP	00017	A00066	w1 var word:w2 var word:w3 var word:w4 var word:w5 var word:w6 var word:w7 var word
-_w5              		EQU	RAM_START + 046h
-; U:\AWESOMECUBE-MASTER\FINAL PROGRAM\MIKE FINAL PROGRAM.PBP	00017	A00068	w1 var word:w2 var word:w3 var word:w4 var word:w5 var word:w6 var word:w7 var word
-_w6              		EQU	RAM_START + 048h
-; U:\AWESOMECUBE-MASTER\FINAL PROGRAM\MIKE FINAL PROGRAM.PBP	00017	A0006A	w1 var word:w2 var word:w3 var word:w4 var word:w5 var word:w6 var word:w7 var word
-_w7              		EQU	RAM_START + 04Ah
-; U:\AWESOMECUBE-MASTER\FINAL PROGRAM\MIKE FINAL PROGRAM.PBP	00020	A0006C	x1 var word:x2 var word:x3 var word:x4 var word:x5 var word:x6 var word:x7 var word:x8 var word:x9 var word:x10 var word
-_x1              		EQU	RAM_START + 04Ch
-; U:\AWESOMECUBE-MASTER\FINAL PROGRAM\MIKE FINAL PROGRAM.PBP	00020	A0006E	x1 var word:x2 var word:x3 var word:x4 var word:x5 var word:x6 var word:x7 var word:x8 var word:x9 var word:x10 var word
-_x10             		EQU	RAM_START + 04Eh
-; U:\AWESOMECUBE-MASTER\FINAL PROGRAM\MIKE FINAL PROGRAM.PBP	00020	A00070	x1 var word:x2 var word:x3 var word:x4 var word:x5 var word:x6 var word:x7 var word:x8 var word:x9 var word:x10 var word
-_x2              		EQU	RAM_START + 050h
-; U:\AWESOMECUBE-MASTER\FINAL PROGRAM\MIKE FINAL PROGRAM.PBP	00020	A00072	x1 var word:x2 var word:x3 var word:x4 var word:x5 var word:x6 var word:x7 var word:x8 var word:x9 var word:x10 var word
-_x3              		EQU	RAM_START + 052h
-; U:\AWESOMECUBE-MASTER\FINAL PROGRAM\MIKE FINAL PROGRAM.PBP	00020	A00074	x1 var word:x2 var word:x3 var word:x4 var word:x5 var word:x6 var word:x7 var word:x8 var word:x9 var word:x10 var word
-_x4              		EQU	RAM_START + 054h
-; U:\AWESOMECUBE-MASTER\FINAL PROGRAM\MIKE FINAL PROGRAM.PBP	00020	A00076	x1 var word:x2 var word:x3 var word:x4 var word:x5 var word:x6 var word:x7 var word:x8 var word:x9 var word:x10 var word
-_x5              		EQU	RAM_START + 056h
-; U:\AWESOMECUBE-MASTER\FINAL PROGRAM\MIKE FINAL PROGRAM.PBP	00020	A00078	x1 var word:x2 var word:x3 var word:x4 var word:x5 var word:x6 var word:x7 var word:x8 var word:x9 var word:x10 var word
-_x6              		EQU	RAM_START + 058h
-; U:\AWESOMECUBE-MASTER\FINAL PROGRAM\MIKE FINAL PROGRAM.PBP	00020	A0007A	x1 var word:x2 var word:x3 var word:x4 var word:x5 var word:x6 var word:x7 var word:x8 var word:x9 var word:x10 var word
-_x7              		EQU	RAM_START + 05Ah
-; U:\AWESOMECUBE-MASTER\FINAL PROGRAM\MIKE FINAL PROGRAM.PBP	00020	A0007C	x1 var word:x2 var word:x3 var word:x4 var word:x5 var word:x6 var word:x7 var word:x8 var word:x9 var word:x10 var word
-_x8              		EQU	RAM_START + 05Ch
-; U:\AWESOMECUBE-MASTER\FINAL PROGRAM\MIKE FINAL PROGRAM.PBP	00020	A0007E	x1 var word:x2 var word:x3 var word:x4 var word:x5 var word:x6 var word:x7 var word:x8 var word:x9 var word:x10 var word
-_x9              		EQU	RAM_START + 05Eh
+; U:\AWESOMECUBE-MASTER\FINAL PROGRAM\MIKE FINAL PROGRAM.PBP	00027	A00038	forstart var word:forstop var word:c_crest var word:a_crest var word
+_a_crest         		EQU	RAM_START + 018h
+; U:\AWESOMECUBE-MASTER\FINAL PROGRAM\MIKE FINAL PROGRAM.PBP	00024	A0003A	a_fadein var word:a_fadeout var word
+_a_fadein        		EQU	RAM_START + 01Ah
+; U:\AWESOMECUBE-MASTER\FINAL PROGRAM\MIKE FINAL PROGRAM.PBP	00024	A0003C	a_fadein var word:a_fadeout var word
+_a_fadeout       		EQU	RAM_START + 01Ch
+; U:\AWESOMECUBE-MASTER\FINAL PROGRAM\MIKE FINAL PROGRAM.PBP	00026	A0003E	a_trough var word:c_trough var word
+_a_trough        		EQU	RAM_START + 01Eh
+; U:\AWESOMECUBE-MASTER\FINAL PROGRAM\MIKE FINAL PROGRAM.PBP	00027	A00040	forstart var word:forstop var word:c_crest var word:a_crest var word
+_c_crest         		EQU	RAM_START + 020h
+; U:\AWESOMECUBE-MASTER\FINAL PROGRAM\MIKE FINAL PROGRAM.PBP	00023	A00042	t_on var word:t_off var word:t_on1 var word:t_off1 var word:i var word:zzz var word:xxx var word:c_fadein var word:c_fadeout var word
+_c_fadein        		EQU	RAM_START + 022h
+; U:\AWESOMECUBE-MASTER\FINAL PROGRAM\MIKE FINAL PROGRAM.PBP	00023	A00044	t_on var word:t_off var word:t_on1 var word:t_off1 var word:i var word:zzz var word:xxx var word:c_fadein var word:c_fadeout var word
+_c_fadeout       		EQU	RAM_START + 024h
+; U:\AWESOMECUBE-MASTER\FINAL PROGRAM\MIKE FINAL PROGRAM.PBP	00026	A00046	a_trough var word:c_trough var word
+_c_trough        		EQU	RAM_START + 026h
+; U:\AWESOMECUBE-MASTER\FINAL PROGRAM\MIKE FINAL PROGRAM.PBP	00025	A00048	x1fadestep var word:fadestep var word
+_fadestep        		EQU	RAM_START + 028h
+; U:\AWESOMECUBE-MASTER\FINAL PROGRAM\MIKE FINAL PROGRAM.PBP	00027	A0004A	forstart var word:forstop var word:c_crest var word:a_crest var word
+_forstart        		EQU	RAM_START + 02Ah
+; U:\AWESOMECUBE-MASTER\FINAL PROGRAM\MIKE FINAL PROGRAM.PBP	00027	A0004C	forstart var word:forstop var word:c_crest var word:a_crest var word
+_forstop         		EQU	RAM_START + 02Ch
+; U:\AWESOMECUBE-MASTER\FINAL PROGRAM\MIKE FINAL PROGRAM.PBP	00023	A0004E	t_on var word:t_off var word:t_on1 var word:t_off1 var word:i var word:zzz var word:xxx var word:c_fadein var word:c_fadeout var word
+_i               		EQU	RAM_START + 02Eh
+; U:\AWESOMECUBE-MASTER\FINAL PROGRAM\MIKE FINAL PROGRAM.PBP	00021	A00050	m var word:m1 var word:m2 var word:m3 var word
+_m               		EQU	RAM_START + 030h
+; U:\AWESOMECUBE-MASTER\FINAL PROGRAM\MIKE FINAL PROGRAM.PBP	00021	A00052	m var word:m1 var word:m2 var word:m3 var word
+_m1              		EQU	RAM_START + 032h
+; U:\AWESOMECUBE-MASTER\FINAL PROGRAM\MIKE FINAL PROGRAM.PBP	00021	A00054	m var word:m1 var word:m2 var word:m3 var word
+_m2              		EQU	RAM_START + 034h
+; U:\AWESOMECUBE-MASTER\FINAL PROGRAM\MIKE FINAL PROGRAM.PBP	00021	A00056	m var word:m1 var word:m2 var word:m3 var word
+_m3              		EQU	RAM_START + 036h
+; U:\AWESOMECUBE-MASTER\FINAL PROGRAM\MIKE FINAL PROGRAM.PBP	00019	A00058	n1 var word:n2 var word:n3 var word:n4 var word:n5 var word:n6 var word:n7 var word:n8 var word
+_n1              		EQU	RAM_START + 038h
+; U:\AWESOMECUBE-MASTER\FINAL PROGRAM\MIKE FINAL PROGRAM.PBP	00019	A0005A	n1 var word:n2 var word:n3 var word:n4 var word:n5 var word:n6 var word:n7 var word:n8 var word
+_n2              		EQU	RAM_START + 03Ah
+; U:\AWESOMECUBE-MASTER\FINAL PROGRAM\MIKE FINAL PROGRAM.PBP	00019	A0005C	n1 var word:n2 var word:n3 var word:n4 var word:n5 var word:n6 var word:n7 var word:n8 var word
+_n3              		EQU	RAM_START + 03Ch
+; U:\AWESOMECUBE-MASTER\FINAL PROGRAM\MIKE FINAL PROGRAM.PBP	00019	A0005E	n1 var word:n2 var word:n3 var word:n4 var word:n5 var word:n6 var word:n7 var word:n8 var word
+_n4              		EQU	RAM_START + 03Eh
+; U:\AWESOMECUBE-MASTER\FINAL PROGRAM\MIKE FINAL PROGRAM.PBP	00019	A00060	n1 var word:n2 var word:n3 var word:n4 var word:n5 var word:n6 var word:n7 var word:n8 var word
+_n5              		EQU	RAM_START + 040h
+; U:\AWESOMECUBE-MASTER\FINAL PROGRAM\MIKE FINAL PROGRAM.PBP	00019	A00062	n1 var word:n2 var word:n3 var word:n4 var word:n5 var word:n6 var word:n7 var word:n8 var word
+_n6              		EQU	RAM_START + 042h
+; U:\AWESOMECUBE-MASTER\FINAL PROGRAM\MIKE FINAL PROGRAM.PBP	00019	A00064	n1 var word:n2 var word:n3 var word:n4 var word:n5 var word:n6 var word:n7 var word:n8 var word
+_n7              		EQU	RAM_START + 044h
+; U:\AWESOMECUBE-MASTER\FINAL PROGRAM\MIKE FINAL PROGRAM.PBP	00019	A00066	n1 var word:n2 var word:n3 var word:n4 var word:n5 var word:n6 var word:n7 var word:n8 var word
+_n8              		EQU	RAM_START + 046h
+; U:\AWESOMECUBE-MASTER\FINAL PROGRAM\MIKE FINAL PROGRAM.PBP	00022	A00068	t_inc var word:t_dec var word:speed var word
+_speed           		EQU	RAM_START + 048h
+; U:\AWESOMECUBE-MASTER\FINAL PROGRAM\MIKE FINAL PROGRAM.PBP	00028	A0006A	startvalue var word:stopvalue var word
+_startvalue      		EQU	RAM_START + 04Ah
+; U:\AWESOMECUBE-MASTER\FINAL PROGRAM\MIKE FINAL PROGRAM.PBP	00028	A0006C	startvalue var word:stopvalue var word
+_stopvalue       		EQU	RAM_START + 04Ch
+; U:\AWESOMECUBE-MASTER\FINAL PROGRAM\MIKE FINAL PROGRAM.PBP	00018	A0006E	t1 var word:t2 var word:t3 var word:t4 var word:t5 var word:t6 var word:t7 var word:t8 var word:t9 var word
+_t1              		EQU	RAM_START + 04Eh
+; U:\AWESOMECUBE-MASTER\FINAL PROGRAM\MIKE FINAL PROGRAM.PBP	00001	A00070	'****************************************************************
+T1              		EQU	RAM_START + 050h
+; U:\AWESOMECUBE-MASTER\FINAL PROGRAM\MIKE FINAL PROGRAM.PBP	00018	A00072	t1 var word:t2 var word:t3 var word:t4 var word:t5 var word:t6 var word:t7 var word:t8 var word:t9 var word
+_t2              		EQU	RAM_START + 052h
+; U:\AWESOMECUBE-MASTER\FINAL PROGRAM\MIKE FINAL PROGRAM.PBP	00018	A00074	t1 var word:t2 var word:t3 var word:t4 var word:t5 var word:t6 var word:t7 var word:t8 var word:t9 var word
+_t3              		EQU	RAM_START + 054h
+; U:\AWESOMECUBE-MASTER\FINAL PROGRAM\MIKE FINAL PROGRAM.PBP	00018	A00076	t1 var word:t2 var word:t3 var word:t4 var word:t5 var word:t6 var word:t7 var word:t8 var word:t9 var word
+_t4              		EQU	RAM_START + 056h
+; U:\AWESOMECUBE-MASTER\FINAL PROGRAM\MIKE FINAL PROGRAM.PBP	00018	A00078	t1 var word:t2 var word:t3 var word:t4 var word:t5 var word:t6 var word:t7 var word:t8 var word:t9 var word
+_t5              		EQU	RAM_START + 058h
+; U:\AWESOMECUBE-MASTER\FINAL PROGRAM\MIKE FINAL PROGRAM.PBP	00018	A0007A	t1 var word:t2 var word:t3 var word:t4 var word:t5 var word:t6 var word:t7 var word:t8 var word:t9 var word
+_t6              		EQU	RAM_START + 05Ah
+; U:\AWESOMECUBE-MASTER\FINAL PROGRAM\MIKE FINAL PROGRAM.PBP	00018	A0007C	t1 var word:t2 var word:t3 var word:t4 var word:t5 var word:t6 var word:t7 var word:t8 var word:t9 var word
+_t7              		EQU	RAM_START + 05Ch
+; U:\AWESOMECUBE-MASTER\FINAL PROGRAM\MIKE FINAL PROGRAM.PBP	00018	A0007E	t1 var word:t2 var word:t3 var word:t4 var word:t5 var word:t6 var word:t7 var word:t8 var word:t9 var word
+_t8              		EQU	RAM_START + 05Eh
+; U:\AWESOMECUBE-MASTER\FINAL PROGRAM\MIKE FINAL PROGRAM.PBP	00018	A000A0	t1 var word:t2 var word:t3 var word:t4 var word:t5 var word:t6 var word:t7 var word:t8 var word:t9 var word
+_t9              		EQU	RAM_START + 080h
+; U:\AWESOMECUBE-MASTER\FINAL PROGRAM\MIKE FINAL PROGRAM.PBP	00022	A000A2	t_inc var word:t_dec var word:speed var word
+_t_dec           		EQU	RAM_START + 082h
+; U:\AWESOMECUBE-MASTER\FINAL PROGRAM\MIKE FINAL PROGRAM.PBP	00022	A000A4	t_inc var word:t_dec var word:speed var word
+_t_inc           		EQU	RAM_START + 084h
+; U:\AWESOMECUBE-MASTER\FINAL PROGRAM\MIKE FINAL PROGRAM.PBP	00023	A000A6	t_on var word:t_off var word:t_on1 var word:t_off1 var word:i var word:zzz var word:xxx var word:c_fadein var word:c_fadeout var word
+_t_off           		EQU	RAM_START + 086h
+; U:\AWESOMECUBE-MASTER\FINAL PROGRAM\MIKE FINAL PROGRAM.PBP	00023	A000A8	t_on var word:t_off var word:t_on1 var word:t_off1 var word:i var word:zzz var word:xxx var word:c_fadein var word:c_fadeout var word
+_t_off1          		EQU	RAM_START + 088h
+; U:\AWESOMECUBE-MASTER\FINAL PROGRAM\MIKE FINAL PROGRAM.PBP	00023	A000AA	t_on var word:t_off var word:t_on1 var word:t_off1 var word:i var word:zzz var word:xxx var word:c_fadein var word:c_fadeout var word
+_t_on            		EQU	RAM_START + 08Ah
+; U:\AWESOMECUBE-MASTER\FINAL PROGRAM\MIKE FINAL PROGRAM.PBP	00023	A000AC	t_on var word:t_off var word:t_on1 var word:t_off1 var word:i var word:zzz var word:xxx var word:c_fadein var word:c_fadeout var word
+_t_on1           		EQU	RAM_START + 08Ch
+; U:\AWESOMECUBE-MASTER\FINAL PROGRAM\MIKE FINAL PROGRAM.PBP	00017	A000AE	w1 var word:w2 var word:w3 var word:w4 var word:w5 var word:w6 var word:w7 var word
+_w1              		EQU	RAM_START + 08Eh
+; U:\AWESOMECUBE-MASTER\FINAL PROGRAM\MIKE FINAL PROGRAM.PBP	00017	A000B0	w1 var word:w2 var word:w3 var word:w4 var word:w5 var word:w6 var word:w7 var word
+_w2              		EQU	RAM_START + 090h
+; U:\AWESOMECUBE-MASTER\FINAL PROGRAM\MIKE FINAL PROGRAM.PBP	00017	A000B2	w1 var word:w2 var word:w3 var word:w4 var word:w5 var word:w6 var word:w7 var word
+_w3              		EQU	RAM_START + 092h
+; U:\AWESOMECUBE-MASTER\FINAL PROGRAM\MIKE FINAL PROGRAM.PBP	00017	A000B4	w1 var word:w2 var word:w3 var word:w4 var word:w5 var word:w6 var word:w7 var word
+_w4              		EQU	RAM_START + 094h
+; U:\AWESOMECUBE-MASTER\FINAL PROGRAM\MIKE FINAL PROGRAM.PBP	00017	A000B6	w1 var word:w2 var word:w3 var word:w4 var word:w5 var word:w6 var word:w7 var word
+_w5              		EQU	RAM_START + 096h
+; U:\AWESOMECUBE-MASTER\FINAL PROGRAM\MIKE FINAL PROGRAM.PBP	00017	A000B8	w1 var word:w2 var word:w3 var word:w4 var word:w5 var word:w6 var word:w7 var word
+_w6              		EQU	RAM_START + 098h
+; U:\AWESOMECUBE-MASTER\FINAL PROGRAM\MIKE FINAL PROGRAM.PBP	00017	A000BA	w1 var word:w2 var word:w3 var word:w4 var word:w5 var word:w6 var word:w7 var word
+_w7              		EQU	RAM_START + 09Ah
+; U:\AWESOMECUBE-MASTER\FINAL PROGRAM\MIKE FINAL PROGRAM.PBP	00020	A000BC	x1 var word:x2 var word:x3 var word:x4 var word:x5 var word:x6 var word:x7 var word:x8 var word:x9 var word:x10 var word
+_x1              		EQU	RAM_START + 09Ch
+; U:\AWESOMECUBE-MASTER\FINAL PROGRAM\MIKE FINAL PROGRAM.PBP	00020	A000BE	x1 var word:x2 var word:x3 var word:x4 var word:x5 var word:x6 var word:x7 var word:x8 var word:x9 var word:x10 var word
+_x10             		EQU	RAM_START + 09Eh
+; U:\AWESOMECUBE-MASTER\FINAL PROGRAM\MIKE FINAL PROGRAM.PBP	00025	A000C0	x1fadestep var word:fadestep var word
+_x1fadestep      		EQU	RAM_START + 0A0h
+; U:\AWESOMECUBE-MASTER\FINAL PROGRAM\MIKE FINAL PROGRAM.PBP	00020	A000C2	x1 var word:x2 var word:x3 var word:x4 var word:x5 var word:x6 var word:x7 var word:x8 var word:x9 var word:x10 var word
+_x2              		EQU	RAM_START + 0A2h
+; U:\AWESOMECUBE-MASTER\FINAL PROGRAM\MIKE FINAL PROGRAM.PBP	00020	A000C4	x1 var word:x2 var word:x3 var word:x4 var word:x5 var word:x6 var word:x7 var word:x8 var word:x9 var word:x10 var word
+_x3              		EQU	RAM_START + 0A4h
+; U:\AWESOMECUBE-MASTER\FINAL PROGRAM\MIKE FINAL PROGRAM.PBP	00020	A000C6	x1 var word:x2 var word:x3 var word:x4 var word:x5 var word:x6 var word:x7 var word:x8 var word:x9 var word:x10 var word
+_x4              		EQU	RAM_START + 0A6h
+; U:\AWESOMECUBE-MASTER\FINAL PROGRAM\MIKE FINAL PROGRAM.PBP	00020	A000C8	x1 var word:x2 var word:x3 var word:x4 var word:x5 var word:x6 var word:x7 var word:x8 var word:x9 var word:x10 var word
+_x5              		EQU	RAM_START + 0A8h
+; U:\AWESOMECUBE-MASTER\FINAL PROGRAM\MIKE FINAL PROGRAM.PBP	00020	A000CA	x1 var word:x2 var word:x3 var word:x4 var word:x5 var word:x6 var word:x7 var word:x8 var word:x9 var word:x10 var word
+_x6              		EQU	RAM_START + 0AAh
+; U:\AWESOMECUBE-MASTER\FINAL PROGRAM\MIKE FINAL PROGRAM.PBP	00020	A000CC	x1 var word:x2 var word:x3 var word:x4 var word:x5 var word:x6 var word:x7 var word:x8 var word:x9 var word:x10 var word
+_x7              		EQU	RAM_START + 0ACh
+; U:\AWESOMECUBE-MASTER\FINAL PROGRAM\MIKE FINAL PROGRAM.PBP	00020	A000CE	x1 var word:x2 var word:x3 var word:x4 var word:x5 var word:x6 var word:x7 var word:x8 var word:x9 var word:x10 var word
+_x8              		EQU	RAM_START + 0AEh
+; U:\AWESOMECUBE-MASTER\FINAL PROGRAM\MIKE FINAL PROGRAM.PBP	00020	A000D0	x1 var word:x2 var word:x3 var word:x4 var word:x5 var word:x6 var word:x7 var word:x8 var word:x9 var word:x10 var word
+_x9              		EQU	RAM_START + 0B0h
+; U:\AWESOMECUBE-MASTER\FINAL PROGRAM\MIKE FINAL PROGRAM.PBP	00023	A000D2	t_on var word:t_off var word:t_on1 var word:t_off1 var word:i var word:zzz var word:xxx var word:c_fadein var word:c_fadeout var word
+_xxx             		EQU	RAM_START + 0B2h
+; U:\AWESOMECUBE-MASTER\FINAL PROGRAM\MIKE FINAL PROGRAM.PBP	00023	A000D4	t_on var word:t_off var word:t_on1 var word:t_off1 var word:i var word:zzz var word:xxx var word:c_fadein var word:c_fadeout var word
+_zzz             		EQU	RAM_START + 0B4h
 ; C:\PROGRAM FILES\PBP3\DEVICES\PIC16F688.PBPINC	00145	PORTL   VAR     PORTA
 _PORTL           		EQU	 PORTA
 ; C:\PROGRAM FILES\PBP3\DEVICES\PIC16F688.PBPINC	00146	PORTH   VAR     PORTC
@@ -188,36 +242,36 @@ _C               		EQU	 PORTC
 ; U:\AWESOMECUBE-MASTER\FINAL PROGRAM\MIKE FINAL PROGRAM.PBP	00012	trisa = 0
 	MOVE?CB	000h, TRISA
 
-; U:\AWESOMECUBE-MASTER\FINAL PROGRAM\MIKE FINAL PROGRAM.PBP	00023	do
-	LABEL?L	L00005	
+; U:\AWESOMECUBE-MASTER\FINAL PROGRAM\MIKE FINAL PROGRAM.PBP	00030	do
+	LABEL?L	L00014	
 
-; U:\AWESOMECUBE-MASTER\FINAL PROGRAM\MIKE FINAL PROGRAM.PBP	00024	        random m
+; U:\AWESOMECUBE-MASTER\FINAL PROGRAM\MIKE FINAL PROGRAM.PBP	00031	        random m
 	RANDOM?W	_m
 
-; U:\AWESOMECUBE-MASTER\FINAL PROGRAM\MIKE FINAL PROGRAM.PBP	00025	        m1=m//8
-	MOD?WCW	_m, 008h, _m1
+; U:\AWESOMECUBE-MASTER\FINAL PROGRAM\MIKE FINAL PROGRAM.PBP	00032	        m1=m//13
+	MOD?WCW	_m, 00Dh, _m1
 
-; U:\AWESOMECUBE-MASTER\FINAL PROGRAM\MIKE FINAL PROGRAM.PBP	00026	        m2=m1+1
+; U:\AWESOMECUBE-MASTER\FINAL PROGRAM\MIKE FINAL PROGRAM.PBP	00033	        m2=m1+1
 	ADD?WCW	_m1, 001h, _m2
 
-; U:\AWESOMECUBE-MASTER\FINAL PROGRAM\MIKE FINAL PROGRAM.PBP	00028	        select case m2
+; U:\AWESOMECUBE-MASTER\FINAL PROGRAM\MIKE FINAL PROGRAM.PBP	00035	        select case m2
 
-; U:\AWESOMECUBE-MASTER\FINAL PROGRAM\MIKE FINAL PROGRAM.PBP	00030	                case 1
-	CMPNE?WCL	_m2, 001h, L00009
+; U:\AWESOMECUBE-MASTER\FINAL PROGRAM\MIKE FINAL PROGRAM.PBP	00037	                case 1
+	CMPNE?WCL	_m2, 001h, L00018
 
-; U:\AWESOMECUBE-MASTER\FINAL PROGRAM\MIKE FINAL PROGRAM.PBP	00031	                    x2=x2+1
+; U:\AWESOMECUBE-MASTER\FINAL PROGRAM\MIKE FINAL PROGRAM.PBP	00038	                    x2=x2+1
 	ADD?WCW	_x2, 001h, _x2
 
-; U:\AWESOMECUBE-MASTER\FINAL PROGRAM\MIKE FINAL PROGRAM.PBP	00032	                    if x2>5 then
-	CMPLE?WCL	_x2, 005h, L00010
+; U:\AWESOMECUBE-MASTER\FINAL PROGRAM\MIKE FINAL PROGRAM.PBP	00039	                    if x2>5 then
+	CMPLE?WCL	_x2, 005h, L00019
 
-; U:\AWESOMECUBE-MASTER\FINAL PROGRAM\MIKE FINAL PROGRAM.PBP	00033	                        x2=0
+; U:\AWESOMECUBE-MASTER\FINAL PROGRAM\MIKE FINAL PROGRAM.PBP	00040	                        x2=0
 	MOVE?CW	000h, _x2
 
-; U:\AWESOMECUBE-MASTER\FINAL PROGRAM\MIKE FINAL PROGRAM.PBP	00034	                    endif
-	LABEL?L	L00010	
+; U:\AWESOMECUBE-MASTER\FINAL PROGRAM\MIKE FINAL PROGRAM.PBP	00041	                    endif
+	LABEL?L	L00019	
 
-; U:\AWESOMECUBE-MASTER\FINAL PROGRAM\MIKE FINAL PROGRAM.PBP	00036	                    lookup2 x2, [90,250,100,50,150], t1 
+; U:\AWESOMECUBE-MASTER\FINAL PROGRAM\MIKE FINAL PROGRAM.PBP	00043	                    lookup2 x2, [90,250,100,50,150], t1 
 	LOOKUP2?WCLW	_x2, 005h, L00001, _t1
 	LU2RET?C	05Ah
 	LU2RET?C	0FAh
@@ -227,45 +281,45 @@ _C               		EQU	 PORTC
 
 	LABEL?L	L00001	
 
-; U:\AWESOMECUBE-MASTER\FINAL PROGRAM\MIKE FINAL PROGRAM.PBP	00038	                    Random x3 
+; U:\AWESOMECUBE-MASTER\FINAL PROGRAM\MIKE FINAL PROGRAM.PBP	00045	                    Random x3 
 	RANDOM?W	_x3
 
-; U:\AWESOMECUBE-MASTER\FINAL PROGRAM\MIKE FINAL PROGRAM.PBP	00039	                    x4=x3//10
+; U:\AWESOMECUBE-MASTER\FINAL PROGRAM\MIKE FINAL PROGRAM.PBP	00046	                    x4=x3//10
 	MOD?WCW	_x3, 00Ah, _x4
 
-; U:\AWESOMECUBE-MASTER\FINAL PROGRAM\MIKE FINAL PROGRAM.PBP	00040	                    x5=x4+1
+; U:\AWESOMECUBE-MASTER\FINAL PROGRAM\MIKE FINAL PROGRAM.PBP	00047	                    x5=x4+1
 	ADD?WCW	_x4, 001h, _x5
 
-; U:\AWESOMECUBE-MASTER\FINAL PROGRAM\MIKE FINAL PROGRAM.PBP	00041	                    for n1=0 to x5
+; U:\AWESOMECUBE-MASTER\FINAL PROGRAM\MIKE FINAL PROGRAM.PBP	00048	                    for n1=0 to x5
 	MOVE?CW	000h, _n1
-	LABEL?L	L00012	
-	CMPGT?WWL	_n1, _x5, L00013
+	LABEL?L	L00021	
+	CMPGT?WWL	_n1, _x5, L00022
 
-; U:\AWESOMECUBE-MASTER\FINAL PROGRAM\MIKE FINAL PROGRAM.PBP	00042	                        gosub left_to_right
+; U:\AWESOMECUBE-MASTER\FINAL PROGRAM\MIKE FINAL PROGRAM.PBP	00049	                        gosub left_to_right
 	GOSUB?L	_left_to_right
 
-; U:\AWESOMECUBE-MASTER\FINAL PROGRAM\MIKE FINAL PROGRAM.PBP	00043	                    next n1
-	NEXT?WCL	_n1, 001h, L00012
-	LABEL?L	L00013	
+; U:\AWESOMECUBE-MASTER\FINAL PROGRAM\MIKE FINAL PROGRAM.PBP	00050	                    next n1
+	NEXT?WCL	_n1, 001h, L00021
+	LABEL?L	L00022	
 
-; U:\AWESOMECUBE-MASTER\FINAL PROGRAM\MIKE FINAL PROGRAM.PBP	00044	                case 2
-	GOTO?L	L00008
-	LABEL?L	L00009	
-	CMPNE?WCL	_m2, 002h, L00014
+; U:\AWESOMECUBE-MASTER\FINAL PROGRAM\MIKE FINAL PROGRAM.PBP	00051	                case 2
+	GOTO?L	L00017
+	LABEL?L	L00018	
+	CMPNE?WCL	_m2, 002h, L00023
 
-; U:\AWESOMECUBE-MASTER\FINAL PROGRAM\MIKE FINAL PROGRAM.PBP	00045	                    x1=x1+1
+; U:\AWESOMECUBE-MASTER\FINAL PROGRAM\MIKE FINAL PROGRAM.PBP	00052	                    x1=x1+1
 	ADD?WCW	_x1, 001h, _x1
 
-; U:\AWESOMECUBE-MASTER\FINAL PROGRAM\MIKE FINAL PROGRAM.PBP	00046	                    if x1>5 then 
-	CMPLE?WCL	_x1, 005h, L00015
+; U:\AWESOMECUBE-MASTER\FINAL PROGRAM\MIKE FINAL PROGRAM.PBP	00053	                    if x1>5 then 
+	CMPLE?WCL	_x1, 005h, L00024
 
-; U:\AWESOMECUBE-MASTER\FINAL PROGRAM\MIKE FINAL PROGRAM.PBP	00047	                        x1=0
+; U:\AWESOMECUBE-MASTER\FINAL PROGRAM\MIKE FINAL PROGRAM.PBP	00054	                        x1=0
 	MOVE?CW	000h, _x1
 
-; U:\AWESOMECUBE-MASTER\FINAL PROGRAM\MIKE FINAL PROGRAM.PBP	00048	                    endif
-	LABEL?L	L00015	
+; U:\AWESOMECUBE-MASTER\FINAL PROGRAM\MIKE FINAL PROGRAM.PBP	00055	                    endif
+	LABEL?L	L00024	
 
-; U:\AWESOMECUBE-MASTER\FINAL PROGRAM\MIKE FINAL PROGRAM.PBP	00050	                    lookup2 x1, [80,200,120,150,70,50], t2
+; U:\AWESOMECUBE-MASTER\FINAL PROGRAM\MIKE FINAL PROGRAM.PBP	00057	                    lookup2 x1, [80,200,120,150,70,50], t2
 	LOOKUP2?WCLW	_x1, 006h, L00002, _t2
 	LU2RET?C	050h
 	LU2RET?C	0C8h
@@ -276,36 +330,36 @@ _C               		EQU	 PORTC
 
 	LABEL?L	L00002	
 
-; U:\AWESOMECUBE-MASTER\FINAL PROGRAM\MIKE FINAL PROGRAM.PBP	00052	                    for n5=1 to 5    
+; U:\AWESOMECUBE-MASTER\FINAL PROGRAM\MIKE FINAL PROGRAM.PBP	00059	                    for n5=1 to 5    
 	MOVE?CW	001h, _n5
-	LABEL?L	L00017	
-	CMPGT?WCL	_n5, 005h, L00018
+	LABEL?L	L00026	
+	CMPGT?WCL	_n5, 005h, L00027
 
-; U:\AWESOMECUBE-MASTER\FINAL PROGRAM\MIKE FINAL PROGRAM.PBP	00053	                        gosub rows
+; U:\AWESOMECUBE-MASTER\FINAL PROGRAM\MIKE FINAL PROGRAM.PBP	00060	                        gosub rows
 	GOSUB?L	_rows
 
-; U:\AWESOMECUBE-MASTER\FINAL PROGRAM\MIKE FINAL PROGRAM.PBP	00054	                    next n5
-	NEXT?WCL	_n5, 001h, L00017
-	LABEL?L	L00018	
+; U:\AWESOMECUBE-MASTER\FINAL PROGRAM\MIKE FINAL PROGRAM.PBP	00061	                    next n5
+	NEXT?WCL	_n5, 001h, L00026
+	LABEL?L	L00027	
 
-; U:\AWESOMECUBE-MASTER\FINAL PROGRAM\MIKE FINAL PROGRAM.PBP	00055	                case 3
-	GOTO?L	L00008
-	LABEL?L	L00014	
-	CMPNE?WCL	_m2, 003h, L00019
+; U:\AWESOMECUBE-MASTER\FINAL PROGRAM\MIKE FINAL PROGRAM.PBP	00062	                case 3
+	GOTO?L	L00017
+	LABEL?L	L00023	
+	CMPNE?WCL	_m2, 003h, L00028
 
-; U:\AWESOMECUBE-MASTER\FINAL PROGRAM\MIKE FINAL PROGRAM.PBP	00057	                x4=x4+1
+; U:\AWESOMECUBE-MASTER\FINAL PROGRAM\MIKE FINAL PROGRAM.PBP	00064	                x4=x4+1
 	ADD?WCW	_x4, 001h, _x4
 
-; U:\AWESOMECUBE-MASTER\FINAL PROGRAM\MIKE FINAL PROGRAM.PBP	00058	                    if x4>5 then
-	CMPLE?WCL	_x4, 005h, L00020
+; U:\AWESOMECUBE-MASTER\FINAL PROGRAM\MIKE FINAL PROGRAM.PBP	00065	                    if x4>5 then
+	CMPLE?WCL	_x4, 005h, L00029
 
-; U:\AWESOMECUBE-MASTER\FINAL PROGRAM\MIKE FINAL PROGRAM.PBP	00059	                        x4=0
+; U:\AWESOMECUBE-MASTER\FINAL PROGRAM\MIKE FINAL PROGRAM.PBP	00066	                        x4=0
 	MOVE?CW	000h, _x4
 
-; U:\AWESOMECUBE-MASTER\FINAL PROGRAM\MIKE FINAL PROGRAM.PBP	00060	                    endif
-	LABEL?L	L00020	
+; U:\AWESOMECUBE-MASTER\FINAL PROGRAM\MIKE FINAL PROGRAM.PBP	00067	                    endif
+	LABEL?L	L00029	
 
-; U:\AWESOMECUBE-MASTER\FINAL PROGRAM\MIKE FINAL PROGRAM.PBP	00062	                    lookup2 x4, [90,250,100,50,150], t3
+; U:\AWESOMECUBE-MASTER\FINAL PROGRAM\MIKE FINAL PROGRAM.PBP	00069	                    lookup2 x4, [90,250,100,50,150], t3
 	LOOKUP2?WCLW	_x4, 005h, L00003, _t3
 	LU2RET?C	05Ah
 	LU2RET?C	0FAh
@@ -315,103 +369,103 @@ _C               		EQU	 PORTC
 
 	LABEL?L	L00003	
 
-; U:\AWESOMECUBE-MASTER\FINAL PROGRAM\MIKE FINAL PROGRAM.PBP	00064	                    Random x6 
+; U:\AWESOMECUBE-MASTER\FINAL PROGRAM\MIKE FINAL PROGRAM.PBP	00071	                    Random x6 
 	RANDOM?W	_x6
 
-; U:\AWESOMECUBE-MASTER\FINAL PROGRAM\MIKE FINAL PROGRAM.PBP	00065	                    x7=x6//10
+; U:\AWESOMECUBE-MASTER\FINAL PROGRAM\MIKE FINAL PROGRAM.PBP	00072	                    x7=x6//10
 	MOD?WCW	_x6, 00Ah, _x7
 
-; U:\AWESOMECUBE-MASTER\FINAL PROGRAM\MIKE FINAL PROGRAM.PBP	00066	                    x8=x7+1
+; U:\AWESOMECUBE-MASTER\FINAL PROGRAM\MIKE FINAL PROGRAM.PBP	00073	                    x8=x7+1
 	ADD?WCW	_x7, 001h, _x8
 
-; U:\AWESOMECUBE-MASTER\FINAL PROGRAM\MIKE FINAL PROGRAM.PBP	00067	                    for n6=1 to x8    
+; U:\AWESOMECUBE-MASTER\FINAL PROGRAM\MIKE FINAL PROGRAM.PBP	00074	                    for n6=1 to x8    
 	MOVE?CW	001h, _n6
-	LABEL?L	L00022	
-	CMPGT?WWL	_n6, _x8, L00023
+	LABEL?L	L00031	
+	CMPGT?WWL	_n6, _x8, L00032
 
-; U:\AWESOMECUBE-MASTER\FINAL PROGRAM\MIKE FINAL PROGRAM.PBP	00068	                        gosub on_off
+; U:\AWESOMECUBE-MASTER\FINAL PROGRAM\MIKE FINAL PROGRAM.PBP	00075	                        gosub on_off
 	GOSUB?L	_on_off
 
-; U:\AWESOMECUBE-MASTER\FINAL PROGRAM\MIKE FINAL PROGRAM.PBP	00069	                    next n6
-	NEXT?WCL	_n6, 001h, L00022
-	LABEL?L	L00023	
-
-; U:\AWESOMECUBE-MASTER\FINAL PROGRAM\MIKE FINAL PROGRAM.PBP	00070	                case 4
-	GOTO?L	L00008
-	LABEL?L	L00019	
-	CMPNE?WCL	_m2, 004h, L00024
-
-; U:\AWESOMECUBE-MASTER\FINAL PROGRAM\MIKE FINAL PROGRAM.PBP	00071	                    For t5 = 400 to 150 step -50
-	MOVE?CW	00190h, _t5
-	LABEL?L	L00025	
-	CMPLT?WCL	_t5, 096h, L00026
-
-; U:\AWESOMECUBE-MASTER\FINAL PROGRAM\MIKE FINAL PROGRAM.PBP	00072	                        gosub center_X_diamond
-	GOSUB?L	_center_X_diamond
-
-; U:\AWESOMECUBE-MASTER\FINAL PROGRAM\MIKE FINAL PROGRAM.PBP	00073	                    Next t5
-	NEXTM?WCL	_t5, 032h, L00025
-	LABEL?L	L00026	
-
-; U:\AWESOMECUBE-MASTER\FINAL PROGRAM\MIKE FINAL PROGRAM.PBP	00075	                    For t5 = 150 to 90 step -10
-	MOVE?CW	096h, _t5
-	LABEL?L	L00027	
-	CMPLT?WCL	_t5, 05Ah, L00028
-
-; U:\AWESOMECUBE-MASTER\FINAL PROGRAM\MIKE FINAL PROGRAM.PBP	00076	                        gosub center_X_diamond
-	GOSUB?L	_center_X_diamond
-
-; U:\AWESOMECUBE-MASTER\FINAL PROGRAM\MIKE FINAL PROGRAM.PBP	00077	                    Next t5
-	NEXTM?WCL	_t5, 00Ah, L00027
-	LABEL?L	L00028	
-
-; U:\AWESOMECUBE-MASTER\FINAL PROGRAM\MIKE FINAL PROGRAM.PBP	00079	                    For n3 = 1 to 7
-	MOVE?CW	001h, _n3
-	LABEL?L	L00029	
-	CMPGT?WCL	_n3, 007h, L00030
-
-; U:\AWESOMECUBE-MASTER\FINAL PROGRAM\MIKE FINAL PROGRAM.PBP	00080	                        gosub center_X_diamond
-	GOSUB?L	_center_X_diamond
-
-; U:\AWESOMECUBE-MASTER\FINAL PROGRAM\MIKE FINAL PROGRAM.PBP	00081	                    Next n3
-	NEXT?WCL	_n3, 001h, L00029
-	LABEL?L	L00030	
-
-; U:\AWESOMECUBE-MASTER\FINAL PROGRAM\MIKE FINAL PROGRAM.PBP	00083	                Case 5
-	GOTO?L	L00008
-	LABEL?L	L00024	
-	CMPNE?WCL	_m2, 005h, L00031
-
-; U:\AWESOMECUBE-MASTER\FINAL PROGRAM\MIKE FINAL PROGRAM.PBP	00084	                for n5=1 to 4
-	MOVE?CW	001h, _n5
+; U:\AWESOMECUBE-MASTER\FINAL PROGRAM\MIKE FINAL PROGRAM.PBP	00076	                    next n6
+	NEXT?WCL	_n6, 001h, L00031
 	LABEL?L	L00032	
-	CMPGT?WCL	_n5, 004h, L00033
 
-; U:\AWESOMECUBE-MASTER\FINAL PROGRAM\MIKE FINAL PROGRAM.PBP	00085	                    gosub random_number
-	GOSUB?L	_random_number
+; U:\AWESOMECUBE-MASTER\FINAL PROGRAM\MIKE FINAL PROGRAM.PBP	00077	                case 4
+	GOTO?L	L00017
+	LABEL?L	L00028	
+	CMPNE?WCL	_m2, 004h, L00033
 
-; U:\AWESOMECUBE-MASTER\FINAL PROGRAM\MIKE FINAL PROGRAM.PBP	00086	                next n5
-	NEXT?WCL	_n5, 001h, L00032
-	LABEL?L	L00033	
+; U:\AWESOMECUBE-MASTER\FINAL PROGRAM\MIKE FINAL PROGRAM.PBP	00078	                    For t5 = 400 to 150 step -50
+	MOVE?CW	00190h, _t5
+	LABEL?L	L00034	
+	CMPLT?WCL	_t5, 096h, L00035
 
-; U:\AWESOMECUBE-MASTER\FINAL PROGRAM\MIKE FINAL PROGRAM.PBP	00088	                case 6
-	GOTO?L	L00008
-	LABEL?L	L00031	
-	CMPNE?WCL	_m2, 006h, L00034
+; U:\AWESOMECUBE-MASTER\FINAL PROGRAM\MIKE FINAL PROGRAM.PBP	00079	                        gosub center_X_diamond
+	GOSUB?L	_center_X_diamond
 
-; U:\AWESOMECUBE-MASTER\FINAL PROGRAM\MIKE FINAL PROGRAM.PBP	00089	                    x9=x9+1
-	ADD?WCW	_x9, 001h, _x9
-
-; U:\AWESOMECUBE-MASTER\FINAL PROGRAM\MIKE FINAL PROGRAM.PBP	00090	                    if x9>5 then 
-	CMPLE?WCL	_x9, 005h, L00035
-
-; U:\AWESOMECUBE-MASTER\FINAL PROGRAM\MIKE FINAL PROGRAM.PBP	00091	                    x9=0
-	MOVE?CW	000h, _x9
-
-; U:\AWESOMECUBE-MASTER\FINAL PROGRAM\MIKE FINAL PROGRAM.PBP	00092	                    endif
+; U:\AWESOMECUBE-MASTER\FINAL PROGRAM\MIKE FINAL PROGRAM.PBP	00080	                    Next t5
+	NEXTM?WCL	_t5, 032h, L00034
 	LABEL?L	L00035	
 
-; U:\AWESOMECUBE-MASTER\FINAL PROGRAM\MIKE FINAL PROGRAM.PBP	00094	                    lookup2 x9, [80,120,100,60,70,65], t6
+; U:\AWESOMECUBE-MASTER\FINAL PROGRAM\MIKE FINAL PROGRAM.PBP	00082	                    For t5 = 150 to 90 step -10
+	MOVE?CW	096h, _t5
+	LABEL?L	L00036	
+	CMPLT?WCL	_t5, 05Ah, L00037
+
+; U:\AWESOMECUBE-MASTER\FINAL PROGRAM\MIKE FINAL PROGRAM.PBP	00083	                        gosub center_X_diamond
+	GOSUB?L	_center_X_diamond
+
+; U:\AWESOMECUBE-MASTER\FINAL PROGRAM\MIKE FINAL PROGRAM.PBP	00084	                    Next t5
+	NEXTM?WCL	_t5, 00Ah, L00036
+	LABEL?L	L00037	
+
+; U:\AWESOMECUBE-MASTER\FINAL PROGRAM\MIKE FINAL PROGRAM.PBP	00086	                    For n3 = 1 to 7
+	MOVE?CW	001h, _n3
+	LABEL?L	L00038	
+	CMPGT?WCL	_n3, 007h, L00039
+
+; U:\AWESOMECUBE-MASTER\FINAL PROGRAM\MIKE FINAL PROGRAM.PBP	00087	                        gosub center_X_diamond
+	GOSUB?L	_center_X_diamond
+
+; U:\AWESOMECUBE-MASTER\FINAL PROGRAM\MIKE FINAL PROGRAM.PBP	00088	                    Next n3
+	NEXT?WCL	_n3, 001h, L00038
+	LABEL?L	L00039	
+
+; U:\AWESOMECUBE-MASTER\FINAL PROGRAM\MIKE FINAL PROGRAM.PBP	00090	                Case 5
+	GOTO?L	L00017
+	LABEL?L	L00033	
+	CMPNE?WCL	_m2, 005h, L00040
+
+; U:\AWESOMECUBE-MASTER\FINAL PROGRAM\MIKE FINAL PROGRAM.PBP	00091	                for n5=1 to 4
+	MOVE?CW	001h, _n5
+	LABEL?L	L00041	
+	CMPGT?WCL	_n5, 004h, L00042
+
+; U:\AWESOMECUBE-MASTER\FINAL PROGRAM\MIKE FINAL PROGRAM.PBP	00092	                    gosub random_number
+	GOSUB?L	_random_number
+
+; U:\AWESOMECUBE-MASTER\FINAL PROGRAM\MIKE FINAL PROGRAM.PBP	00093	                next n5
+	NEXT?WCL	_n5, 001h, L00041
+	LABEL?L	L00042	
+
+; U:\AWESOMECUBE-MASTER\FINAL PROGRAM\MIKE FINAL PROGRAM.PBP	00095	                case 6
+	GOTO?L	L00017
+	LABEL?L	L00040	
+	CMPNE?WCL	_m2, 006h, L00043
+
+; U:\AWESOMECUBE-MASTER\FINAL PROGRAM\MIKE FINAL PROGRAM.PBP	00096	                    x9=x9+1
+	ADD?WCW	_x9, 001h, _x9
+
+; U:\AWESOMECUBE-MASTER\FINAL PROGRAM\MIKE FINAL PROGRAM.PBP	00097	                    if x9>5 then 
+	CMPLE?WCL	_x9, 005h, L00044
+
+; U:\AWESOMECUBE-MASTER\FINAL PROGRAM\MIKE FINAL PROGRAM.PBP	00098	                    x9=0
+	MOVE?CW	000h, _x9
+
+; U:\AWESOMECUBE-MASTER\FINAL PROGRAM\MIKE FINAL PROGRAM.PBP	00099	                    endif
+	LABEL?L	L00044	
+
+; U:\AWESOMECUBE-MASTER\FINAL PROGRAM\MIKE FINAL PROGRAM.PBP	00101	                    lookup2 x9, [80,120,100,60,70,65], t6
 	LOOKUP2?WCLW	_x9, 006h, L00004, _t6
 	LU2RET?C	050h
 	LU2RET?C	078h
@@ -422,361 +476,828 @@ _C               		EQU	 PORTC
 
 	LABEL?L	L00004	
 
-; U:\AWESOMECUBE-MASTER\FINAL PROGRAM\MIKE FINAL PROGRAM.PBP	00096	                    for n6=1 to 5    
+; U:\AWESOMECUBE-MASTER\FINAL PROGRAM\MIKE FINAL PROGRAM.PBP	00103	                    for n6=1 to 5    
 	MOVE?CW	001h, _n6
-	LABEL?L	L00037	
-	CMPGT?WCL	_n6, 005h, L00038
+	LABEL?L	L00046	
+	CMPGT?WCL	_n6, 005h, L00047
 
-; U:\AWESOMECUBE-MASTER\FINAL PROGRAM\MIKE FINAL PROGRAM.PBP	00097	                        gosub X
+; U:\AWESOMECUBE-MASTER\FINAL PROGRAM\MIKE FINAL PROGRAM.PBP	00104	                        gosub X
 	GOSUB?L	_X
 
-; U:\AWESOMECUBE-MASTER\FINAL PROGRAM\MIKE FINAL PROGRAM.PBP	00098	                    next n6
-	NEXT?WCL	_n6, 001h, L00037
-	LABEL?L	L00038	
+; U:\AWESOMECUBE-MASTER\FINAL PROGRAM\MIKE FINAL PROGRAM.PBP	00105	                    next n6
+	NEXT?WCL	_n6, 001h, L00046
+	LABEL?L	L00047	
 
-; U:\AWESOMECUBE-MASTER\FINAL PROGRAM\MIKE FINAL PROGRAM.PBP	00099	                case 7
-	GOTO?L	L00008
-	LABEL?L	L00034	
-	CMPNE?WCL	_m2, 007h, L00039
+; U:\AWESOMECUBE-MASTER\FINAL PROGRAM\MIKE FINAL PROGRAM.PBP	00106	                case 7
+	GOTO?L	L00017
+	LABEL?L	L00043	
+	CMPNE?WCL	_m2, 007h, L00048
 
-; U:\AWESOMECUBE-MASTER\FINAL PROGRAM\MIKE FINAL PROGRAM.PBP	00100	                   for n7=1 to 4
+; U:\AWESOMECUBE-MASTER\FINAL PROGRAM\MIKE FINAL PROGRAM.PBP	00107	                   for n7=1 to 4
 	MOVE?CW	001h, _n7
-	LABEL?L	L00040	
-	CMPGT?WCL	_n7, 004h, L00041
+	LABEL?L	L00049	
+	CMPGT?WCL	_n7, 004h, L00050
 
-; U:\AWESOMECUBE-MASTER\FINAL PROGRAM\MIKE FINAL PROGRAM.PBP	00101	                    gosub Around_the_Cube
+; U:\AWESOMECUBE-MASTER\FINAL PROGRAM\MIKE FINAL PROGRAM.PBP	00108	                    gosub Around_the_Cube
 	GOSUB?L	_Around_the_Cube
 
-; U:\AWESOMECUBE-MASTER\FINAL PROGRAM\MIKE FINAL PROGRAM.PBP	00102	                   next n7
-	NEXT?WCL	_n7, 001h, L00040
-	LABEL?L	L00041	
+; U:\AWESOMECUBE-MASTER\FINAL PROGRAM\MIKE FINAL PROGRAM.PBP	00109	                   next n7
+	NEXT?WCL	_n7, 001h, L00049
+	LABEL?L	L00050	
 
-; U:\AWESOMECUBE-MASTER\FINAL PROGRAM\MIKE FINAL PROGRAM.PBP	00103	                end select
-	LABEL?L	L00039	
-	LABEL?L	L00008	
+; U:\AWESOMECUBE-MASTER\FINAL PROGRAM\MIKE FINAL PROGRAM.PBP	00110	                case 8
+	GOTO?L	L00017
+	LABEL?L	L00048	
+	CMPNE?WCL	_m2, 008h, L00051
 
-; U:\AWESOMECUBE-MASTER\FINAL PROGRAM\MIKE FINAL PROGRAM.PBP	00104	loop
-	GOTO?L	L00005
+; U:\AWESOMECUBE-MASTER\FINAL PROGRAM\MIKE FINAL PROGRAM.PBP	00111	                    for zzz = 0 to 9
+	MOVE?CW	000h, _zzz
+	LABEL?L	L00052	
+	CMPGT?WCL	_zzz, 009h, L00053
+
+; U:\AWESOMECUBE-MASTER\FINAL PROGRAM\MIKE FINAL PROGRAM.PBP	00112	                        lookup zzz, [63,63,63,63,63,63,63,63,63,63], c_crest 'these leds are half lit
+	LOOKUP?WCLW	_zzz, 00Ah, L00005, _c_crest
+	LURET?C	03Fh
+	LURET?C	03Fh
+	LURET?C	03Fh
+	LURET?C	03Fh
+	LURET?C	03Fh
+	LURET?C	03Fh
+	LURET?C	03Fh
+	LURET?C	03Fh
+	LURET?C	03Fh
+	LURET?C	03Fh
+
+	LABEL?L	L00005	
+
+; U:\AWESOMECUBE-MASTER\FINAL PROGRAM\MIKE FINAL PROGRAM.PBP	00113	                        lookup zzz, [ 7, 7, 7, 7, 7, 7, 7, 7, 7, 7], a_crest '
+	LOOKUP?WCLW	_zzz, 00Ah, L00006, _a_crest
+	LURET?C	007h
+	LURET?C	007h
+	LURET?C	007h
+	LURET?C	007h
+	LURET?C	007h
+	LURET?C	007h
+	LURET?C	007h
+	LURET?C	007h
+	LURET?C	007h
+	LURET?C	007h
+
 	LABEL?L	L00006	
 
-; U:\AWESOMECUBE-MASTER\FINAL PROGRAM\MIKE FINAL PROGRAM.PBP	00108	    left_to_right:
+; U:\AWESOMECUBE-MASTER\FINAL PROGRAM\MIKE FINAL PROGRAM.PBP	00114	                        lookup zzz, [ 0, 4, 2, 1, 8,16,32, 0, 0, 0], c_trough' these leds are full lit
+	LOOKUP?WCLW	_zzz, 00Ah, L00007, _c_trough
+	LURET?C	000h
+	LURET?C	004h
+	LURET?C	002h
+	LURET?C	001h
+	LURET?C	008h
+	LURET?C	010h
+	LURET?C	020h
+	LURET?C	000h
+	LURET?C	000h
+	LURET?C	000h
+
+	LABEL?L	L00007	
+
+; U:\AWESOMECUBE-MASTER\FINAL PROGRAM\MIKE FINAL PROGRAM.PBP	00115	                        lookup zzz, [ 0, 0, 0, 0, 0, 0, 0, 4 , 2, 1], a_trough
+	LOOKUP?WCLW	_zzz, 00Ah, L00008, _a_trough
+	LURET?C	000h
+	LURET?C	000h
+	LURET?C	000h
+	LURET?C	000h
+	LURET?C	000h
+	LURET?C	000h
+	LURET?C	000h
+	LURET?C	004h
+	LURET?C	002h
+	LURET?C	001h
+
+	LABEL?L	L00008	
+
+; U:\AWESOMECUBE-MASTER\FINAL PROGRAM\MIKE FINAL PROGRAM.PBP	00116	                        gosub Halflit
+	GOSUB?L	_Halflit
+
+; U:\AWESOMECUBE-MASTER\FINAL PROGRAM\MIKE FINAL PROGRAM.PBP	00117	                    next zzz
+	NEXT?WCL	_zzz, 001h, L00052
+	LABEL?L	L00053	
+
+; U:\AWESOMECUBE-MASTER\FINAL PROGRAM\MIKE FINAL PROGRAM.PBP	00118	                case 9
+	GOTO?L	L00017
+	LABEL?L	L00051	
+	CMPNE?WCL	_m2, 009h, L00054
+
+; U:\AWESOMECUBE-MASTER\FINAL PROGRAM\MIKE FINAL PROGRAM.PBP	00119	                    for xxx = 0 to 9
+	MOVE?CW	000h, _xxx
+	LABEL?L	L00055	
+	CMPGT?WCL	_xxx, 009h, L00056
+
+; U:\AWESOMECUBE-MASTER\FINAL PROGRAM\MIKE FINAL PROGRAM.PBP	00120	                        x1fadestep=x1fadestep+1   
+	ADD?WCW	_x1fadestep, 001h, _x1fadestep
+
+; U:\AWESOMECUBE-MASTER\FINAL PROGRAM\MIKE FINAL PROGRAM.PBP	00121	                        if x1fadestep>5 then
+	CMPLE?WCL	_x1fadestep, 005h, L00057
+
+; U:\AWESOMECUBE-MASTER\FINAL PROGRAM\MIKE FINAL PROGRAM.PBP	00122	                            x1fadestep=0
+	MOVE?CW	000h, _x1fadestep
+
+; U:\AWESOMECUBE-MASTER\FINAL PROGRAM\MIKE FINAL PROGRAM.PBP	00123	                        endif
+	LABEL?L	L00057	
+
+; U:\AWESOMECUBE-MASTER\FINAL PROGRAM\MIKE FINAL PROGRAM.PBP	00124	                        lookup2 x1fadestep, [100,150,200,300,200], fadestep   
+	LOOKUP2?WCLW	_x1fadestep, 005h, L00009, _fadestep
+	LU2RET?C	064h
+	LU2RET?C	096h
+	LU2RET?C	0C8h
+	LU2RET?C	0012Ch
+	LU2RET?C	0C8h
+
+	LABEL?L	L00009	
+
+; U:\AWESOMECUBE-MASTER\FINAL PROGRAM\MIKE FINAL PROGRAM.PBP	00125	                        lookup xxx, [0,6,7,15,31,63,0,0,0,0], c_fadein
+	LOOKUP?WCLW	_xxx, 00Ah, L00010, _c_fadein
+	LURET?C	000h
+	LURET?C	006h
+	LURET?C	007h
+	LURET?C	00Fh
+	LURET?C	01Fh
+	LURET?C	03Fh
+	LURET?C	000h
+	LURET?C	000h
+	LURET?C	000h
+	LURET?C	000h
+
+	LABEL?L	L00010	
+
+; U:\AWESOMECUBE-MASTER\FINAL PROGRAM\MIKE FINAL PROGRAM.PBP	00126	                        lookup xxx, [0,0,0,4,6,7,0,0,0,0], a_fadein
+	LOOKUP?WCLW	_xxx, 00Ah, L00011, _a_fadein
+	LURET?C	000h
+	LURET?C	000h
+	LURET?C	000h
+	LURET?C	004h
+	LURET?C	006h
+	LURET?C	007h
+	LURET?C	000h
+	LURET?C	000h
+	LURET?C	000h
+	LURET?C	000h
+
+	LABEL?L	L00011	
+
+; U:\AWESOMECUBE-MASTER\FINAL PROGRAM\MIKE FINAL PROGRAM.PBP	00127	                        lookup xxx, [0,0,6,7,15,31,63,0,0,0], c_fadeout
+	LOOKUP?WCLW	_xxx, 00Ah, L00012, _c_fadeout
+	LURET?C	000h
+	LURET?C	000h
+	LURET?C	006h
+	LURET?C	007h
+	LURET?C	00Fh
+	LURET?C	01Fh
+	LURET?C	03Fh
+	LURET?C	000h
+	LURET?C	000h
+	LURET?C	000h
+
+	LABEL?L	L00012	
+
+; U:\AWESOMECUBE-MASTER\FINAL PROGRAM\MIKE FINAL PROGRAM.PBP	00128	                        lookup xxx, [0,0,0,0,0,0,0,0,0,0], a_fadeout
+	LOOKUP?WCLW	_xxx, 00Ah, L00013, _a_fadeout
+	LURET?C	000h
+	LURET?C	000h
+	LURET?C	000h
+	LURET?C	000h
+	LURET?C	000h
+	LURET?C	000h
+	LURET?C	000h
+	LURET?C	000h
+	LURET?C	000h
+	LURET?C	000h
+
+	LABEL?L	L00013	
+
+; U:\AWESOMECUBE-MASTER\FINAL PROGRAM\MIKE FINAL PROGRAM.PBP	00129	                    next xxx
+	NEXT?WCL	_xxx, 001h, L00055
+	LABEL?L	L00056	
+
+; U:\AWESOMECUBE-MASTER\FINAL PROGRAM\MIKE FINAL PROGRAM.PBP	00130	                Case 10
+	GOTO?L	L00017
+	LABEL?L	L00054	
+	CMPNE?WCL	_m2, 00Ah, L00059
+
+; U:\AWESOMECUBE-MASTER\FINAL PROGRAM\MIKE FINAL PROGRAM.PBP	00131	                 for w3=200 TO 100 STEP -20
+	MOVE?CW	0C8h, _w3
+	LABEL?L	L00060	
+	CMPLT?WCL	_w3, 064h, L00061
+
+; U:\AWESOMECUBE-MASTER\FINAL PROGRAM\MIKE FINAL PROGRAM.PBP	00132	                    GOSUB CORNERSPIN2
+	GOSUB?L	_CORNERSPIN2
+
+; U:\AWESOMECUBE-MASTER\FINAL PROGRAM\MIKE FINAL PROGRAM.PBP	00133	                 NEXT  w3
+	NEXTM?WCL	_w3, 014h, L00060
+	LABEL?L	L00061	
+
+; U:\AWESOMECUBE-MASTER\FINAL PROGRAM\MIKE FINAL PROGRAM.PBP	00134	                 FOR n8=1 TO 7
+	MOVE?CW	001h, _n8
+	LABEL?L	L00062	
+	CMPGT?WCL	_n8, 007h, L00063
+
+; U:\AWESOMECUBE-MASTER\FINAL PROGRAM\MIKE FINAL PROGRAM.PBP	00135	                    GOSUB CORNERSPIN2
+	GOSUB?L	_CORNERSPIN2
+
+; U:\AWESOMECUBE-MASTER\FINAL PROGRAM\MIKE FINAL PROGRAM.PBP	00136	                 NEXT n8
+	NEXT?WCL	_n8, 001h, L00062
+	LABEL?L	L00063	
+
+; U:\AWESOMECUBE-MASTER\FINAL PROGRAM\MIKE FINAL PROGRAM.PBP	00137	                Case 11
+	GOTO?L	L00017
+	LABEL?L	L00059	
+	CMPNE?WCL	_m2, 00Bh, L00064
+
+; U:\AWESOMECUBE-MASTER\FINAL PROGRAM\MIKE FINAL PROGRAM.PBP	00139	                case 12
+	GOTO?L	L00017
+	LABEL?L	L00064	
+	CMPNE?WCL	_m2, 00Ch, L00065
+
+; U:\AWESOMECUBE-MASTER\FINAL PROGRAM\MIKE FINAL PROGRAM.PBP	00140	                end select
+	LABEL?L	L00065	
+	LABEL?L	L00017	
+
+; U:\AWESOMECUBE-MASTER\FINAL PROGRAM\MIKE FINAL PROGRAM.PBP	00141	loop
+	GOTO?L	L00014
+	LABEL?L	L00015	
+
+; U:\AWESOMECUBE-MASTER\FINAL PROGRAM\MIKE FINAL PROGRAM.PBP	00145	    left_to_right:
 
 	LABEL?L	_left_to_right	
 
-; U:\AWESOMECUBE-MASTER\FINAL PROGRAM\MIKE FINAL PROGRAM.PBP	00109	        A=0:C=0
+; U:\AWESOMECUBE-MASTER\FINAL PROGRAM\MIKE FINAL PROGRAM.PBP	00146	        A=0:C=0
 	MOVE?CB	000h, _A
 
-; U:\AWESOMECUBE-MASTER\FINAL PROGRAM\MIKE FINAL PROGRAM.PBP	00109	        A=0:C=0
+; U:\AWESOMECUBE-MASTER\FINAL PROGRAM\MIKE FINAL PROGRAM.PBP	00146	        A=0:C=0
 	MOVE?CB	000h, _C
 
-; U:\AWESOMECUBE-MASTER\FINAL PROGRAM\MIKE FINAL PROGRAM.PBP	00110	        C=%000100   'C1 on
+; U:\AWESOMECUBE-MASTER\FINAL PROGRAM\MIKE FINAL PROGRAM.PBP	00147	        C=%000100   'C1 on
 	MOVE?CB	004h, _C
 
-; U:\AWESOMECUBE-MASTER\FINAL PROGRAM\MIKE FINAL PROGRAM.PBP	00111	        Pause t1
+; U:\AWESOMECUBE-MASTER\FINAL PROGRAM\MIKE FINAL PROGRAM.PBP	00148	        Pause t1
 	PAUSE?W	_t1
 
-; U:\AWESOMECUBE-MASTER\FINAL PROGRAM\MIKE FINAL PROGRAM.PBP	00112	        C=%000010    'C1 on
+; U:\AWESOMECUBE-MASTER\FINAL PROGRAM\MIKE FINAL PROGRAM.PBP	00149	        C=%000010    'C1 on
 	MOVE?CB	002h, _C
 
-; U:\AWESOMECUBE-MASTER\FINAL PROGRAM\MIKE FINAL PROGRAM.PBP	00113	        pause t1
+; U:\AWESOMECUBE-MASTER\FINAL PROGRAM\MIKE FINAL PROGRAM.PBP	00150	        pause t1
 	PAUSE?W	_t1
 
-; U:\AWESOMECUBE-MASTER\FINAL PROGRAM\MIKE FINAL PROGRAM.PBP	00114	        c=%000001      'C0 on
+; U:\AWESOMECUBE-MASTER\FINAL PROGRAM\MIKE FINAL PROGRAM.PBP	00151	        c=%000001      'C0 on
 	MOVE?CB	001h, _C
 
-; U:\AWESOMECUBE-MASTER\FINAL PROGRAM\MIKE FINAL PROGRAM.PBP	00115	        pause t1
+; U:\AWESOMECUBE-MASTER\FINAL PROGRAM\MIKE FINAL PROGRAM.PBP	00152	        pause t1
 	PAUSE?W	_t1
 
-; U:\AWESOMECUBE-MASTER\FINAL PROGRAM\MIKE FINAL PROGRAM.PBP	00116	        c=%100000     'C5 on
+; U:\AWESOMECUBE-MASTER\FINAL PROGRAM\MIKE FINAL PROGRAM.PBP	00153	        c=%100000     'C5 on
 	MOVE?CB	020h, _C
 
-; U:\AWESOMECUBE-MASTER\FINAL PROGRAM\MIKE FINAL PROGRAM.PBP	00117	        Pause t1
+; U:\AWESOMECUBE-MASTER\FINAL PROGRAM\MIKE FINAL PROGRAM.PBP	00154	        Pause t1
 	PAUSE?W	_t1
 
-; U:\AWESOMECUBE-MASTER\FINAL PROGRAM\MIKE FINAL PROGRAM.PBP	00118	        c=%010000     'C4 on
+; U:\AWESOMECUBE-MASTER\FINAL PROGRAM\MIKE FINAL PROGRAM.PBP	00155	        c=%010000     'C4 on
 	MOVE?CB	010h, _C
 
-; U:\AWESOMECUBE-MASTER\FINAL PROGRAM\MIKE FINAL PROGRAM.PBP	00119	        pause t1
+; U:\AWESOMECUBE-MASTER\FINAL PROGRAM\MIKE FINAL PROGRAM.PBP	00156	        pause t1
 	PAUSE?W	_t1
 
-; U:\AWESOMECUBE-MASTER\FINAL PROGRAM\MIKE FINAL PROGRAM.PBP	00120	        c=%001000      'C3 on
+; U:\AWESOMECUBE-MASTER\FINAL PROGRAM\MIKE FINAL PROGRAM.PBP	00157	        c=%001000      'C3 on
 	MOVE?CB	008h, _C
 
-; U:\AWESOMECUBE-MASTER\FINAL PROGRAM\MIKE FINAL PROGRAM.PBP	00121	        pause t1
+; U:\AWESOMECUBE-MASTER\FINAL PROGRAM\MIKE FINAL PROGRAM.PBP	00158	        pause t1
 	PAUSE?W	_t1
 
-; U:\AWESOMECUBE-MASTER\FINAL PROGRAM\MIKE FINAL PROGRAM.PBP	00122	        A=4        '4 because of bianary numbering (A2 on)
+; U:\AWESOMECUBE-MASTER\FINAL PROGRAM\MIKE FINAL PROGRAM.PBP	00159	        A=4        '4 because of bianary numbering (A2 on)
 	MOVE?CB	004h, _A
 
-; U:\AWESOMECUBE-MASTER\FINAL PROGRAM\MIKE FINAL PROGRAM.PBP	00123	        C=0
+; U:\AWESOMECUBE-MASTER\FINAL PROGRAM\MIKE FINAL PROGRAM.PBP	00160	        C=0
 	MOVE?CB	000h, _C
 
-; U:\AWESOMECUBE-MASTER\FINAL PROGRAM\MIKE FINAL PROGRAM.PBP	00124	        pause t1
+; U:\AWESOMECUBE-MASTER\FINAL PROGRAM\MIKE FINAL PROGRAM.PBP	00161	        pause t1
 	PAUSE?W	_t1
 
-; U:\AWESOMECUBE-MASTER\FINAL PROGRAM\MIKE FINAL PROGRAM.PBP	00125	        A=2                  'A1 on
+; U:\AWESOMECUBE-MASTER\FINAL PROGRAM\MIKE FINAL PROGRAM.PBP	00162	        A=2                  'A1 on
 	MOVE?CB	002h, _A
 
-; U:\AWESOMECUBE-MASTER\FINAL PROGRAM\MIKE FINAL PROGRAM.PBP	00126	        pause t1
+; U:\AWESOMECUBE-MASTER\FINAL PROGRAM\MIKE FINAL PROGRAM.PBP	00163	        pause t1
 	PAUSE?W	_t1
 
-; U:\AWESOMECUBE-MASTER\FINAL PROGRAM\MIKE FINAL PROGRAM.PBP	00127	        A=1                 'A0 on
+; U:\AWESOMECUBE-MASTER\FINAL PROGRAM\MIKE FINAL PROGRAM.PBP	00164	        A=1                 'A0 on
 	MOVE?CB	001h, _A
 
-; U:\AWESOMECUBE-MASTER\FINAL PROGRAM\MIKE FINAL PROGRAM.PBP	00128	        pause t1
+; U:\AWESOMECUBE-MASTER\FINAL PROGRAM\MIKE FINAL PROGRAM.PBP	00165	        pause t1
 	PAUSE?W	_t1
 
-; U:\AWESOMECUBE-MASTER\FINAL PROGRAM\MIKE FINAL PROGRAM.PBP	00129	    Return
+; U:\AWESOMECUBE-MASTER\FINAL PROGRAM\MIKE FINAL PROGRAM.PBP	00166	    Return
 	RETURN?	
 
-; U:\AWESOMECUBE-MASTER\FINAL PROGRAM\MIKE FINAL PROGRAM.PBP	00131	        rows:     
+; U:\AWESOMECUBE-MASTER\FINAL PROGRAM\MIKE FINAL PROGRAM.PBP	00168	        rows:     
 
 	LABEL?L	_rows	
 
-; U:\AWESOMECUBE-MASTER\FINAL PROGRAM\MIKE FINAL PROGRAM.PBP	00132	            C=%000111:A=%000     'Top Row
+; U:\AWESOMECUBE-MASTER\FINAL PROGRAM\MIKE FINAL PROGRAM.PBP	00169	            C=%000111:A=%000     'Top Row
 	MOVE?CB	007h, _C
 
-; U:\AWESOMECUBE-MASTER\FINAL PROGRAM\MIKE FINAL PROGRAM.PBP	00132	            C=%000111:A=%000     'Top Row
+; U:\AWESOMECUBE-MASTER\FINAL PROGRAM\MIKE FINAL PROGRAM.PBP	00169	            C=%000111:A=%000     'Top Row
 	MOVE?CB	000h, _A
 
-; U:\AWESOMECUBE-MASTER\FINAL PROGRAM\MIKE FINAL PROGRAM.PBP	00133	            pause t2
+; U:\AWESOMECUBE-MASTER\FINAL PROGRAM\MIKE FINAL PROGRAM.PBP	00170	            pause t2
 	PAUSE?W	_t2
 
-; U:\AWESOMECUBE-MASTER\FINAL PROGRAM\MIKE FINAL PROGRAM.PBP	00134	            a=%000:c=%111000     'Middle Row
+; U:\AWESOMECUBE-MASTER\FINAL PROGRAM\MIKE FINAL PROGRAM.PBP	00171	            a=%000:c=%111000     'Middle Row
 	MOVE?CB	000h, _A
 
-; U:\AWESOMECUBE-MASTER\FINAL PROGRAM\MIKE FINAL PROGRAM.PBP	00134	            a=%000:c=%111000     'Middle Row
+; U:\AWESOMECUBE-MASTER\FINAL PROGRAM\MIKE FINAL PROGRAM.PBP	00171	            a=%000:c=%111000     'Middle Row
 	MOVE?CB	038h, _C
 
-; U:\AWESOMECUBE-MASTER\FINAL PROGRAM\MIKE FINAL PROGRAM.PBP	00135	            pause t2
+; U:\AWESOMECUBE-MASTER\FINAL PROGRAM\MIKE FINAL PROGRAM.PBP	00172	            pause t2
 	PAUSE?W	_t2
 
-; U:\AWESOMECUBE-MASTER\FINAL PROGRAM\MIKE FINAL PROGRAM.PBP	00136	            A=%111:C=%000000     'Bottom Row
+; U:\AWESOMECUBE-MASTER\FINAL PROGRAM\MIKE FINAL PROGRAM.PBP	00173	            A=%111:C=%000000     'Bottom Row
 	MOVE?CB	007h, _A
 
-; U:\AWESOMECUBE-MASTER\FINAL PROGRAM\MIKE FINAL PROGRAM.PBP	00136	            A=%111:C=%000000     'Bottom Row
+; U:\AWESOMECUBE-MASTER\FINAL PROGRAM\MIKE FINAL PROGRAM.PBP	00173	            A=%111:C=%000000     'Bottom Row
 	MOVE?CB	000h, _C
 
-; U:\AWESOMECUBE-MASTER\FINAL PROGRAM\MIKE FINAL PROGRAM.PBP	00137	            pause t2
+; U:\AWESOMECUBE-MASTER\FINAL PROGRAM\MIKE FINAL PROGRAM.PBP	00174	            pause t2
 	PAUSE?W	_t2
 
-; U:\AWESOMECUBE-MASTER\FINAL PROGRAM\MIKE FINAL PROGRAM.PBP	00138	        return
+; U:\AWESOMECUBE-MASTER\FINAL PROGRAM\MIKE FINAL PROGRAM.PBP	00175	        return
 	RETURN?	
 
-; U:\AWESOMECUBE-MASTER\FINAL PROGRAM\MIKE FINAL PROGRAM.PBP	00140	            on_off:
+; U:\AWESOMECUBE-MASTER\FINAL PROGRAM\MIKE FINAL PROGRAM.PBP	00177	            on_off:
 
 	LABEL?L	_on_off	
 
-; U:\AWESOMECUBE-MASTER\FINAL PROGRAM\MIKE FINAL PROGRAM.PBP	00141	                A=%111:C=%111111  'LEDs ON
+; U:\AWESOMECUBE-MASTER\FINAL PROGRAM\MIKE FINAL PROGRAM.PBP	00178	                A=%111:C=%111111  'LEDs ON
 	MOVE?CB	007h, _A
 
-; U:\AWESOMECUBE-MASTER\FINAL PROGRAM\MIKE FINAL PROGRAM.PBP	00141	                A=%111:C=%111111  'LEDs ON
+; U:\AWESOMECUBE-MASTER\FINAL PROGRAM\MIKE FINAL PROGRAM.PBP	00178	                A=%111:C=%111111  'LEDs ON
 	MOVE?CB	03Fh, _C
 
-; U:\AWESOMECUBE-MASTER\FINAL PROGRAM\MIKE FINAL PROGRAM.PBP	00142	                pause t3
+; U:\AWESOMECUBE-MASTER\FINAL PROGRAM\MIKE FINAL PROGRAM.PBP	00179	                pause t3
 	PAUSE?W	_t3
 
-; U:\AWESOMECUBE-MASTER\FINAL PROGRAM\MIKE FINAL PROGRAM.PBP	00143	                A=%000:c=%000000   'LEDs Off
+; U:\AWESOMECUBE-MASTER\FINAL PROGRAM\MIKE FINAL PROGRAM.PBP	00180	                A=%000:c=%000000   'LEDs Off
 	MOVE?CB	000h, _A
 
-; U:\AWESOMECUBE-MASTER\FINAL PROGRAM\MIKE FINAL PROGRAM.PBP	00143	                A=%000:c=%000000   'LEDs Off
+; U:\AWESOMECUBE-MASTER\FINAL PROGRAM\MIKE FINAL PROGRAM.PBP	00180	                A=%000:c=%000000   'LEDs Off
 	MOVE?CB	000h, _C
 
-; U:\AWESOMECUBE-MASTER\FINAL PROGRAM\MIKE FINAL PROGRAM.PBP	00144	                pause t3
+; U:\AWESOMECUBE-MASTER\FINAL PROGRAM\MIKE FINAL PROGRAM.PBP	00181	                pause t3
 	PAUSE?W	_t3
 
-; U:\AWESOMECUBE-MASTER\FINAL PROGRAM\MIKE FINAL PROGRAM.PBP	00145	            return
+; U:\AWESOMECUBE-MASTER\FINAL PROGRAM\MIKE FINAL PROGRAM.PBP	00182	            return
 	RETURN?	
 
-; U:\AWESOMECUBE-MASTER\FINAL PROGRAM\MIKE FINAL PROGRAM.PBP	00147	                center_X_diamond:
+; U:\AWESOMECUBE-MASTER\FINAL PROGRAM\MIKE FINAL PROGRAM.PBP	00184	                center_X_diamond:
 
 	LABEL?L	_center_X_diamond	
 
-; U:\AWESOMECUBE-MASTER\FINAL PROGRAM\MIKE FINAL PROGRAM.PBP	00148	                    C=%010000:A=%000    'center lED 
+; U:\AWESOMECUBE-MASTER\FINAL PROGRAM\MIKE FINAL PROGRAM.PBP	00185	                    C=%010000:A=%000    'center lED 
 	MOVE?CB	010h, _C
 
-; U:\AWESOMECUBE-MASTER\FINAL PROGRAM\MIKE FINAL PROGRAM.PBP	00148	                    C=%010000:A=%000    'center lED 
+; U:\AWESOMECUBE-MASTER\FINAL PROGRAM\MIKE FINAL PROGRAM.PBP	00185	                    C=%010000:A=%000    'center lED 
 	MOVE?CB	000h, _A
 
-; U:\AWESOMECUBE-MASTER\FINAL PROGRAM\MIKE FINAL PROGRAM.PBP	00149	                    pause t5
+; U:\AWESOMECUBE-MASTER\FINAL PROGRAM\MIKE FINAL PROGRAM.PBP	00186	                    pause t5
 	PAUSE?W	_t5
 
-; U:\AWESOMECUBE-MASTER\FINAL PROGRAM\MIKE FINAL PROGRAM.PBP	00150	                    A=%101:C=%010101  '"X shape
+; U:\AWESOMECUBE-MASTER\FINAL PROGRAM\MIKE FINAL PROGRAM.PBP	00187	                    A=%101:C=%010101  '"X shape
 	MOVE?CB	005h, _A
 
-; U:\AWESOMECUBE-MASTER\FINAL PROGRAM\MIKE FINAL PROGRAM.PBP	00150	                    A=%101:C=%010101  '"X shape
+; U:\AWESOMECUBE-MASTER\FINAL PROGRAM\MIKE FINAL PROGRAM.PBP	00187	                    A=%101:C=%010101  '"X shape
 	MOVE?CB	015h, _C
 
-; U:\AWESOMECUBE-MASTER\FINAL PROGRAM\MIKE FINAL PROGRAM.PBP	00151	                    pause t5
+; U:\AWESOMECUBE-MASTER\FINAL PROGRAM\MIKE FINAL PROGRAM.PBP	00188	                    pause t5
 	PAUSE?W	_t5
 
-; U:\AWESOMECUBE-MASTER\FINAL PROGRAM\MIKE FINAL PROGRAM.PBP	00152	                    A=%010:C=%101010   ' Diamond shape
+; U:\AWESOMECUBE-MASTER\FINAL PROGRAM\MIKE FINAL PROGRAM.PBP	00189	                    A=%010:C=%101010   ' Diamond shape
 	MOVE?CB	002h, _A
 
-; U:\AWESOMECUBE-MASTER\FINAL PROGRAM\MIKE FINAL PROGRAM.PBP	00152	                    A=%010:C=%101010   ' Diamond shape
+; U:\AWESOMECUBE-MASTER\FINAL PROGRAM\MIKE FINAL PROGRAM.PBP	00189	                    A=%010:C=%101010   ' Diamond shape
 	MOVE?CB	02Ah, _C
 
-; U:\AWESOMECUBE-MASTER\FINAL PROGRAM\MIKE FINAL PROGRAM.PBP	00153	                    pause t5
+; U:\AWESOMECUBE-MASTER\FINAL PROGRAM\MIKE FINAL PROGRAM.PBP	00190	                    pause t5
 	PAUSE?W	_t5
 
-; U:\AWESOMECUBE-MASTER\FINAL PROGRAM\MIKE FINAL PROGRAM.PBP	00154	                return
+; U:\AWESOMECUBE-MASTER\FINAL PROGRAM\MIKE FINAL PROGRAM.PBP	00191	                return
 	RETURN?	
 
-; U:\AWESOMECUBE-MASTER\FINAL PROGRAM\MIKE FINAL PROGRAM.PBP	00156	                    random_number:
+; U:\AWESOMECUBE-MASTER\FINAL PROGRAM\MIKE FINAL PROGRAM.PBP	00193	                    random_number:
 
 	LABEL?L	_random_number	
 
-; U:\AWESOMECUBE-MASTER\FINAL PROGRAM\MIKE FINAL PROGRAM.PBP	00157	                        Random w3
+; U:\AWESOMECUBE-MASTER\FINAL PROGRAM\MIKE FINAL PROGRAM.PBP	00194	                        Random w3
 	RANDOM?W	_w3
 
-; U:\AWESOMECUBE-MASTER\FINAL PROGRAM\MIKE FINAL PROGRAM.PBP	00158	                        w4=w3/1040
+; U:\AWESOMECUBE-MASTER\FINAL PROGRAM\MIKE FINAL PROGRAM.PBP	00195	                        w4=w3/1040
 	DIV?WCW	_w3, 00410h, _w4
 
-; U:\AWESOMECUBE-MASTER\FINAL PROGRAM\MIKE FINAL PROGRAM.PBP	00159	                        w5=10*w4+20
+; U:\AWESOMECUBE-MASTER\FINAL PROGRAM\MIKE FINAL PROGRAM.PBP	00196	                        w5=10*w4+20
 	MUL?CWW	00Ah, _w4, T1
 	ADD?WCW	T1, 014h, _w5
 
-; U:\AWESOMECUBE-MASTER\FINAL PROGRAM\MIKE FINAL PROGRAM.PBP	00160	                        w6=w4/9
+; U:\AWESOMECUBE-MASTER\FINAL PROGRAM\MIKE FINAL PROGRAM.PBP	00197	                        w6=w4/9
 	DIV?WCW	_w4, 009h, _w6
 
-; U:\AWESOMECUBE-MASTER\FINAL PROGRAM\MIKE FINAL PROGRAM.PBP	00161	                        w7=10*w4
+; U:\AWESOMECUBE-MASTER\FINAL PROGRAM\MIKE FINAL PROGRAM.PBP	00198	                        w7=10*w4
 	MUL?CWW	00Ah, _w4, _w7
 
-; U:\AWESOMECUBE-MASTER\FINAL PROGRAM\MIKE FINAL PROGRAM.PBP	00162	                        a=w6
+; U:\AWESOMECUBE-MASTER\FINAL PROGRAM\MIKE FINAL PROGRAM.PBP	00199	                        a=w6
 	MOVE?WB	_w6, _A
 
-; U:\AWESOMECUBE-MASTER\FINAL PROGRAM\MIKE FINAL PROGRAM.PBP	00163	                        c=w4
+; U:\AWESOMECUBE-MASTER\FINAL PROGRAM\MIKE FINAL PROGRAM.PBP	00200	                        c=w4
 	MOVE?WB	_w4, _C
 
-; U:\AWESOMECUBE-MASTER\FINAL PROGRAM\MIKE FINAL PROGRAM.PBP	00164	                        pause w5
+; U:\AWESOMECUBE-MASTER\FINAL PROGRAM\MIKE FINAL PROGRAM.PBP	00201	                        pause w5
 	PAUSE?W	_w5
 
-; U:\AWESOMECUBE-MASTER\FINAL PROGRAM\MIKE FINAL PROGRAM.PBP	00165	                        a=%111
+; U:\AWESOMECUBE-MASTER\FINAL PROGRAM\MIKE FINAL PROGRAM.PBP	00202	                        a=%111
 	MOVE?CB	007h, _A
 
-; U:\AWESOMECUBE-MASTER\FINAL PROGRAM\MIKE FINAL PROGRAM.PBP	00166	                        C=%111111
+; U:\AWESOMECUBE-MASTER\FINAL PROGRAM\MIKE FINAL PROGRAM.PBP	00203	                        C=%111111
 	MOVE?CB	03Fh, _C
 
-; U:\AWESOMECUBE-MASTER\FINAL PROGRAM\MIKE FINAL PROGRAM.PBP	00167	                        pause w7
+; U:\AWESOMECUBE-MASTER\FINAL PROGRAM\MIKE FINAL PROGRAM.PBP	00204	                        pause w7
 	PAUSE?W	_w7
 
-; U:\AWESOMECUBE-MASTER\FINAL PROGRAM\MIKE FINAL PROGRAM.PBP	00168	                    return
+; U:\AWESOMECUBE-MASTER\FINAL PROGRAM\MIKE FINAL PROGRAM.PBP	00205	                    return
 	RETURN?	
 
-; U:\AWESOMECUBE-MASTER\FINAL PROGRAM\MIKE FINAL PROGRAM.PBP	00169	                            X:
+; U:\AWESOMECUBE-MASTER\FINAL PROGRAM\MIKE FINAL PROGRAM.PBP	00206	                            X:
 
 	LABEL?L	_X	
 
-; U:\AWESOMECUBE-MASTER\FINAL PROGRAM\MIKE FINAL PROGRAM.PBP	00170	                             c=%000101:a=0
+; U:\AWESOMECUBE-MASTER\FINAL PROGRAM\MIKE FINAL PROGRAM.PBP	00207	                             c=%000101:a=0
 	MOVE?CB	005h, _C
 
-; U:\AWESOMECUBE-MASTER\FINAL PROGRAM\MIKE FINAL PROGRAM.PBP	00170	                             c=%000101:a=0
+; U:\AWESOMECUBE-MASTER\FINAL PROGRAM\MIKE FINAL PROGRAM.PBP	00207	                             c=%000101:a=0
 	MOVE?CB	000h, _A
 
-; U:\AWESOMECUBE-MASTER\FINAL PROGRAM\MIKE FINAL PROGRAM.PBP	00171	                             pause t1
+; U:\AWESOMECUBE-MASTER\FINAL PROGRAM\MIKE FINAL PROGRAM.PBP	00208	                             pause t1
 	PAUSE?W	_t1
 
-; U:\AWESOMECUBE-MASTER\FINAL PROGRAM\MIKE FINAL PROGRAM.PBP	00172	                             c=%010000:A=0
+; U:\AWESOMECUBE-MASTER\FINAL PROGRAM\MIKE FINAL PROGRAM.PBP	00209	                             c=%010000:A=0
 	MOVE?CB	010h, _C
 
-; U:\AWESOMECUBE-MASTER\FINAL PROGRAM\MIKE FINAL PROGRAM.PBP	00172	                             c=%010000:A=0
+; U:\AWESOMECUBE-MASTER\FINAL PROGRAM\MIKE FINAL PROGRAM.PBP	00209	                             c=%010000:A=0
 	MOVE?CB	000h, _A
 
-; U:\AWESOMECUBE-MASTER\FINAL PROGRAM\MIKE FINAL PROGRAM.PBP	00173	                             pause t1
+; U:\AWESOMECUBE-MASTER\FINAL PROGRAM\MIKE FINAL PROGRAM.PBP	00210	                             pause t1
 	PAUSE?W	_t1
 
-; U:\AWESOMECUBE-MASTER\FINAL PROGRAM\MIKE FINAL PROGRAM.PBP	00174	                             C=0:A=%101
+; U:\AWESOMECUBE-MASTER\FINAL PROGRAM\MIKE FINAL PROGRAM.PBP	00211	                             C=0:A=%101
 	MOVE?CB	000h, _C
 
-; U:\AWESOMECUBE-MASTER\FINAL PROGRAM\MIKE FINAL PROGRAM.PBP	00174	                             C=0:A=%101
+; U:\AWESOMECUBE-MASTER\FINAL PROGRAM\MIKE FINAL PROGRAM.PBP	00211	                             C=0:A=%101
 	MOVE?CB	005h, _A
 
-; U:\AWESOMECUBE-MASTER\FINAL PROGRAM\MIKE FINAL PROGRAM.PBP	00175	                             pause t1
+; U:\AWESOMECUBE-MASTER\FINAL PROGRAM\MIKE FINAL PROGRAM.PBP	00212	                             pause t1
 	PAUSE?W	_t1
 
-; U:\AWESOMECUBE-MASTER\FINAL PROGRAM\MIKE FINAL PROGRAM.PBP	00176	                            return
+; U:\AWESOMECUBE-MASTER\FINAL PROGRAM\MIKE FINAL PROGRAM.PBP	00213	                            return
 	RETURN?	
 
-; U:\AWESOMECUBE-MASTER\FINAL PROGRAM\MIKE FINAL PROGRAM.PBP	00177	                                Around_the_Cube:
+; U:\AWESOMECUBE-MASTER\FINAL PROGRAM\MIKE FINAL PROGRAM.PBP	00214	                                Around_the_Cube:
 
 	LABEL?L	_Around_the_Cube	
 
-; U:\AWESOMECUBE-MASTER\FINAL PROGRAM\MIKE FINAL PROGRAM.PBP	00178	                                 pause t7
+; U:\AWESOMECUBE-MASTER\FINAL PROGRAM\MIKE FINAL PROGRAM.PBP	00215	                                 pause t7
 	PAUSE?W	_t7
 
-; U:\AWESOMECUBE-MASTER\FINAL PROGRAM\MIKE FINAL PROGRAM.PBP	00179	                                 C=%000100:A=0
+; U:\AWESOMECUBE-MASTER\FINAL PROGRAM\MIKE FINAL PROGRAM.PBP	00216	                                 C=%000100:A=0
 	MOVE?CB	004h, _C
 
-; U:\AWESOMECUBE-MASTER\FINAL PROGRAM\MIKE FINAL PROGRAM.PBP	00179	                                 C=%000100:A=0
+; U:\AWESOMECUBE-MASTER\FINAL PROGRAM\MIKE FINAL PROGRAM.PBP	00216	                                 C=%000100:A=0
 	MOVE?CB	000h, _A
 
-; U:\AWESOMECUBE-MASTER\FINAL PROGRAM\MIKE FINAL PROGRAM.PBP	00180	                                 pause t7
+; U:\AWESOMECUBE-MASTER\FINAL PROGRAM\MIKE FINAL PROGRAM.PBP	00217	                                 pause t7
 	PAUSE?W	_t7
 
-; U:\AWESOMECUBE-MASTER\FINAL PROGRAM\MIKE FINAL PROGRAM.PBP	00181	                                 C=%000010:a=0
+; U:\AWESOMECUBE-MASTER\FINAL PROGRAM\MIKE FINAL PROGRAM.PBP	00218	                                 C=%000010:a=0
 	MOVE?CB	002h, _C
 
-; U:\AWESOMECUBE-MASTER\FINAL PROGRAM\MIKE FINAL PROGRAM.PBP	00181	                                 C=%000010:a=0
+; U:\AWESOMECUBE-MASTER\FINAL PROGRAM\MIKE FINAL PROGRAM.PBP	00218	                                 C=%000010:a=0
 	MOVE?CB	000h, _A
 
-; U:\AWESOMECUBE-MASTER\FINAL PROGRAM\MIKE FINAL PROGRAM.PBP	00182	                                 pause t7
+; U:\AWESOMECUBE-MASTER\FINAL PROGRAM\MIKE FINAL PROGRAM.PBP	00219	                                 pause t7
 	PAUSE?W	_t7
 
-; U:\AWESOMECUBE-MASTER\FINAL PROGRAM\MIKE FINAL PROGRAM.PBP	00183	                                 C=%000001:a=0
+; U:\AWESOMECUBE-MASTER\FINAL PROGRAM\MIKE FINAL PROGRAM.PBP	00220	                                 C=%000001:a=0
 	MOVE?CB	001h, _C
 
-; U:\AWESOMECUBE-MASTER\FINAL PROGRAM\MIKE FINAL PROGRAM.PBP	00183	                                 C=%000001:a=0
+; U:\AWESOMECUBE-MASTER\FINAL PROGRAM\MIKE FINAL PROGRAM.PBP	00220	                                 C=%000001:a=0
 	MOVE?CB	000h, _A
 
-; U:\AWESOMECUBE-MASTER\FINAL PROGRAM\MIKE FINAL PROGRAM.PBP	00184	                                 pause t7
+; U:\AWESOMECUBE-MASTER\FINAL PROGRAM\MIKE FINAL PROGRAM.PBP	00221	                                 pause t7
 	PAUSE?W	_t7
 
-; U:\AWESOMECUBE-MASTER\FINAL PROGRAM\MIKE FINAL PROGRAM.PBP	00185	                                 C=%001000:a=0
+; U:\AWESOMECUBE-MASTER\FINAL PROGRAM\MIKE FINAL PROGRAM.PBP	00222	                                 C=%001000:a=0
 	MOVE?CB	008h, _C
 
-; U:\AWESOMECUBE-MASTER\FINAL PROGRAM\MIKE FINAL PROGRAM.PBP	00185	                                 C=%001000:a=0
+; U:\AWESOMECUBE-MASTER\FINAL PROGRAM\MIKE FINAL PROGRAM.PBP	00222	                                 C=%001000:a=0
 	MOVE?CB	000h, _A
 
-; U:\AWESOMECUBE-MASTER\FINAL PROGRAM\MIKE FINAL PROGRAM.PBP	00186	                                 pause t7
+; U:\AWESOMECUBE-MASTER\FINAL PROGRAM\MIKE FINAL PROGRAM.PBP	00223	                                 pause t7
 	PAUSE?W	_t7
 
-; U:\AWESOMECUBE-MASTER\FINAL PROGRAM\MIKE FINAL PROGRAM.PBP	00187	                                 C=0:a=001
+; U:\AWESOMECUBE-MASTER\FINAL PROGRAM\MIKE FINAL PROGRAM.PBP	00224	                                 C=0:a=001
 	MOVE?CB	000h, _C
 
-; U:\AWESOMECUBE-MASTER\FINAL PROGRAM\MIKE FINAL PROGRAM.PBP	00187	                                 C=0:a=001
+; U:\AWESOMECUBE-MASTER\FINAL PROGRAM\MIKE FINAL PROGRAM.PBP	00224	                                 C=0:a=001
 	MOVE?CB	001h, _A
 
-; U:\AWESOMECUBE-MASTER\FINAL PROGRAM\MIKE FINAL PROGRAM.PBP	00188	                                 pause t7
+; U:\AWESOMECUBE-MASTER\FINAL PROGRAM\MIKE FINAL PROGRAM.PBP	00225	                                 pause t7
 	PAUSE?W	_t7
 
-; U:\AWESOMECUBE-MASTER\FINAL PROGRAM\MIKE FINAL PROGRAM.PBP	00189	                                 C=0:a=010
+; U:\AWESOMECUBE-MASTER\FINAL PROGRAM\MIKE FINAL PROGRAM.PBP	00226	                                 C=0:a=010
 	MOVE?CB	000h, _C
 
-; U:\AWESOMECUBE-MASTER\FINAL PROGRAM\MIKE FINAL PROGRAM.PBP	00189	                                 C=0:a=010
+; U:\AWESOMECUBE-MASTER\FINAL PROGRAM\MIKE FINAL PROGRAM.PBP	00226	                                 C=0:a=010
 	MOVE?CB	00Ah, _A
 
-; U:\AWESOMECUBE-MASTER\FINAL PROGRAM\MIKE FINAL PROGRAM.PBP	00190	                                 pause t7
+; U:\AWESOMECUBE-MASTER\FINAL PROGRAM\MIKE FINAL PROGRAM.PBP	00227	                                 pause t7
 	PAUSE?W	_t7
 
-; U:\AWESOMECUBE-MASTER\FINAL PROGRAM\MIKE FINAL PROGRAM.PBP	00191	                                 C=0:a=100
+; U:\AWESOMECUBE-MASTER\FINAL PROGRAM\MIKE FINAL PROGRAM.PBP	00228	                                 C=0:a=100
 	MOVE?CB	000h, _C
 
-; U:\AWESOMECUBE-MASTER\FINAL PROGRAM\MIKE FINAL PROGRAM.PBP	00191	                                 C=0:a=100
+; U:\AWESOMECUBE-MASTER\FINAL PROGRAM\MIKE FINAL PROGRAM.PBP	00228	                                 C=0:a=100
 	MOVE?CB	064h, _A
 
-; U:\AWESOMECUBE-MASTER\FINAL PROGRAM\MIKE FINAL PROGRAM.PBP	00192	                                 pause t7
+; U:\AWESOMECUBE-MASTER\FINAL PROGRAM\MIKE FINAL PROGRAM.PBP	00229	                                 pause t7
 	PAUSE?W	_t7
 
-; U:\AWESOMECUBE-MASTER\FINAL PROGRAM\MIKE FINAL PROGRAM.PBP	00193	                                 C=%100000:a=0
+; U:\AWESOMECUBE-MASTER\FINAL PROGRAM\MIKE FINAL PROGRAM.PBP	00230	                                 C=%100000:a=0
 	MOVE?CB	020h, _C
 
-; U:\AWESOMECUBE-MASTER\FINAL PROGRAM\MIKE FINAL PROGRAM.PBP	00193	                                 C=%100000:a=0
+; U:\AWESOMECUBE-MASTER\FINAL PROGRAM\MIKE FINAL PROGRAM.PBP	00230	                                 C=%100000:a=0
 	MOVE?CB	000h, _A
 
-; U:\AWESOMECUBE-MASTER\FINAL PROGRAM\MIKE FINAL PROGRAM.PBP	00194	                                 pause t7
+; U:\AWESOMECUBE-MASTER\FINAL PROGRAM\MIKE FINAL PROGRAM.PBP	00231	                                 pause t7
 	PAUSE?W	_t7
 
-; U:\AWESOMECUBE-MASTER\FINAL PROGRAM\MIKE FINAL PROGRAM.PBP	00195	                                 return
+; U:\AWESOMECUBE-MASTER\FINAL PROGRAM\MIKE FINAL PROGRAM.PBP	00232	                                 return
+	RETURN?	
+
+; U:\AWESOMECUBE-MASTER\FINAL PROGRAM\MIKE FINAL PROGRAM.PBP	00233	                                    Fader:
+
+	LABEL?L	_Fader	
+
+; U:\AWESOMECUBE-MASTER\FINAL PROGRAM\MIKE FINAL PROGRAM.PBP	00234	                                     for t_on1 = 0 to 8000 step fadestep
+	MOVE?CW	000h, _t_on1
+	LABEL?L	L00066	
+	CMPGT?WCL	_t_on1, 01F40h, L00067
+
+; U:\AWESOMECUBE-MASTER\FINAL PROGRAM\MIKE FINAL PROGRAM.PBP	00235	                                        t_off1 = 8000 - t_on1
+	SUB?CWW	01F40h, _t_on1, _t_off1
+
+; U:\AWESOMECUBE-MASTER\FINAL PROGRAM\MIKE FINAL PROGRAM.PBP	00236	                                        c = c_fadein
+	MOVE?WB	_c_fadein, _C
+
+; U:\AWESOMECUBE-MASTER\FINAL PROGRAM\MIKE FINAL PROGRAM.PBP	00237	                                        a = a_fadein
+	MOVE?WB	_a_fadein, _A
+
+; U:\AWESOMECUBE-MASTER\FINAL PROGRAM\MIKE FINAL PROGRAM.PBP	00238	                                        pauseus t_on1
+	PAUSEUS?W	_t_on1
+
+; U:\AWESOMECUBE-MASTER\FINAL PROGRAM\MIKE FINAL PROGRAM.PBP	00239	                                        c = c_fadeout
+	MOVE?WB	_c_fadeout, _C
+
+; U:\AWESOMECUBE-MASTER\FINAL PROGRAM\MIKE FINAL PROGRAM.PBP	00240	                                        a = a_fadeout        
+	MOVE?WB	_a_fadeout, _A
+
+; U:\AWESOMECUBE-MASTER\FINAL PROGRAM\MIKE FINAL PROGRAM.PBP	00241	                                        pauseus t_off1
+	PAUSEUS?W	_t_off1
+
+; U:\AWESOMECUBE-MASTER\FINAL PROGRAM\MIKE FINAL PROGRAM.PBP	00242	                                     next t_on1
+	NEXT?WWL	_t_on1, _fadestep, L00066
+	LABEL?L	L00067	
+
+; U:\AWESOMECUBE-MASTER\FINAL PROGRAM\MIKE FINAL PROGRAM.PBP	00243	                                    return
+	RETURN?	
+
+; U:\AWESOMECUBE-MASTER\FINAL PROGRAM\MIKE FINAL PROGRAM.PBP	00245	                                        Halflit:
+
+	LABEL?L	_Halflit	
+
+; U:\AWESOMECUBE-MASTER\FINAL PROGRAM\MIKE FINAL PROGRAM.PBP	00246	                                         t_on=900
+	MOVE?CW	00384h, _t_on
+
+; U:\AWESOMECUBE-MASTER\FINAL PROGRAM\MIKE FINAL PROGRAM.PBP	00247	                                         for i = 0 to 250 step 20
+	MOVE?CW	000h, _i
+	LABEL?L	L00068	
+	CMPGT?WCL	_i, 0FAh, L00069
+
+; U:\AWESOMECUBE-MASTER\FINAL PROGRAM\MIKE FINAL PROGRAM.PBP	00248	                                            t_off = 8000 - t_on 
+	SUB?CWW	01F40h, _t_on, _t_off
+
+; U:\AWESOMECUBE-MASTER\FINAL PROGRAM\MIKE FINAL PROGRAM.PBP	00249	                                            c = c_crest
+	MOVE?WB	_c_crest, _C
+
+; U:\AWESOMECUBE-MASTER\FINAL PROGRAM\MIKE FINAL PROGRAM.PBP	00250	                                            a = a_crest
+	MOVE?WB	_a_crest, _A
+
+; U:\AWESOMECUBE-MASTER\FINAL PROGRAM\MIKE FINAL PROGRAM.PBP	00251	                                            pauseus t_on                     
+	PAUSEUS?W	_t_on
+
+; U:\AWESOMECUBE-MASTER\FINAL PROGRAM\MIKE FINAL PROGRAM.PBP	00252	                                            c = c_trough
+	MOVE?WB	_c_trough, _C
+
+; U:\AWESOMECUBE-MASTER\FINAL PROGRAM\MIKE FINAL PROGRAM.PBP	00253	                                            a = a_trough
+	MOVE?WB	_a_trough, _A
+
+; U:\AWESOMECUBE-MASTER\FINAL PROGRAM\MIKE FINAL PROGRAM.PBP	00254	                                            pauseus t_off
+	PAUSEUS?W	_t_off
+
+; U:\AWESOMECUBE-MASTER\FINAL PROGRAM\MIKE FINAL PROGRAM.PBP	00255	                                         next i
+	NEXT?WCL	_i, 014h, L00068
+	LABEL?L	L00069	
+
+; U:\AWESOMECUBE-MASTER\FINAL PROGRAM\MIKE FINAL PROGRAM.PBP	00256	                                        return
+	RETURN?	
+
+; U:\AWESOMECUBE-MASTER\FINAL PROGRAM\MIKE FINAL PROGRAM.PBP	00257	                                                  CORNERSPIN2:
+
+	LABEL?L	_CORNERSPIN2	
+
+; U:\AWESOMECUBE-MASTER\FINAL PROGRAM\MIKE FINAL PROGRAM.PBP	00258	                                                      t9=80
+	MOVE?CW	050h, _t9
+
+; U:\AWESOMECUBE-MASTER\FINAL PROGRAM\MIKE FINAL PROGRAM.PBP	00259	                                                      c= 1
+	MOVE?CB	001h, _C
+
+; U:\AWESOMECUBE-MASTER\FINAL PROGRAM\MIKE FINAL PROGRAM.PBP	00260	                                                      a= 0
+	MOVE?CB	000h, _A
+
+; U:\AWESOMECUBE-MASTER\FINAL PROGRAM\MIKE FINAL PROGRAM.PBP	00261	                                                      PAUSE t9
+	PAUSE?W	_t9
+
+; U:\AWESOMECUBE-MASTER\FINAL PROGRAM\MIKE FINAL PROGRAM.PBP	00262	                                                      c= 10
+	MOVE?CB	00Ah, _C
+
+; U:\AWESOMECUBE-MASTER\FINAL PROGRAM\MIKE FINAL PROGRAM.PBP	00263	                                                      PAUSE t9
+	PAUSE?W	_t9
+
+; U:\AWESOMECUBE-MASTER\FINAL PROGRAM\MIKE FINAL PROGRAM.PBP	00264	                                                      c= 20
+	MOVE?CB	014h, _C
+
+; U:\AWESOMECUBE-MASTER\FINAL PROGRAM\MIKE FINAL PROGRAM.PBP	00265	                                                      a= 1
+	MOVE?CB	001h, _A
+
+; U:\AWESOMECUBE-MASTER\FINAL PROGRAM\MIKE FINAL PROGRAM.PBP	00266	                                                      PAUSE t9
+	PAUSE?W	_t9
+
+; U:\AWESOMECUBE-MASTER\FINAL PROGRAM\MIKE FINAL PROGRAM.PBP	00267	                                                      c= 32
+	MOVE?CB	020h, _C
+
+; U:\AWESOMECUBE-MASTER\FINAL PROGRAM\MIKE FINAL PROGRAM.PBP	00268	                                                      a= 2
+	MOVE?CB	002h, _A
+
+; U:\AWESOMECUBE-MASTER\FINAL PROGRAM\MIKE FINAL PROGRAM.PBP	00269	                                                      PAUSE t9
+	PAUSE?W	_t9
+
+; U:\AWESOMECUBE-MASTER\FINAL PROGRAM\MIKE FINAL PROGRAM.PBP	00270	                                                      c= 0
+	MOVE?CB	000h, _C
+
+; U:\AWESOMECUBE-MASTER\FINAL PROGRAM\MIKE FINAL PROGRAM.PBP	00271	                                                      a= 4
+	MOVE?CB	004h, _A
+
+; U:\AWESOMECUBE-MASTER\FINAL PROGRAM\MIKE FINAL PROGRAM.PBP	00272	                                                      PAUSE t9
+	PAUSE?W	_t9
+
+; U:\AWESOMECUBE-MASTER\FINAL PROGRAM\MIKE FINAL PROGRAM.PBP	00273	                                                      c= 4
+	MOVE?CB	004h, _C
+
+; U:\AWESOMECUBE-MASTER\FINAL PROGRAM\MIKE FINAL PROGRAM.PBP	00274	                                                      a= 0
+	MOVE?CB	000h, _A
+
+; U:\AWESOMECUBE-MASTER\FINAL PROGRAM\MIKE FINAL PROGRAM.PBP	00275	                                                      PAUSE t9
+	PAUSE?W	_t9
+
+; U:\AWESOMECUBE-MASTER\FINAL PROGRAM\MIKE FINAL PROGRAM.PBP	00276	                                                      c= 34
+	MOVE?CB	022h, _C
+
+; U:\AWESOMECUBE-MASTER\FINAL PROGRAM\MIKE FINAL PROGRAM.PBP	00277	                                                      PAUSE t9
+	PAUSE?W	_t9
+
+; U:\AWESOMECUBE-MASTER\FINAL PROGRAM\MIKE FINAL PROGRAM.PBP	00278	                                                      c= 17
+	MOVE?CB	011h, _C
+
+; U:\AWESOMECUBE-MASTER\FINAL PROGRAM\MIKE FINAL PROGRAM.PBP	00279	                                                      a= 4
+	MOVE?CB	004h, _A
+
+; U:\AWESOMECUBE-MASTER\FINAL PROGRAM\MIKE FINAL PROGRAM.PBP	00280	                                                      PAUSE t9 
+	PAUSE?W	_t9
+
+; U:\AWESOMECUBE-MASTER\FINAL PROGRAM\MIKE FINAL PROGRAM.PBP	00281	                                                      c= 8
+	MOVE?CB	008h, _C
+
+; U:\AWESOMECUBE-MASTER\FINAL PROGRAM\MIKE FINAL PROGRAM.PBP	00282	                                                      a= 2
+	MOVE?CB	002h, _A
+
+; U:\AWESOMECUBE-MASTER\FINAL PROGRAM\MIKE FINAL PROGRAM.PBP	00283	                                                      PAUSE t9
+	PAUSE?W	_t9
+
+; U:\AWESOMECUBE-MASTER\FINAL PROGRAM\MIKE FINAL PROGRAM.PBP	00284	                                                      c= 0 
+	MOVE?CB	000h, _C
+
+; U:\AWESOMECUBE-MASTER\FINAL PROGRAM\MIKE FINAL PROGRAM.PBP	00285	                                                      a= 1
+	MOVE?CB	001h, _A
+
+; U:\AWESOMECUBE-MASTER\FINAL PROGRAM\MIKE FINAL PROGRAM.PBP	00286	                                                      PAUSE t9
+	PAUSE?W	_t9
+
+; U:\AWESOMECUBE-MASTER\FINAL PROGRAM\MIKE FINAL PROGRAM.PBP	00287	                                                      c= 0
+	MOVE?CB	000h, _C
+
+; U:\AWESOMECUBE-MASTER\FINAL PROGRAM\MIKE FINAL PROGRAM.PBP	00288	                                                      a= 4
+	MOVE?CB	004h, _A
+
+; U:\AWESOMECUBE-MASTER\FINAL PROGRAM\MIKE FINAL PROGRAM.PBP	00289	                                                      pause t9
+	PAUSE?W	_t9
+
+; U:\AWESOMECUBE-MASTER\FINAL PROGRAM\MIKE FINAL PROGRAM.PBP	00290	                                                      c= 32
+	MOVE?CB	020h, _C
+
+; U:\AWESOMECUBE-MASTER\FINAL PROGRAM\MIKE FINAL PROGRAM.PBP	00291	                                                      a= 2
+	MOVE?CB	002h, _A
+
+; U:\AWESOMECUBE-MASTER\FINAL PROGRAM\MIKE FINAL PROGRAM.PBP	00292	                                                      pause t9
+	PAUSE?W	_t9
+
+; U:\AWESOMECUBE-MASTER\FINAL PROGRAM\MIKE FINAL PROGRAM.PBP	00293	                                                      c= 20
+	MOVE?CB	014h, _C
+
+; U:\AWESOMECUBE-MASTER\FINAL PROGRAM\MIKE FINAL PROGRAM.PBP	00294	                                                      a= 1
+	MOVE?CB	001h, _A
+
+; U:\AWESOMECUBE-MASTER\FINAL PROGRAM\MIKE FINAL PROGRAM.PBP	00295	                                                      pause t9
+	PAUSE?W	_t9
+
+; U:\AWESOMECUBE-MASTER\FINAL PROGRAM\MIKE FINAL PROGRAM.PBP	00296	                                                      c= 10
+	MOVE?CB	00Ah, _C
+
+; U:\AWESOMECUBE-MASTER\FINAL PROGRAM\MIKE FINAL PROGRAM.PBP	00297	                                                      a= 0
+	MOVE?CB	000h, _A
+
+; U:\AWESOMECUBE-MASTER\FINAL PROGRAM\MIKE FINAL PROGRAM.PBP	00298	                                                      pause t9
+	PAUSE?W	_t9
+
+; U:\AWESOMECUBE-MASTER\FINAL PROGRAM\MIKE FINAL PROGRAM.PBP	00299	                                                      c= 1
+	MOVE?CB	001h, _C
+
+; U:\AWESOMECUBE-MASTER\FINAL PROGRAM\MIKE FINAL PROGRAM.PBP	00300	                                                      pause t9
+	PAUSE?W	_t9
+
+; U:\AWESOMECUBE-MASTER\FINAL PROGRAM\MIKE FINAL PROGRAM.PBP	00301	                                                      c= 0
+	MOVE?CB	000h, _C
+
+; U:\AWESOMECUBE-MASTER\FINAL PROGRAM\MIKE FINAL PROGRAM.PBP	00302	                                                      a= 1
+	MOVE?CB	001h, _A
+
+; U:\AWESOMECUBE-MASTER\FINAL PROGRAM\MIKE FINAL PROGRAM.PBP	00303	                                                      pause t9
+	PAUSE?W	_t9
+
+; U:\AWESOMECUBE-MASTER\FINAL PROGRAM\MIKE FINAL PROGRAM.PBP	00304	                                                      c= 8
+	MOVE?CB	008h, _C
+
+; U:\AWESOMECUBE-MASTER\FINAL PROGRAM\MIKE FINAL PROGRAM.PBP	00305	                                                      a= 2
+	MOVE?CB	002h, _A
+
+; U:\AWESOMECUBE-MASTER\FINAL PROGRAM\MIKE FINAL PROGRAM.PBP	00306	                                                      pause t9
+	PAUSE?W	_t9
+
+; U:\AWESOMECUBE-MASTER\FINAL PROGRAM\MIKE FINAL PROGRAM.PBP	00307	                                                      c= 17
+	MOVE?CB	011h, _C
+
+; U:\AWESOMECUBE-MASTER\FINAL PROGRAM\MIKE FINAL PROGRAM.PBP	00308	                                                      a= 4
+	MOVE?CB	004h, _A
+
+; U:\AWESOMECUBE-MASTER\FINAL PROGRAM\MIKE FINAL PROGRAM.PBP	00309	                                                      pause t9
+	PAUSE?W	_t9
+
+; U:\AWESOMECUBE-MASTER\FINAL PROGRAM\MIKE FINAL PROGRAM.PBP	00310	                                                      c= 34
+	MOVE?CB	022h, _C
+
+; U:\AWESOMECUBE-MASTER\FINAL PROGRAM\MIKE FINAL PROGRAM.PBP	00311	                                                      a= 0
+	MOVE?CB	000h, _A
+
+; U:\AWESOMECUBE-MASTER\FINAL PROGRAM\MIKE FINAL PROGRAM.PBP	00312	                                                      pause t9
+	PAUSE?W	_t9
+
+; U:\AWESOMECUBE-MASTER\FINAL PROGRAM\MIKE FINAL PROGRAM.PBP	00313	                                                      c= 4
+	MOVE?CB	004h, _C
+
+; U:\AWESOMECUBE-MASTER\FINAL PROGRAM\MIKE FINAL PROGRAM.PBP	00314	                                                      pause t9
+	PAUSE?W	_t9
+
+; U:\AWESOMECUBE-MASTER\FINAL PROGRAM\MIKE FINAL PROGRAM.PBP	00315	                                                      return
 	RETURN?	
 
 	END

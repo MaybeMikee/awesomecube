@@ -1,0 +1,86 @@
+'****************************************************************
+'*  Name    : UNTITLED.BAS                                      *
+'*  Author  : [select VIEW...EDITOR OPTIONS]                    *
+'*  Notice  : Copyright (c) 2017 [select VIEW...EDITOR OPTIONS] *
+'*          : All Rights Reserved                               *
+'*  Date    : 11/2/2017                                         *
+'*  Version : 1.0                                               *
+'*  Notes   :                                                   *
+'*          :                                                   *
+'****************************************************************
+trisc = 0
+trisa = 0
+
+A VAR portA
+C var portC
+
+w1 var word:n2 var word:t4 var word
+
+ 
+  for w3=200 TO 100 STEP -20
+  GOSUB CORNERSPIN2
+  NEXT  w3
+  FOR n8=1 TO 7
+  GOSUB CORNERSPIN2
+  NEXT n8
+  return
+  
+  CORNERSPIN2:
+  t9=80
+  c= 1
+  a= 0
+  PAUSE t9
+  c= 10
+  PAUSE t9
+  c= 20
+  a= 1
+  PAUSE t9
+  c= 32
+  a= 2
+  PAUSE t9
+  c= 0
+  a= 4
+  PAUSE t9
+  c= 4
+  a= 0
+  PAUSE t9
+  c= 34
+  PAUSE t9
+  c= 17
+  a= 4
+  PAUSE t9 
+  c= 8
+  a= 2
+  PAUSE t9
+  c= 0 
+  a= 1
+  PAUSE t9
+  c= 0
+  a= 4
+  pause t9
+  c= 32
+  a= 2
+  pause t9
+  c= 20
+  a= 1
+  pause t9
+  c= 10
+  a= 0
+  pause t9
+  c= 1
+  pause t9
+  c= 0
+  a= 1
+  pause t9
+  c= 8
+  a= 2
+  pause t9
+  c= 17
+  a= 4
+  pause t9
+  c= 34
+  a= 0
+  pause t9
+  c= 4
+  pause t9
+  return
