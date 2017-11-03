@@ -1,0 +1,27 @@
+
+	NOLIST
+; PICBASIC PRO(TM) Compiler 3.0.7.2, (c) 1998, 2013 microEngineering Labs, Inc. All Rights Reserved. 
+
+LABEL?L macro Label
+        RST?RP
+    ifdef PM_USED
+        LALL
+Label
+        XALL
+    else
+Label
+    endif
+    endm
+
+GOTO?L macro Label
+        L?GOTO  Label
+    endm
+
+PAUSE?W macro Win
+        MOVE?WWA Win, R1
+        L?CALL  PAUSEL
+    endm
+PAUSE_USED = 1
+
+
+	LIST

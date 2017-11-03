@@ -1,0 +1,41 @@
+'****************************************************************
+'*  Name    : UNTITLED.BAS                                      *
+'*  Author  : [select VIEW...EDITOR OPTIONS]                    *
+'*  Notice  : Copyright (c) 2017 [select VIEW...EDITOR OPTIONS] *
+'*          : All Rights Reserved                               *
+'*  Date    : 11/1/2017                                         *
+'*  Version : 1.0                                               *
+'*  Notes   :                                                   *
+'*          :                                                   *
+'****************************************************************
+trisc = 0
+trisa = 0
+
+A VAR portA
+C var portC
+
+t_inc var word
+t_dec var word
+speed var word
+do
+    speed=20
+    'c=0:a=0
+    'pause 250
+    for t_inc=0 to 5000 step speed
+        t_dec=5000-t_inc
+        c=%010101:a=%101  'what is at the START of the loop
+        pauseus t_inc 
+        C=%101010:A=%010   'what is at the END of the loop
+        pauseus t_dec
+    next t_inc
+   
+    
+    for t_inc=0 to 5000 step speed
+        t_dec=5000-t_inc
+        C=%101010:A=%010  'what is at the START of the loop
+        pauseus t_inc 
+        c=%010101:a=%101   'what is at the END of the loop
+        pauseus t_dec
+    next t_inc
+    
+loop

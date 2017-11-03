@@ -1,8 +1,9 @@
 '****************************************************************
-'*  Name    : Fader                                             *
-'*  Author  : Mike                                              *
-'*  Notice  : Copyright (c) 2017                                * 
-'*  Date    : 10/30/2017                                        *
+'*  Name    : UNTITLED.BAS                                      *
+'*  Author  : [select VIEW...EDITOR OPTIONS]                    *
+'*  Notice  : Copyright (c) 2017 [select VIEW...EDITOR OPTIONS] *
+'*          : All Rights Reserved                               *
+'*  Date    : 11/1/2017                                         *
 '*  Version : 1.0                                               *
 '*  Notes   :                                                   *
 '*          :                                                   *
@@ -10,47 +11,30 @@
 trisc = 0
 trisa = 0
 
-a VAR portA
-c var portC
+A VAR portA
+C var portC
 
-
-n var word:x var word:t var word:y var word:a1 var word:a2 var word:c1 var word:c2 var word:a3 var word:c3 var word:i var word
-t1 var word:x1 var word:x2 var word:t3b var word:w var word:n1 var word:w2 var word:w3 var word:w4 var word:w5 var word:n2 var word
-t2 var word:w1 var word:l var word:l1 var word:n0 var word:p var word
- t10 var word:n10 var word
-n11 var word:s1 var word:x11 var word: s5 var word:m3 var word
-'************************************************************
-
-
+t_inc var word
+t_dec var word
+speed var word
 do
-    gosub relax
+    speed=5
+    c=0:a=0
+    pause 250
+    for t_inc=0 to 4000 step speed
+        t_dec=5000-t_inc
+        c=63:a=7  'what is at the START of the loop
+        pauseus t_inc 
+        A=0:c=0   'what is at the END of the loop
+        pauseus t_dec
+    next t_inc
+    
+    for t_inc=0 to 4000 step speed
+        t_dec=5000-t_inc
+        c=0:a=0  'what is at the START of the loop
+        pauseus t_inc 
+        C=63:A=7   'what is at the END of the loop
+        pauseus t_dec
+    next t_inc
+    
 loop
-
-
-
-
-
-relax:
-a3=7:c3=63:p=100
-for t1= 1 to 2
- for i=0 to 5 step 1
-  lookup i, [0,1,2,3,4,5],a1 
-  lookup i, [1,2,3,4,5,6],a2
-  lookup i, [0,1,2,3,4,5],c1
-  lookup i, [1,2,3,4,5,6],c2
-   gosub fader
- next i
-next t1
-return
-
-
-fader:
-for x= 0 to 1000 step 5
- a=a1:c=c1
- pauseus 1000-x
- a=a2:c=c2
- pauseus x
- a=a3:c=c3
- pauseus p 
-next x 
-return

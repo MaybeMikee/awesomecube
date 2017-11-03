@@ -1,0 +1,283 @@
+
+	NOLIST
+; PICBASIC PRO(TM) Compiler 3.0.7.2, (c) 1998, 2013 microEngineering Labs, Inc. All Rights Reserved. 
+
+LABEL?L macro Label
+        RST?RP
+    ifdef PM_USED
+        LALL
+Label
+        XALL
+    else
+Label
+    endif
+    endm
+
+ADD?WCW macro Win, Cin, Wout
+    if ((Wout) == (Win))
+        CHK?RP  Wout
+      if ((Cin) == 1)
+        incf    Wout, F
+        btfsc   STATUS, Z
+        incf    (Wout) + 1, F
+      else  
+        movlw   low (Cin)
+        addwf   Wout, F
+        if (((Cin) >> 8) == 0)
+        btfsc   STATUS, C
+        incf    (Wout) + 1, F
+        else
+        movlw   (Cin) >> 8
+        btfsc   STATUS, C
+        addlw   1
+        addwf   (Wout) + 1, F
+        endif
+      endif
+    else
+        movlw   low (Cin)
+        CHK?RP  Win
+        addwf   Win, W
+        MOVE?AB Wout
+      if (((Cin) >> 8) == 0)
+        MOVE?BA (Win) + 1
+        btfsc   STATUS, C
+        addlw   1
+        MOVE?AB (Wout) + 1
+      else
+        movlw   (Cin) >> 8
+        btfsc   STATUS, C
+        addlw   1
+        CHK?RP  Win
+        addwf   (Win) + 1, W
+        MOVE?AB (Wout) + 1
+      endif
+    endif
+    endm
+
+SUB?CWW macro Cin, Win, Wout
+        MOVE?BA Win
+        sublw   low (Cin)
+        MOVE?AB Wout
+        MOVE?BA (Win) + 1
+        btfss   STATUS, C
+        addlw   1
+        sublw   (Cin) >> 8
+        MOVE?AB (Wout) + 1
+    endm
+
+CMPGT?WCL macro Win, Cin, Label
+    if ((Cin) < 0)
+        L?GOTO  Label
+    else
+      if ((Cin) < 0ffffh)
+        MOVE?WW Win, R0
+        MOVE?CB (Cin) >> 8, R1 + 1
+        MOVE?CA low (Cin)
+        L?CALL  CMPGT
+        BIT?GOTO 0, STATUS, Z, Label
+      endif
+    endif
+    endm
+CMPGT_USED = 1
+
+CMPLE?WCL macro Win, Cin, Label
+    if ((Cin) >= 0ffffh)
+        L?GOTO  Label
+    else
+      if ((Cin) >= 0)
+        MOVE?WW Win, R0
+        MOVE?CB (Cin) >> 8, R1 + 1
+        MOVE?CA low (Cin)
+        L?CALL  CMPLE
+        BIT?GOTO 0, STATUS, Z, Label
+      endif
+    endif
+    endm
+CMPLE_USED = 1
+
+GOTO?L macro Label
+        L?GOTO  Label
+    endm
+
+LOOKUP?WCLW macro Win, Cin, Label, Wout
+    local dojump, valtbl
+	MOVE?BA	Win + 1
+	BIT?GOTO 0, STATUS, Z, Label
+        MOVE?BA Win
+        sublw   (Cin) - 1
+        BIT?GOTO 0, STATUS, C, Label
+        L?CALL  dojump
+        MOVE?AW Wout
+        L?GOTO  Label
+dojump  movlw   high (valtbl)
+        movwf   PCLATH
+        MOVE?BA Win
+        RST?RP
+	addlw	low (valtbl)
+	btfsc	STATUS, C
+	incf	PCLATH, F
+	movwf	PCL
+valtbl
+    endm
+
+LURET?C macro Cin
+        retlw   Cin
+    endm
+
+LOOKUP2?WCLW macro Win, Cin, Label, Wout
+  local getval, valtbl, notequal
+    if (Cin <= 85)
+	MOVE?BA	Win + 1
+	BIT?GOTO 0, STATUS, Z, Label
+        MOVE?BA Win
+        CHK?RP  R1
+        movwf   R1
+        sublw   (Cin) - 1
+        BIT?GOTO 0, STATUS, C, Label
+        bcf     STATUS, C
+        rlf     R1, W
+        addwf   R1, F
+        L?CALL  getval
+        movwf   R0
+        incf    R1, F
+        L?CALL  getval
+        movwf   R0 + 1
+        incf    R1, F
+        L?CALL  getval
+        L?CALL  LOOK2
+        MOVE?WW R0, Wout
+        L?GOTO  Label
+getval  movlw   high (valtbl)
+        movwf   PCLATH
+        movf    R1, W
+	addlw	low (valtbl)
+	btfsc	STATUS, C
+	incf	PCLATH, F
+	movwf	PCL
+    else                                    ; More than 85 elements
+        MOVE?WW  Win, R1                    ; copy index to R1, leaves highbyte in W
+        sublw    high(Cin-1)                ; is Win > (Cin - 1)
+        BIT?GOTO 0, STATUS, Z, notequal     ; highbytes are not equal, check lowbytes
+        MOVE?BA  Win
+        sublw    low(Cin-1)
+notequal
+        BIT?GOTO 0, STATUS, C, Label        ; Yes, (Cin-1) < Win
+        CHK?RP  R1
+        bcf     STATUS, C                   ; Table is 3 words per item
+        rlf     R1, F                       ; index*2
+        rlf     R1+1,F                      ; carry to highbyte
+        MOVE?BA Win
+        CHK?RP  R1
+        addwf   R1, F                       ; +index = 3x index
+        btfsc   STATUS,C
+        incf    R1 + 1,F
+        MOVE?BA Win + 1
+        CHK?RP  R1
+        addwf   R1 + 1,F
+        movlw   low (valtbl)                ; Add table's address to R1
+        addwf   R1,F
+        btfsc   STATUS,C
+        incf    R1+1,F
+        movlw   high(valtbl)
+        addwf   R1+1,F
+        L?CALL  getval                      ; get low byte
+        movwf   R0                          ; put it in R0.L
+        movlw 1
+        addwf  R1,F                         ; point to next byte
+        btfsc STATUS,C
+        incf R1+1,F
+        L?CALL  getval                      ; get high byte
+        movwf   R0 + 1                      ; put it in R0.H
+        movlw 1
+        addwf  R1,F                         ; point to next byte
+        btfsc STATUS,C
+        incf R1+1,F
+        L?CALL  getval                      ; get item type
+        L?CALL  LOOK2                       ; get the item
+        MOVE?WW R0, Wout                    ; move it to user variable
+        L?GOTO  Label
+getval
+        movf    R1+1,W                       ; highbyte to PCLATH
+        movwf   PCLATH
+        movf    R1,W                         ; loading lowbyte in PCL
+        movwf   PCL                          ; jumps to the data (retlw)
+    endif
+valtbl
+    endm
+LOOK2_USED = 1
+
+LU2RET?C macro Cin
+        retlw   low (Cin)
+        retlw   high (Cin)
+        retlw   0
+    endm
+
+NEXT?WCL macro Win, Cin, Label
+    local endlabel
+    if ((Cin) == 1)
+        CHK?RP  Win
+        incf    Win, F
+        btfsc   STATUS, Z
+      if ((PREV_BANK == 0) & (CODE_SIZE <= 2))
+        incfsz  Win + 1, F
+        goto    Label
+      else
+        incf    Win + 1, F
+        BIT?GOTO 0, STATUS, Z, Label
+      endif
+    else
+      if ((Cin) <= 255)
+        MOVE?CA Cin
+        CHK?RP  Win
+        addwf   Win, F
+        BIT?GOTO 0, STATUS, C, Label
+        CHK?RP  Win
+        if ((PREV_BANK == 0) & (CODE_SIZE <= 2))
+        incfsz  Win + 1, F
+        goto    Label
+        else
+        incf    Win + 1, F
+        BIT?GOTO 0, STATUS, Z, Label
+        endif
+      else
+        movlw   low (Cin)
+        CHK?RP  Win
+        addwf   Win, F
+        movlw   (Cin) >> 8
+        btfsc   STATUS, C
+        addlw   1
+        BIT?GOTO 1, STATUS, C, endlabel
+        addwf   Win + 1, F
+          if ((Cin) <= 65535)
+        BIT?GOTO 0, STATUS, C, Label
+          endif
+      endif
+    endif
+endlabel
+    endm
+
+NEXT?WWL macro Win1, Win2, Label
+    local endlabel
+        CHK?RP  Win2
+        movf    Win2, W
+        CHK?RP  Win1
+        addwf   Win1, F
+        CHK?RP  Win2
+        movf    Win2 + 1, W
+        btfsc   STATUS, C
+        addlw   1
+        BIT?GOTO 1, STATUS, C, endlabel
+        CHK?RP  Win1
+        addwf   Win1 + 1, F
+        BIT?GOTO 0, STATUS, C, Label
+endlabel
+    endm
+
+PAUSEUS?W macro Win
+        MOVE?WWA Win, R0
+        L?CALL  PAUSEUSL
+    endm
+PAUSEUS_USED = 1
+
+
+	LIST

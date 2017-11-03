@@ -1,6 +1,6 @@
 
 	NOLIST
-; PICBASIC PRO(TM) Compiler 3.1.0.2, (c) 1997, 2017 ME Labs, Inc. All Rights Reserved. 
+; PICBASIC PRO(TM) Compiler 3.0.7.2, (c) 1998, 2013 microEngineering Labs, Inc. All Rights Reserved. 
 
 LABEL?L macro Label
         RST?RP
@@ -94,6 +94,17 @@ MUL?CWW macro Cin, Win, Wout
     endm
 MUL_USED = 1
 
+SUB?CWW macro Cin, Win, Wout
+        MOVE?BA Win
+        sublw   low (Cin)
+        MOVE?AB Wout
+        MOVE?BA (Win) + 1
+        btfss   STATUS, C
+        addlw   1
+        sublw   (Cin) >> 8
+        MOVE?AB (Wout) + 1
+    endm
+
 CMPGT?WCL macro Win, Cin, Label
     if ((Cin) < 0)
         L?GOTO  Label
@@ -182,6 +193,52 @@ dlabel
 
 GOTO?L macro Label
         L?GOTO  Label
+    endm
+
+LOOKUP?WCLB macro Win, Cin, Label, Bout
+    local dojump, valtbl
+	MOVE?BA	Win + 1
+	BIT?GOTO 0, STATUS, Z, Label
+        MOVE?BA Win
+        sublw   (Cin) - 1
+        BIT?GOTO 0, STATUS, C, Label
+        L?CALL  dojump
+        MOVE?AB Bout
+        L?GOTO  Label
+dojump  movlw   high (valtbl)
+        movwf   PCLATH
+        MOVE?BA Win
+        RST?RP
+	addlw	low (valtbl)
+	btfsc	STATUS, C
+	incf	PCLATH, F
+	movwf	PCL
+valtbl
+    endm
+
+LOOKUP?WCLW macro Win, Cin, Label, Wout
+    local dojump, valtbl
+	MOVE?BA	Win + 1
+	BIT?GOTO 0, STATUS, Z, Label
+        MOVE?BA Win
+        sublw   (Cin) - 1
+        BIT?GOTO 0, STATUS, C, Label
+        L?CALL  dojump
+        MOVE?AW Wout
+        L?GOTO  Label
+dojump  movlw   high (valtbl)
+        movwf   PCLATH
+        MOVE?BA Win
+        RST?RP
+	addlw	low (valtbl)
+	btfsc	STATUS, C
+	incf	PCLATH, F
+	movwf	PCL
+valtbl
+    endm
+
+LURET?C macro Cin
+        retlw   Cin
     endm
 
 LOOKUP2?WCLW macro Win, Cin, Label, Wout
@@ -316,6 +373,23 @@ NEXT?WCL macro Win, Cin, Label
 endlabel
     endm
 
+NEXT?WWL macro Win1, Win2, Label
+    local endlabel
+        CHK?RP  Win2
+        movf    Win2, W
+        CHK?RP  Win1
+        addwf   Win1, F
+        CHK?RP  Win2
+        movf    Win2 + 1, W
+        btfsc   STATUS, C
+        addlw   1
+        BIT?GOTO 1, STATUS, C, endlabel
+        CHK?RP  Win1
+        addwf   Win1 + 1, F
+        BIT?GOTO 0, STATUS, C, Label
+endlabel
+    endm
+
 NEXTM?WCL macro Win, Cin, Label
     local hlabel
     local endlabel
@@ -347,6 +421,24 @@ PAUSE?W macro Win
         L?CALL  PAUSEL
     endm
 PAUSE_USED = 1
+
+PAUSEUS?C macro Cin
+    if (((Cin) >> 8) == 0)
+        movlw   Cin
+        L?CALL  PAUSEUS
+    else
+        MOVE?CB (Cin) >> 8, R0 + 1
+        MOVE?CA low (Cin)
+        L?CALL  PAUSEUSL
+    endif
+    endm
+PAUSEUS_USED = 1
+
+PAUSEUS?W macro Win
+        MOVE?WWA Win, R0
+        L?CALL  PAUSEUSL
+    endm
+PAUSEUS_USED = 1
 
 RANDOM?W macro Win
         MOVE?WW Win, R0

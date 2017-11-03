@@ -1,0 +1,51 @@
+'****************************************************************
+'*  Name    : UNTITLED.BAS                                      *
+'*  Author  : [select VIEW...EDITOR OPTIONS]                    *
+'*  Notice  : Copyright (c) 2017 [select VIEW...EDITOR OPTIONS] *
+'*          : All Rights Reserved                               *
+'*  Date    : 11/3/2017                                         *
+'*  Version : 1.0                                               *
+'*  Notes   :                                                   *
+'*          :                                                   *
+'****************************************************************
+trisc = 0
+
+trisa = 0
+
+a VAR portA
+
+c var portC
+a3 var word:c3 var word:p var word:i var word:t_on1 var word:t_off1 var word:a1 var word:c1 var word:a2 var word:c2 var word
+fadestep var word:c_fadein var word:a_fadein var word:c_fadeout var word:a_fadeout var word 
+
+waves:
+
+a3=7:c3=63:p=1
+
+for i= 0 to 4 step 1
+
+lookup i,[0,0,4,2,1],a1
+
+lookup i,[4,34,17,8,0],c1
+
+lookup i,[0,4,2,1,0],a2
+
+lookup i,[34,17,8,0,4],c2
+
+gosub fader
+
+next i
+
+return
+
+Fader:
+for t_on1 = 0 to 8000 step fadestep
+                                        t_off1 = 8000 - t_on1
+                                        c = c_fadein
+                                        a = a_fadein
+                                        pauseus t_on1
+                                        c = c_fadeout
+                                        a = a_fadeout        
+                                        pauseus t_off1
+                                     next t_on1
+                                    return

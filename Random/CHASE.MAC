@@ -1,0 +1,165 @@
+
+	NOLIST
+; PICBASIC PRO(TM) Compiler 3.0.7.2, (c) 1998, 2013 microEngineering Labs, Inc. All Rights Reserved. 
+
+LABEL?L macro Label
+        RST?RP
+    ifdef PM_USED
+        LALL
+Label
+        XALL
+    else
+Label
+    endif
+    endm
+
+SUB?CWW macro Cin, Win, Wout
+        MOVE?BA Win
+        sublw   low (Cin)
+        MOVE?AB Wout
+        MOVE?BA (Win) + 1
+        btfss   STATUS, C
+        addlw   1
+        sublw   (Cin) >> 8
+        MOVE?AB (Wout) + 1
+    endm
+
+CMPGT?WCL macro Win, Cin, Label
+    if ((Cin) < 0)
+        L?GOTO  Label
+    else
+      if ((Cin) < 0ffffh)
+        MOVE?WW Win, R0
+        MOVE?CB (Cin) >> 8, R1 + 1
+        MOVE?CA low (Cin)
+        L?CALL  CMPGT
+        BIT?GOTO 0, STATUS, Z, Label
+      endif
+    endif
+    endm
+CMPGT_USED = 1
+
+GOSUB?L macro Label
+    local dlabel
+    ifdef DEBUG_STACK
+        CHK?RP  DEBUG_STACK
+      ifdef DEBUG_STACK_ADDR
+        bcf     STATUS, C
+        rlf     DEBUG_STACK, W
+        addlw   DEBUG_STACK_ADDR
+        movwf   FSR
+        movlw   low (dlabel)
+        movwf   INDF
+        incf    FSR, F
+        movlw	high (dlabel)
+        movwf   INDF
+      endif
+        incf    DEBUG_STACK, F
+    endif
+        L?CALL  Label
+dlabel
+    endm
+
+LOOKUP?WCLW macro Win, Cin, Label, Wout
+    local dojump, valtbl
+	MOVE?BA	Win + 1
+	BIT?GOTO 0, STATUS, Z, Label
+        MOVE?BA Win
+        sublw   (Cin) - 1
+        BIT?GOTO 0, STATUS, C, Label
+        L?CALL  dojump
+        MOVE?AW Wout
+        L?GOTO  Label
+dojump  movlw   high (valtbl)
+        movwf   PCLATH
+        MOVE?BA Win
+        RST?RP
+	addlw	low (valtbl)
+	btfsc	STATUS, C
+	incf	PCLATH, F
+	movwf	PCL
+valtbl
+    endm
+
+LURET?C macro Cin
+        retlw   Cin
+    endm
+
+NEXT?WCL macro Win, Cin, Label
+    local endlabel
+    if ((Cin) == 1)
+        CHK?RP  Win
+        incf    Win, F
+        btfsc   STATUS, Z
+      if ((PREV_BANK == 0) & (CODE_SIZE <= 2))
+        incfsz  Win + 1, F
+        goto    Label
+      else
+        incf    Win + 1, F
+        BIT?GOTO 0, STATUS, Z, Label
+      endif
+    else
+      if ((Cin) <= 255)
+        MOVE?CA Cin
+        CHK?RP  Win
+        addwf   Win, F
+        BIT?GOTO 0, STATUS, C, Label
+        CHK?RP  Win
+        if ((PREV_BANK == 0) & (CODE_SIZE <= 2))
+        incfsz  Win + 1, F
+        goto    Label
+        else
+        incf    Win + 1, F
+        BIT?GOTO 0, STATUS, Z, Label
+        endif
+      else
+        movlw   low (Cin)
+        CHK?RP  Win
+        addwf   Win, F
+        movlw   (Cin) >> 8
+        btfsc   STATUS, C
+        addlw   1
+        BIT?GOTO 1, STATUS, C, endlabel
+        addwf   Win + 1, F
+          if ((Cin) <= 65535)
+        BIT?GOTO 0, STATUS, C, Label
+          endif
+      endif
+    endif
+endlabel
+    endm
+
+NEXT?WWL macro Win1, Win2, Label
+    local endlabel
+        CHK?RP  Win2
+        movf    Win2, W
+        CHK?RP  Win1
+        addwf   Win1, F
+        CHK?RP  Win2
+        movf    Win2 + 1, W
+        btfsc   STATUS, C
+        addlw   1
+        BIT?GOTO 1, STATUS, C, endlabel
+        CHK?RP  Win1
+        addwf   Win1 + 1, F
+        BIT?GOTO 0, STATUS, C, Label
+endlabel
+    endm
+
+PAUSEUS?W macro Win
+        MOVE?WWA Win, R0
+        L?CALL  PAUSEUSL
+    endm
+PAUSEUS_USED = 1
+
+RETURN? macro
+    ifdef DEBUG_STACK
+        CHK?RP  DEBUG_STACK
+        decf    DEBUG_STACK, F
+    endif
+        RST?RP
+        return
+    endm
+
+
+	LIST

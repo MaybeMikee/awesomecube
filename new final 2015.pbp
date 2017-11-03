@@ -1,0 +1,1029 @@
+'FINAL CUBE PROGRAM 2015
+
+trisc = 0
+
+trisa = 0
+
+ 
+
+a VAR portA
+
+c var portC
+
+ 
+
+ 
+
+n var word:x var word:t var word:y var word:a1 var word:a2 var word:c1 var word:c2 var word:a3 var word:c3 var word:i var word
+
+t1 var word:x1 var word:x2 var word:t3b var word:w var word:n1 var word:w2 var word:w3 var word:w4 var word:w5 var word:n2 var word
+
+t2 var word:w1 var word:l var word:l1 var word:n0 var word:p var word
+
+ t17 var word:t6 var word:t13 var word:t10 var word:n10 var word
+
+n11 var word:s1 var word:x11 var word: s5 var word:m3 var word
+
+x21 var word: x22 var word:x23 var word:x24 var word:
+
+start:
+
+random l
+
+ l1=l//15
+
+gosub selectsub
+
+ 
+
+goto start
+
+ 
+
+ 
+
+ 
+
+selectsub:
+
+select case l1
+
+case 0
+
+gosub relax
+
+case 1
+
+gosub arroundmiddle
+
+case 2
+
+gosub rings
+
+case 3
+
+gosub cornersin
+
+case 4
+
+gosub randoms
+
+case 5
+
+gosub Kents_juggler
+
+case 6
+
+gosub cxs
+
+case 7
+
+gosub dotheworm
+
+case 8
+
+gosub snakestepper
+
+case 9
+
+for t1=1 to 3
+
+gosub waves
+
+next t1
+
+case 10
+
+             
+
+              for n10= 3 to 20
+
+                gosub Chase
+
+              next n10
+
+case 11
+
+             
+
+              x11=x11+1
+
+              if x11>3 then
+
+                x11=0
+
+              endif
+
+             
+
+              lookup2 x11, [100,150,80], s1
+
+             
+
+              for n11 = 1 to 8
+
+                gosub FourCorners
+
+              next n11
+
+case 12
+
+               
+
+               for m3 = 1 to 2
+
+                gosub CenterDiamondBox
+
+               next m3
+
+              
+
+ case 13
+
+random x21
+
+x22= x21// 16
+
+x23=x22+4
+
+for x24 = 1 to x23
+
+gosub bounce
+
+next x24
+
+ 
+
+case 14
+
+random x21
+
+x22= x21// 16
+
+x23=x22+4
+
+for x24 = 1 to x23
+
+gosub bounce2
+
+next x24             
+
+end select
+
+return
+
+ 
+
+ 
+
+ 
+
+'subroutines
+
+Kents_juggler:
+
+for t13 = 30 to 50 step 5
+
+a=2: c=0
+
+pause t13
+
+c=16: a=0
+
+pause t13
+
+c=2
+
+pause t13
+
+c=5
+
+pause t13
+
+c=40
+
+pause t13
+
+c=0: a=5
+
+pause t13
+
+next t13
+
+for t13= 50 to 100 step 10
+
+a=2: c=0
+
+pause t13
+
+c=16: a=0
+
+pause t13
+
+c=2
+
+pause t13
+
+c=5
+
+pause t13
+
+c=40
+
+pause t13
+
+c=0: a=5
+
+pause t13
+
+next t13
+
+return
+
+bounce:
+
+t6= 100
+
+c=%000011:a=%110
+
+pause t6
+
+c=%111000: a=0
+
+pause t6
+
+c=%000110:a=3
+
+pause t6
+
+c=%111000: a=0
+
+pause t6
+
+return
+
+'**********************************************************************
+
+bounce2:
+
+t17 = 100
+
+c=2: a=5
+
+pause t17
+
+c=56: a= 0
+
+pause t17
+
+c=5: a=2
+
+pause t17
+
+c=56: a= 0
+
+pause t17
+
+return
+
+ 
+
+rings:
+
+ for n=0 to 5 step 1
+
+  lookup n, [1,8,5,2,10,4], x2
+
+  gosub ringssub
+
+ next n
+
+ a=0:c=0
+
+return
+
+ 
+
+cornersin:
+
+  for n1=110 to 10  step -10
+
+    for x=0 to 8
+
+     gosub cornersinsub
+
+    next x
+
+   next n1
+
+  for n2= 1 to 25 step 1
+
+    n1=10
+
+   for x=0 to 8
+
+    gosub cornersinsub
+
+   next x
+
+  next n2
+
+  for n1=10 to 110 step 10
+
+    for x=0 to 8
+
+     gosub cornersinsub
+
+    next x
+
+  next n1 
+
+return
+
+ 
+
+ 
+
+ 
+
+allonoff:
+
+    random x
+
+  y=x//3
+
+ select case y
+
+ case 0
+
+   lookup y,[0,0,0],a1
+
+   lookup y,[0,0,0],a2
+
+   lookup y,[],a3
+
+   lookup y,[0,8,32],c1
+
+   lookup y,[8,32,0],c2
+
+   lookup y,[0,8,40],c3
+
+    gosub fader
+
+ case 1
+
+ lookup y,[],a1
+
+   lookup y,[],a2
+
+   lookup y,[],a3
+
+   lookup y,[],c1
+
+   lookup y,[],c2
+
+   lookup y,[],c3
+
+    gosub fader
+
+ case 2
+
+   lookup y,[],a1
+
+   lookup y,[],a2
+
+   lookup y,[],a3
+
+   lookup y,[],c1
+
+   lookup y,[],c2
+
+   lookup y,[],c3
+
+  gosub fader
+
+  end select
+
+ return
+
+ 
+
+ 
+
+ 
+
+randoms:
+
+for y= 1 to 25
+
+gosub random1
+
+for x= 1 to 1000 step 5
+
+  a=w3:c=w5
+
+  pauseus 1000-x
+
+  a=w4:c=w2
+
+  pauseus x
+
+  a=7:c=63
+
+next x
+
+gosub random2
+
+  for x= 1 to 1000 step 5
+
+  a=w4:c=w2
+
+  pauseus 1000-x
+
+  a=w3:c=w5
+
+  pauseus x
+
+  a=7:c=63
+
+ next x
+
+next y
+
+return
+
+ 
+
+relax:
+
+a3=7:c3=63:p=100
+
+for t1= 1 to 2
+
+ for i=0 to 5 step 1
+
+  lookup i, [0,1,2,3,4,5],a1
+
+  lookup i, [1,2,3,4,5,6],a2
+
+  lookup i, [0,1,2,3,4,5],c1
+
+  lookup i, [1,2,3,4,5,6],c2
+
+   gosub fader
+
+ next i
+
+next t1
+
+return
+
+ 
+
+arroundmiddle:
+
+a3=7:c3=63:p=0
+
+for t1 = 1 to 5
+
+ for i=0 to 3 step 1
+
+  lookup i, [0,1,2,4],a1
+
+  lookup i, [1,2,4,0],a2
+
+  lookup i, [56,20,18,17],c1
+
+  lookup i, [20,18,17,56],c2
+
+   gosub fader
+
+ next i
+
+next t1
+
+return
+
+ 
+
+ 
+
+ 
+
+waves:
+
+a3=7:c3=63:p=1
+
+for i= 0 to 4 step 1
+
+lookup i,[0,0,4,2,1],a1
+
+lookup i,[4,34,17,8,0],c1
+
+lookup i,[0,4,2,1,0],a2
+
+lookup i,[34,17,8,0,4],c2
+
+gosub fader
+
+next i
+
+return
+
+ 
+
+ 
+
+ 
+
+ 
+
+snakestepper:
+
+p=100
+
+for i=0 to 9
+
+lookup i,[0,0,0,0,0,0,0,0,4,6],a3
+
+lookup i,[0,0,0,0,0,0,0,4,2,1],a1
+
+lookup i,[0,0,0,0,0,0,4,2,1,0],a2
+
+lookup i,[0,4,6,7,15,31,63,63,63,63],c3
+
+lookup i,[0,4,2,1,8,16,32,0,0,0],c1
+
+lookup i,[4,2,1,8,16,32,0,0,0,0],c2
+
+gosub fader
+
+next i
+
+return
+
+ 
+
+ 
+
+ 
+
+cxs:
+
+a3=0:c3=16:p=100
+
+for t1= 1 to 10
+
+ for i=0 to 7 step 1
+
+  lookup i, [7,6,4,1,2,4,1,3],a1
+
+  lookup i, [6,4,1,2,4,1,3,7],a2
+
+  lookup i, [2,33,44,38,7,11,41,12],c1
+
+  lookup i, [33,44,38,7,11,41,12,2],c2
+
+   gosub fader
+
+ next i
+
+next t1
+
+return
+
+ 
+
+ 
+
+ 
+
+ 
+
+cxdiamond:
+
+ for t3b= 400 to 200 step -50
+
+ next t3b
+
+ 
+
+ for t3b= 200 to 110 step -10
+
+  
+
+ next t3b
+
+ 
+
+ for N= 1 to 9 step 1
+
+  
+
+ next n
+
+return
+
+ 
+
+ 
+
+ 
+
+dotheworm:
+
+ a3=7:c3=63:p=0
+
+ for i=0 to 14 step 1
+
+  lookup i, [0,7,6,5,3,7,6,4,0,0,0,0,0,0,0],a1
+
+  lookup i, [7,6,5,3,7,6,4,0,0,0,0,0,0,0,0],a2
+
+  lookup i, [0,0,8,16,32,0,8,24,56,28,42,49,56,28,14],c1
+
+  lookup i, [0,8,16,32,0,8,24,56,28,42,49,56,28,14,7],c2
+
+   gosub fader
+
+ next i
+
+return
+
+ 
+
+'support subroutines 
+
+fader:
+
+for x= 0 to 1000 step 5
+
+ a=a1:c=c1
+
+ pauseus 1000-x
+
+ a=a2:c=c2
+
+ pauseus x
+
+ a=a3:c=c3
+
+ pauseus p
+
+next x
+
+return
+
+ 
+
+ 
+
+random1:
+
+    random w
+
+     w2=w/1040
+
+     w4=w2/9
+
+return
+
+ 
+
+random2:
+
+    random w1
+
+     w3=w1/1040
+
+     w5=w1/9
+
+return
+
+ 
+
+onoff:    
+
+    a=%111:c=%1111111
+
+    pause t2
+
+    a=0:c=0
+
+    pause t2
+
+return
+
+ 
+
+cornersinsub:
+
+ for n=1 to n1 step 1
+
+ lookup x,[1,1,5,7,7,6,6,2,0],a
+
+ lookup x,[4,44,45,47,63,59,19,18,16],c
+
+  pauseus 1000
+
+  a=7
+
+  c=63
+
+ next n
+
+return   
+
+ 
+
+ringssub:
+
+for x=1000 to 1 step -x2
+
+    a=7
+
+    c=%101111
+
+    pauseus x
+
+    a=0
+
+    c=16
+
+    pauseus 1000-x
+
+next x
+
+for x=1 to 1000 step x2
+
+    a=7
+
+    c=%101111
+
+    pauseus x
+
+    a=0
+
+    c=16
+
+pauseus 1000-x
+
+next x
+
+return
+
+ 
+
+Chase:
+
+t10=65
+
+c=%000001:a=4
+
+pause t10
+
+c=%000010:A=2
+
+pause t10
+
+c=%000100:a=1
+
+pause t10
+
+c=%101000:a=0
+
+pause t10
+
+return
+
+FourCorners:
+
+c=%100100:a=4
+
+pause s1
+
+c=%000010:a=4
+
+pause s1
+
+c=%010001:a=4
+
+pause s1
+
+c=%001000:a=4
+
+pause s1
+
+c=%000000:A=7
+
+pause s1
+
+c=%100000:a=1
+
+pause s1
+
+c=%010100:a=1
+
+pause s1
+
+c=%000010:a=1
+
+pause s1
+
+c=%001001:a=1
+
+pause s1
+
+c=%000001:a=2
+
+pause s1
+
+c=%010001:a=4                                 
+
+pause s1
+
+c=%100001:a=0
+
+pause s1
+
+c=%000111:a=0
+
+pause s1
+
+c=%001100:a=0
+
+pause s1
+
+c=%010100:a=1
+
+pause s1
+
+c=%000100:a=2
+
+pause s1
+
+return
+
+CenterDiamondBox:
+
+s5=70
+
+pause s5
+
+c=%010000:a=0
+
+pause s5
+
+c=%000101:a=5
+
+pause s5
+
+c=%101010:a=2
+
+pause s5
+
+c=%010000:a=0
+
+pause s5
+
+c=%000101:a=5
+
+pause s5
+
+c=%101010:a=2
+
+pause s5
+
+c=%010000:a=0
+
+pause s5
+
+c=%000101:a=5
+
+pause s5
+
+c=%101010:a=2
+
+pause s5
+
+c=%010000:a=0
+
+pause s5
+
+c=%000101:a=5
+
+pause s5
+
+c=%101010:a=2
+
+pause s5
+
+c=%010000:a=0
+
+pause 800                   ' Pause
+
+c=%101010:a=2
+
+pause s5
+
+c=%010000:a=0
+
+pause s5                   
+
+c=%000101:a=5
+
+pause s5
+
+c=%101010:a=2
+
+pause s5
+
+c=%010000:a=0
+
+pause s5
+
+c=%000101:a=5
+
+pause s5
+
+c=%101010:a=2
+
+pause s5
+
+c=%010000:a=0
+
+pause s5
+
+c=%000101:a=5
+
+pause s5
+
+c=%101010:a=2
+
+pause s5
+
+c=%010000:a=0
+
+pause s5
+
+c=%000101:a=5
+
+pause s5
+
+c=%101010:a=2
+
+pause 800                   ' Pause
+
+c=%000101:a=5
+
+pause s5
+
+c=%101010:a=2
+
+pause s5
+
+c=%010000:a=0
+
+pause s5
+
+c=%000101:a=5
+
+pause s5
+
+c=%101010:a=2
+
+pause s5
+
+c=%010000:a=0
+
+pause s5
+
+c=%000101:a=5
+
+pause s5
+
+c=%101010:a=2
+
+pause s5
+
+c=%010000:a=0
+
+pause s5
+
+c=%000101:a=5
+
+pause s5
+
+c=%101010:a=2
+
+pause s5
+
+c=%010000:a=0
+
+pause s5
+
+c=%000101:a=5
+
+pause 800                   ' pause
+
+return

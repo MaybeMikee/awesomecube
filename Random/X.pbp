@@ -1,0 +1,46 @@
+'****************************************************************
+'*  Name    : UNTITLED.BAS                                      *
+'*  Author  : [select VIEW...EDITOR OPTIONS]                    *
+'*  Notice  : Copyright (c) 2017                                *
+'*          : All Rights Reserved                               *
+'*  Date    : 10/31/2017                                        *
+'*  Version : 1.0                                               *
+'*  Notes   :                                                   *
+'*          :                                                   *
+'****************************************************************
+trisc = 0
+trisa = 0
+
+A VAR portA
+C var portC
+
+t1 var word:x1 var word:n5 var word
+'****************************************************************
+
+do
+x1=x1+1
+if x1>5 then 
+x1=0
+endif
+                    
+lookup2 x1, [80,120,100,60,70,65], t1
+                        
+for n5=1 to 5    
+    gosub X
+next n5
+   
+loop
+
+
+
+
+
+
+X:
+   c=%000101:a=0
+   pause t1
+   c=%010000:A=0
+   pause t1
+   C=0:A=%101
+   pause t1
+return

@@ -1,0 +1,39 @@
+'****************************************************************
+'*  Name    : UNTITLED.BAS                                      *
+'*  Author  : [select VIEW...EDITOR OPTIONS]                    *
+'*  Notice  : Copyright (c) 2017                                *
+'*          : All Rights Reserved                               *
+'*  Date    : 10/31/2017                                        *
+'*  Version : 1.0                                               *
+'*  Notes   :                                                   *
+'*          :                                                   *
+'****************************************************************
+trisc = 0
+trisa = 0
+
+A VAR portA
+C var portC
+
+t1 var word:x1 var word:n5 var word
+'*************************************************
+
+t1=40
+
+do
+ C=%000100:A=0
+ pause t1
+ C=%000010:a=0
+ pause t1
+ C=%000001:a=0
+ pause t1
+ C=%001000:a=0
+ pause t1
+ C=0:a=001
+ pause t1
+ C=0:a=010
+ pause t1
+ C=0:a=100
+ pause t1
+ C=%100000:a=0
+ pause t1
+ loop

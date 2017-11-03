@@ -1,0 +1,55 @@
+'****************************************************************
+'*  Name    : UNTITLED.BAS                                      *
+'*  Author  : [select VIEW...EDITOR OPTIONS]                    *
+'*  Notice  : Copyright (c) 2016 [select VIEW...EDITOR OPTIONS] *
+'*          : All Rights Reserved                               *
+'*  Date    : 9/21/2016                                         *
+'*  Version : 1.0                                               *
+'*  Notes   :                                                   *
+'*          :                                                   *
+'****************************************************************
+trisc = 0
+trisa = 0
+
+
+a var porta               
+c var portC
+i var word  
+t1 var word:t2 var word:t3 var word:t4 var word:t5 var word
+n1 var word:n2 var word:n3 var word:n4 var word:n5 var word:n8 var word
+x1 var word:x2 var word:x3 var word:x4 var word:x5 var word:x6 var word
+x7 var word:x8 var word:t_on var word:t_off var word:t_on2 var word:t_on3 var word
+t_on1 var word:t_off1 var word:t_off2 var word:t_off3 var word:t_on4 var word:T_off4 var word
+x1fadestep var word:fadestep var word:zzz var word:a_trough var word:c_trough var word
+forstart var word:forstop var word:c_crest var word:a_crest var word
+startvalue var word:stopvalue var word
+start:
+
+for zzz = 0 to 9
+
+        
+        
+       lookup zzz, [63,63,63,63,63,63,63,63,63,63], c_crest 'these leds are half lit
+       lookup zzz, [ 7, 7, 7, 7, 7, 7, 7, 7, 7, 7], a_crest '
+       lookup zzz, [ 0, 4, 2, 1, 8,16,32, 0, 0, 0], c_trough' these leds are full lit
+       lookup zzz, [ 0, 0, 0, 0, 0, 0, 0, 4 , 2, 1], a_trough
+
+  t_on=900
+    for i = 0 to 250 step 20
+        t_off = 8000 - t_on 
+            c = c_crest
+            a = a_crest
+            pauseus t_on                     
+            c = c_trough
+            a = a_trough
+            pauseus t_off
+    next i
+next zzz
+
+
+
+
+
+
+
+

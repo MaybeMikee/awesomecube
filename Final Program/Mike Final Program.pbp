@@ -15,14 +15,23 @@ A VAR portA
 C var portC
 
 w1 var word:w2 var word:w3 var word:w4 var word:w5 var word:w6 var word:w7 var word
-t1 var word:t2 var word:t3 var word:t4 var word:t5 var word:t6 var word
-n1 var word:n2 var word:n3 var word:n4 var word:n5 var word:n6 var word:n7 var word
+t1 var word:t2 var word:t3 var word:t4 var word:t5 var word:t6 var word:t7 var word:t8 var word:t9 var word:t10 var word:t11 var word:t12 var word:t13 var word
+n1 var word:n2 var word:n3 var word:n4 var word:n5 var word:n6 var word:n7 var word:n8 var word:n9 var word
 x1 var word:x2 var word:x3 var word:x4 var word:x5 var word:x6 var word:x7 var word:x8 var word:x9 var word:x10 var word
 m var word:m1 var word:m2 var word:m3 var word
+:a1 var word:a2 var word:c1 var word:c2 var word:a3 var word:c3 var word:p var word
+s1 var word:n11 var word:x11 var word
+t_inc var word:t_dec var word:speed var word
+t_on var word:t_off var word:t_on1 var word:t_off1 var word:i var word:zzz var word:xxx var word:c_fadein var word:c_fadeout var word
+a_fadein var word:a_fadeout var word
+x1fadestep var word:fadestep var word
+a_trough var word:c_trough var word
+forstart var word:forstop var word:c_crest var word:a_crest var word
+startvalue var word:stopvalue var word
 '****************************************************************
 do
         random m
-        m1=m//6
+        m1=m//17
         m2=m1+1
         
         select case m2
@@ -68,15 +77,15 @@ do
                         gosub on_off
                     next n6
                 case 4
-                    For t5 = 400 to 150 step -50
+                    For t5 = 250 to 150 step -25
                         gosub center_X_diamond
                     Next t5
 
-                    For t5 = 150 to 90 step -10
+                    For t5 = 130 to 90 step -10
                         gosub center_X_diamond
                     Next t5
     
-                    For n3 = 1 to 7
+                    For n3 = 1 to 4
                         gosub center_X_diamond
                     Next n3
                     
@@ -84,6 +93,75 @@ do
                 for n5=1 to 4
                     gosub random_number
                 next n5
+                
+                case 6
+                    x9=x9+1
+                    if x9>5 then 
+                    x9=0
+                    endif
+                    
+                    lookup2 x9, [80,120,100,60,70,65], t6
+                        
+                    for n6=1 to 5    
+                        gosub X
+                    next n6
+                case 7
+                   for n7=1 to 4
+                    gosub Around_the_Cube
+                   next n7
+                case 8
+                    for zzz = 0 to 9
+                        lookup zzz, [63,63,63,63,63,63,63,63,63,63], c_crest 'these leds are half lit
+                        lookup zzz, [ 7, 7, 7, 7, 7, 7, 7, 7, 7, 7], a_crest '
+                        lookup zzz, [ 0, 4, 2, 1, 8,16,32, 0, 0, 0], c_trough' these leds are full lit
+                        lookup zzz, [ 0, 0, 0, 0, 0, 0, 0, 4 , 2, 1], a_trough
+                        gosub Halflit
+                    next zzz
+                case 9
+                    for xxx = 0 to 9
+                        x1fadestep=x1fadestep+1   
+                        if x1fadestep>5 then
+                            x1fadestep=0
+                        endif
+                        lookup2 x1fadestep, [100,150,200,300,200], fadestep   
+                        lookup xxx, [0,6,7,15,31,63,0,0,0,0], c_fadein
+                        lookup xxx, [0,0,0,4,6,7,0,0,0,0], a_fadein
+                        lookup xxx, [0,0,6,7,15,31,63,0,0,0], c_fadeout
+                        lookup xxx, [0,0,0,0,0,0,0,0,0,0], a_fadeout
+                        gosub fader
+                    next xxx
+                Case 10
+                 for w3=200 TO 100 STEP -50
+                    GOSUB CORNERSPIN2
+                 NEXT  w3
+                 FOR n8=1 TO 3
+                    GOSUB CORNERSPIN2
+                 NEXT n8
+                Case 11
+                    for n9=1 to 2
+                        gosub juggler
+                    next n9
+                case 12
+                 gosub cornersin
+                 
+                case 13
+                 gosub bounce
+                 case 14
+                 x11=x11+1
+                    if x11>3 then
+                        x11=0
+                    endif
+              lookup2 x11, [100,150,80], s1
+                for n11 = 1 to 8
+                    gosub FourCorners
+                next n11
+                  case 15
+                  gosub relax
+                  case 16
+                  gosub arroundmiddle
+                  case 17
+                  gosub waves
+                   
                 end select
 loop
 
@@ -150,3 +228,287 @@ loop
                         C=%111111
                         pause w7
                     return
+                            X:
+                             c=%000101:a=0
+                             pause t1
+                             c=%010000:A=0
+                             pause t1
+                             C=0:A=%101
+                             pause t1
+                            return
+                                Around_the_Cube:
+                                 t7=250
+                                 C=%000100:A=0
+                                 pause t7
+                                 C=%000010:a=0
+                                 pause t7
+                                 C=%000001:a=0
+                                 pause t7
+                                 C=%001000:a=0
+                                 pause t7
+                                 C=0:a=001
+                                 pause t7
+                                 C=0:a=010
+                                 pause t7
+                                 C=0:a=100
+                                 pause t7
+                                 C=%100000:a=0
+                                 pause t7
+                                 return
+                                    Fader:
+                                     for t_on1 = 0 to 8000 step fadestep
+                                        t_off1 = 8000 - t_on1
+                                        c = c_fadein
+                                        a = a_fadein
+                                        pauseus t_on1
+                                        c = c_fadeout
+                                        a = a_fadeout        
+                                        pauseus t_off1
+                                     next t_on1
+                                    return
+                                     
+                                        Halflit:
+                                         t_on=900
+                                         for i = 0 to 250 step 20
+                                            t_off = 8000 - t_on 
+                                            c = c_crest
+                                            a = a_crest
+                                            pauseus t_on                     
+                                            c = c_trough
+                                            a = a_trough
+                                            pauseus t_off
+                                         next i
+                                        return
+                                                  CORNERSPIN2:
+                                                      t9=80
+                                                      c= 1
+                                                      a= 0
+                                                      PAUSE t9
+                                                      c= 10
+                                                      PAUSE t9
+                                                      c= 20
+                                                      a= 1
+                                                      PAUSE t9
+                                                      c= 32
+                                                      a= 2
+                                                      PAUSE t9
+                                                      c= 0
+                                                      a= 4
+                                                      PAUSE t9
+                                                      c= 4
+                                                      a= 0
+                                                      PAUSE t9
+                                                      c= 34
+                                                      PAUSE t9
+                                                      c= 17
+                                                      a= 4
+                                                      PAUSE t9 
+                                                      c= 8
+                                                      a= 2
+                                                      PAUSE t9
+                                                      c= 0 
+                                                      a= 1
+                                                      PAUSE t9
+                                                      c= 0
+                                                      a= 4
+                                                      pause t9
+                                                      c= 32
+                                                      a= 2
+                                                      pause t9
+                                                      c= 20
+                                                      a= 1
+                                                      pause t9
+                                                      c= 10
+                                                      a= 0
+                                                      pause t9
+                                                      c= 1
+                                                      pause t9
+                                                      c= 0
+                                                      a= 1
+                                                      pause t9
+                                                      c= 8
+                                                      a= 2
+                                                      pause t9
+                                                      c= 17
+                                                      a= 4
+                                                      pause t9
+                                                      c= 34
+                                                      a= 0
+                                                      pause t9
+                                                      c= 4
+                                                      pause t9
+                                                      return
+                                                        Juggler:
+                                                           for t13 = 30 to 50 step 5
+                                                            a=2: c=0
+                                                            pause t13
+                                                            c=16: a=0
+                                                            pause t13
+                                                            c=2
+                                                            pause t13
+                                                            c=5
+                                                            pause t13
+                                                            c=40
+                                                            pause t13
+                                                            c=0: a=5
+                                                            pause t13
+                                                           next t13
+                                                           for t13= 50 to 100 step 10
+                                                            a=2: c=0
+                                                            pause t13
+                                                            c=16: a=0
+                                                            pause t13
+                                                            c=2
+                                                            pause t13
+                                                            c=5
+                                                            pause t13
+                                                            c=40
+                                                            pause t13
+                                                            c=0: a=5
+                                                            pause t13
+                                                           next t13
+                                                          return                                               
+cornersin:
+  for x4=110 to 10  step -10
+    for x5=0 to 8
+     gosub cornersinsub
+    next x5
+   next x4
+  for x6= 1 to 25 step 1
+    x4=10
+   for x5=0 to 8
+    gosub cornersinsub
+   next x5
+  next x6
+  for x4=10 to 110 step 10
+    for x5=0 to 8
+     gosub cornersinsub
+    next x5
+  next  
+return
+
+cornersinsub:
+ for x7=1 to x4 step 1
+    lookup x5,[1,1,5,7,7,6,6,2,0],a
+    lookup x5,[4,44,45,47,63,59,19,18,16],c
+    pauseus 1000
+    a=7
+    c=63
+ next x7
+return
+
+bounce:
+t12= 100
+c=%000011:a=%110
+pause t12
+c=%111000: a=0
+pause t12
+c=%000110:a=3
+pause t12
+c=%111000: a=0
+pause t12
+return
+
+FourCorners:
+c=%100100:a=4
+pause s1
+c=%000010:a=4
+pause s1
+c=%010001:a=4
+pause s1
+c=%001000:a=4
+pause s1
+c=%000000:A=7
+pause s1
+c=%100000:a=1
+pause s1
+c=%010100:a=1
+pause s1
+c=%000010:a=1
+pause s1
+c=%001001:a=1
+pause s1
+c=%000001:a=2
+pause s1
+c=%010001:a=4                                 
+pause s1
+c=%100001:a=0
+pause s1
+c=%000111:a=0
+pause s1
+c=%001100:a=0
+pause s1
+c=%010100:a=1
+pause s1
+c=%000100:a=2
+pause s1
+return   
+
+relax:
+
+a3=7:c3=63:p=100
+
+for t1= 1 to 2
+
+ for i=0 to 5 step 1
+
+  lookup i, [0,1,2,3,4,5],a1
+
+  lookup i, [1,2,3,4,5,6],a2
+
+  lookup i, [0,1,2,3,4,5],c1
+
+  lookup i, [1,2,3,4,5,6],c2
+
+   gosub fader
+
+ next i
+
+next t1
+
+return 
+
+arroundmiddle:
+
+a3=7:c3=63:p=0
+
+for t1 = 1 to 5
+
+ for i=0 to 3 step 1
+
+  lookup i, [0,1,2,4],a1
+
+  lookup i, [1,2,4,0],a2
+
+  lookup i, [56,20,18,17],c1
+
+  lookup i, [20,18,17,56],c2
+
+   gosub fader
+
+ next i
+
+next t1
+
+return  
+
+waves:
+
+a3=7:c3=63:p=1
+
+for i= 0 to 4 step 1
+
+lookup i,[0,0,4,2,1],a1
+
+lookup i,[4,34,17,8,0],c1
+
+lookup i,[0,4,2,1,0],a2
+
+lookup i,[34,17,8,0,4],c2
+
+gosub fader
+
+next i
+
+return
+                         

@@ -1,0 +1,56 @@
+'****************************************************************
+'*  Name    : UNTITLED.BAS                                      *
+'*  Author  : [select VIEW...EDITOR OPTIONS]                    *
+'*  Notice  : Copyright (c) 2016 [select VIEW...EDITOR OPTIONS] *
+'*          : All Rights Reserved                               *
+'*  Date    : 9/21/2016                                         *
+'*  Version : 1.0                                               *
+'*  Notes   :                                                   *
+'*          :                                                   *
+'****************************************************************
+trisc = 0
+trisa = 0
+
+
+a var porta               
+c var portC
+i var word  
+t1 var word:t2 var word:t3 var word:t4 var word:t5 var word
+n1 var word:n2 var word:n3 var word:n4 var word:n5 var word:n8 var word
+x1 var word:x2 var word:x3 var word:x4 var word:x5 var word:x6 var word
+x7 var word:x8 var word:t_on var word:t_off var word:t_on2 var word:t_on3 var word
+t_on1 var word:t_off1 var word:t_off2 var word:t_off3 var word:t_on4 var word:T_off4 var word
+x1fadestep var word:fadestep var word:zzz var word:c_fadein var word:c_fadeout var word
+forstart var word:forstop var word:a_fadein var word:a_fadeout var word
+startvalue var word:stopvalue var word
+start:
+for xxx = 0 to 9
+
+    x1fadestep=x1fadestep+1   
+    if x1fadestep>5 then
+        x1fadestep=0
+    endif
+    lookup2 x1fadestep, [100,150,200,300,200], fadestep 
+        
+        
+        lookup xxx, [0,6,7,15,31,63,0,0,0,0], c_fadein
+        lookup xxx, [0,0,0,4,6,7,0,0,0,0], a_fadein
+        lookup xxx, [0,0,6,7,15,31,63,0,0,0], c_fadeout
+        lookup xxx, [0,0,0,0,0,0,0,0,0,0], a_fadeout
+    for t_on = 0 to 8000 step fadestep
+        t_off = 8000 - t_on
+            c = c_fadein
+            a = a_fadein
+            pauseus t_on
+            c = c_fadeout
+            a = a_fadeout        
+            pauseus t_off
+    next t_on
+next zzz
+
+goto start
+
+
+
+
+
