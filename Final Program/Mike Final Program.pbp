@@ -77,15 +77,15 @@ do
                         gosub on_off
                     next n6
                 case 4
-                    For t5 = 400 to 150 step -50
+                    For t5 = 250 to 150 step -25
                         gosub center_X_diamond
                     Next t5
 
-                    For t5 = 150 to 90 step -10
+                    For t5 = 130 to 90 step -10
                         gosub center_X_diamond
                     Next t5
     
-                    For n3 = 1 to 7
+                    For n3 = 1 to 4
                         gosub center_X_diamond
                     Next n3
                     
