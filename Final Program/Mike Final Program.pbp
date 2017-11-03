@@ -31,7 +31,7 @@ startvalue var word:stopvalue var word
 '****************************************************************
 do
         random m
-        m1=m//16
+        m1=m//17
         m2=m1+1
         
         select case m2
