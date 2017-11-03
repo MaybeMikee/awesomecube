@@ -237,7 +237,7 @@ loop
                              pause t1
                             return
                                 Around_the_Cube:
-                                 pause t7
+                                 t7=250
                                  C=%000100:A=0
                                  pause t7
                                  C=%000010:a=0

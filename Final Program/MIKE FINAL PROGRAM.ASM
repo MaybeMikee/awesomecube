@@ -1084,8 +1084,8 @@ _C               		EQU	 PORTC
 
 	LABEL?L	_Around_the_Cube	
 
-; U:\AWESOMECUBE-MASTER\FINAL PROGRAM\MIKE FINAL PROGRAM.PBP	00240	                                 pause t7
-	PAUSE?W	_t7
+; U:\AWESOMECUBE-MASTER\FINAL PROGRAM\MIKE FINAL PROGRAM.PBP	00240	                                 t7=250
+	MOVE?CW	0FAh, _t7
 
 ; U:\AWESOMECUBE-MASTER\FINAL PROGRAM\MIKE FINAL PROGRAM.PBP	00241	                                 C=%000100:A=0
 	MOVE?CB	004h, _C
