@@ -195,6 +195,27 @@ GOTO?L macro Label
         L?GOTO  Label
     endm
 
+LOOKUP?WCLB macro Win, Cin, Label, Bout
+    local dojump, valtbl
+	MOVE?BA	Win + 1
+	BIT?GOTO 0, STATUS, Z, Label
+        MOVE?BA Win
+        sublw   (Cin) - 1
+        BIT?GOTO 0, STATUS, C, Label
+        L?CALL  dojump
+        MOVE?AB Bout
+        L?GOTO  Label
+dojump  movlw   high (valtbl)
+        movwf   PCLATH
+        MOVE?BA Win
+        RST?RP
+	addlw	low (valtbl)
+	btfsc	STATUS, C
+	incf	PCLATH, F
+	movwf	PCL
+valtbl
+    endm
+
 LOOKUP?WCLW macro Win, Cin, Label, Wout
     local dojump, valtbl
 	MOVE?BA	Win + 1
@@ -400,6 +421,18 @@ PAUSE?W macro Win
         L?CALL  PAUSEL
     endm
 PAUSE_USED = 1
+
+PAUSEUS?C macro Cin
+    if (((Cin) >> 8) == 0)
+        movlw   Cin
+        L?CALL  PAUSEUS
+    else
+        MOVE?CB (Cin) >> 8, R0 + 1
+        MOVE?CA low (Cin)
+        L?CALL  PAUSEUSL
+    endif
+    endm
+PAUSEUS_USED = 1
 
 PAUSEUS?W macro Win
         MOVE?WWA Win, R0
